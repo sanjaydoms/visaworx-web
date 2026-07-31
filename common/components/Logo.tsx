@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 type LogoProps = {
   kind?: "visaworx" | "klar";
@@ -6,6 +9,12 @@ type LogoProps = {
 };
 
 export function Logo({ kind = "visaworx", className = "" }: LogoProps) {
+  const [error, setError] = useState(false);
+
+  if (error) {
+    return null;
+  }
+
   const source =
     kind === "visaworx"
       ? "/brand/visaworx-logo.png"
@@ -19,6 +28,9 @@ export function Logo({ kind = "visaworx", className = "" }: LogoProps) {
       height={120}
       className={className}
       priority
+      onError={() => setError(true)}
+      style={{ objectFit: "contain" }}
     />
   );
 }
+

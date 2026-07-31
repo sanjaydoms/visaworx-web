@@ -1,8 +1,11 @@
 import {
   ArrowRight,
-  CheckCircle2,
+  ArrowRightCircle,
+  Compass,
+  FileCheck,
   MessageCircle,
   Search,
+  ShieldAlert,
 } from "lucide-react";
 import { ButtonLink } from "../../common/components/ButtonLink";
 import { Container } from "../../common/components/Container";
@@ -10,48 +13,79 @@ import { countries, faqs, services, trustPoints } from "../../common/content/hom
 import { routes } from "../../common/config/routes";
 import { site } from "../../common/config/site";
 
+const panelOutcomes = [
+  {
+    title: "Right visa pathway",
+    description: "Understand which visa category fits your travel purpose.",
+    icon: Compass,
+  },
+  {
+    title: "Document readiness",
+    description: "See what is available, missing or unclear.",
+    icon: FileCheck,
+  },
+  {
+    title: "Potential gaps",
+    description: "Identify avoidable weaknesses before submission.",
+    icon: ShieldAlert,
+  },
+  {
+    title: "Clear next steps",
+    description: "Know what to do and when expert review is needed.",
+    icon: ArrowRightCircle,
+  },
+];
+
 export function HomePage() {
   return (
     <>
-      <section className="overflow-hidden bg-[radial-gradient(circle_at_top_right,#edf4ff,transparent_35%),linear-gradient(180deg,#fff,#f8fafc)] py-20 sm:py-28">
+      <section className="overflow-hidden bg-[radial-gradient(circle_at_top_right,#edf4ff,transparent_35%),linear-gradient(180deg,#fff,#f8fafc)] pt-14 pb-16 sm:py-24">
         <Container>
-          <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_.95fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-14">
             <div>
-              <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-[#e6282f]">
+              <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#e6282f] sm:text-sm">
                 Visa intelligence. Human expertise.
               </p>
-              <h1 className="mt-6 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-[#071f4a] sm:text-6xl">
-                Make the right visa decision before you apply.
+              <h1 className="mt-4 max-w-3xl text-[clamp(3rem,13vw,3.25rem)] font-black leading-[1.05] tracking-tight text-[#071f4a] sm:text-6xl">
+                Make the right visa<br className="hidden sm:inline" /> decision before<br className="hidden sm:inline" /> you apply.
               </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
-                Understand the right pathway, assess your readiness, identify avoidable risks and speak with experienced visa professionals.
+              <p className="mt-5 max-w-2xl text-[18px] leading-[1.55] text-slate-600 sm:text-xl">
+                Understand the right pathway, assess your readiness, identify avoidable risks and speak with experienced visa experts.
               </p>
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href={site.consultationUrl}>
                   Speak to an Expert <ArrowRight className="ml-2 h-4 w-4" />
                 </ButtonLink>
                 <ButtonLink href={routes.readiness} variant="secondary">
-                  Check Visa Readiness
+                  Check My Readiness
                 </ButtonLink>
               </div>
-              <p className="mt-6 text-sm text-slate-500">
+              <p className="mt-5 text-sm leading-6 text-slate-500">
                 No approval guarantees. No false promises. Clear guidance and careful preparation.
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-[#0b3478]/10 bg-white p-7 shadow-[0_30px_80px_rgba(7,31,74,.12)] sm:p-10">
-              <div className="rounded-3xl bg-[#071f4a] p-7 text-white">
-                <Search className="h-8 w-8 text-[#ef3a40]" />
-                <h2 className="mt-6 text-2xl font-bold">Start with clarity</h2>
-                <p className="mt-3 leading-7 text-white/75">
+            <div className="mx-1 rounded-[2rem] border border-[#0b3478]/10 bg-white p-5 shadow-[0_25px_70px_rgba(7,31,74,.10)] sm:mx-0 sm:p-8">
+              <div className="rounded-2xl bg-[#071f4a] p-6 text-white sm:p-7">
+                <Search className="h-7 w-7 text-[#ef3a40]" />
+                <h2 className="mt-5 text-2xl font-bold">Know Before You Apply</h2>
+                <p className="mt-2 text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
                   Tell us where you want to go and why. Visaworx helps you understand what matters before the paperwork begins.
                 </p>
               </div>
-              <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                {["Right visa pathway", "Document readiness", "Potential gaps", "Clear next steps"].map((item) => (
-                  <div key={item} className="flex gap-3 rounded-2xl bg-slate-50 p-4 text-sm font-semibold text-slate-700">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-[#e6282f]" />
-                    {item}
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {panelOutcomes.map(({ title, description, icon: Icon }) => (
+                  <div
+                    key={title}
+                    className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 transition hover:bg-slate-100/80"
+                  >
+                    <div className="flex shrink-0 items-center justify-center rounded-xl bg-[#071f4a]/5 p-2 text-[#e6282f]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-[#071f4a]">{title}</h3>
+                      <p className="mt-0.5 text-xs leading-5 text-slate-600">{description}</p>
+                    </div>
                   </div>
                 ))}
               </div>

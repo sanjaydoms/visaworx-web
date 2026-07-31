@@ -1,8 +1,17 @@
 import type { ConsultationRequest } from "../../types/consultation";
+import { submitToKlarCrm } from "../klar-crm/submit-consultation";
 
 export async function submitConsultationRequest(
   request: ConsultationRequest
 ): Promise<{ success: boolean; error?: string }> {
+  // 1. Single System of Record — Klar CRM Integration
+  if (process.env.KLAR_CRM_API_URL) {
+    const crmResult = await submitToKlarCrm(request);
+    if (crmResult.success) {
+      return { success: true };
+    }
+  }
+
   const apiUrl = process.env.KLAR_CONSULTATION_API_URL;
   const apiToken = process.env.KLAR_CONSULTATION_API_TOKEN;
   const webhookUrl = process.env.VISAWORX_CONSULTATION_WEBHOOK_URL;

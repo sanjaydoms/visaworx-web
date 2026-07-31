@@ -5,5 +5,6 @@ export const site = {
   tagline: "Visa Intelligence. Expert Guidance. Confident Journeys.",
   supportEmail: "support@klartravels.com",
   klarTravelsUrl: "https://www.klartravels.com/",
-  consultationUrl: "mailto:support@klartravels.com?subject=Visaworx%20Consultation",
+  consultationUrl: "/visaworx/consultation",
 } as const;
+

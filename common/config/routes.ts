@@ -11,12 +11,14 @@ export const routes = {
   guideDetail: (slug: string) => `/visaworx/resources/guides/${slug}`,
   faqsPage: "/visaworx/resources/faqs",
   glossaryPage: "/visaworx/resources/glossary",
+  consultation: "/visaworx/consultation",
+  consultationSuccess: "/visaworx/consultation/success",
   services: "/visaworx/services",
   countries: "/visaworx/countries",
   resources: "/visaworx/resources",
   faq: "/visaworx/resources/faqs",
-  consultation: "/visaworx#consultation",
 } as const;
+
 
 
 

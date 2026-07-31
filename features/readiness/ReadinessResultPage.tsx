@@ -17,9 +17,9 @@ import { site } from "../../common/config/site";
 export function ReadinessResultPage() {
   const { answers, evaluationResult, destinationObj, restartAssessment } = useReadinessAssessment();
 
-  const consultationUrlWithHandoff = `${site.consultationUrl}&body=${encodeURIComponent(
-    evaluationResult.consultationHandoffText
-  )}`;
+  const consultationUrlWithHandoff = `${routes.consultation}?source=readiness&readinessBand=${encodeURIComponent(
+    evaluationResult.band
+  )}&country=${encodeURIComponent(answers.destinationSlug || "")}&service=${encodeURIComponent(answers.visaPurpose || "")}`;
 
   return (
     <div className="py-10 sm:py-16 space-y-12">

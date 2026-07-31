@@ -13,11 +13,13 @@ export const routes = {
   glossaryPage: "/visaworx/resources/glossary",
   consultation: "/visaworx/consultation",
   consultationSuccess: "/visaworx/consultation/success",
+  assistant: "/visaworx/assistant",
   services: "/visaworx/services",
   countries: "/visaworx/countries",
   resources: "/visaworx/resources",
   faq: "/visaworx/resources/faqs",
 } as const;
+
 
 
 

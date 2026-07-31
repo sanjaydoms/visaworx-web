@@ -8,6 +8,7 @@ import { Logo } from "./Logo";
 import { ButtonLink } from "./ButtonLink";
 import { routes } from "../config/routes";
 import { site } from "../config/site";
+import { AssistantLauncher } from "../../features/assistant/components/AssistantLauncher";
 
 const navigation = [
   ["Services", routes.services],
@@ -80,7 +81,10 @@ export function Header() {
           )}
         </Container>
       </header>
+
+      <AssistantLauncher />
     </>
   );
 }
+
 

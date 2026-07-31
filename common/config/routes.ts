@@ -6,12 +6,18 @@ export const routes = {
   serviceDetail: (slug: string) => `/visaworx/services/${slug}`,
   readiness: "/visaworx/readiness",
   readinessResult: "/visaworx/readiness/result",
+  resourcesHub: "/visaworx/resources",
+  guidesList: "/visaworx/resources/guides",
+  guideDetail: (slug: string) => `/visaworx/resources/guides/${slug}`,
+  faqsPage: "/visaworx/resources/faqs",
+  glossaryPage: "/visaworx/resources/glossary",
   services: "/visaworx/services",
   countries: "/visaworx/countries",
-  resources: "/visaworx#resources",
-  faq: "/visaworx#faq",
+  resources: "/visaworx/resources",
+  faq: "/visaworx/resources/faqs",
   consultation: "/visaworx#consultation",
 } as const;
+
 
 
 

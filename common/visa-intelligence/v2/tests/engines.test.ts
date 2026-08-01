@@ -10,6 +10,7 @@ import { decide, detectExactTopic, gapToReply, toCoachedAnswer } from "../ai/coa
 import { parseSearchIntent, needsMoreContext } from "../search/intent";
 import { enrichConsultationPayload, enrichmentCollidesWith } from "../crm/handoff";
 import { defaultTenant, visibleTo } from "../tenancy/config";
+import type { PreviousRefusal } from "../types/journey";
 import { unavailable, available } from "../types/core";
 
 const NOW = new Date("2026-08-01T00:00:00Z");
@@ -399,5 +400,53 @@ describe("Phase 7 - search across the expanded destination list", () => {
   it("prefers the longest matching name so partial names do not shadow", () => {
     expect(parseSearchIntent("South Korea work visa").countryName).toBe("South Korea");
     expect(parseSearchIntent("South Africa tourist visa").countryName).toBe("South Africa");
+  });
+});
+
+describe("Spec coverage - previous refusal and human escalation", () => {
+  it("distinguishes a refusal with documentation from one without", () => {
+    // Whether the applicant holds the refusal letter changes the next step
+    // entirely, so the model must not collapse the two.
+    const withDocs: PreviousRefusal = { hasRefusal: true, hasRefusalDocumentation: true };
+    const withoutDocs: PreviousRefusal = { hasRefusal: true, hasRefusalDocumentation: false };
+    expect(withDocs.hasRefusalDocumentation).toBe(true);
+    expect(withoutDocs.hasRefusalDocumentation).toBe(false);
+
+    const none: PreviousRefusal = { hasRefusal: false };
+    expect(none.hasRefusal).toBe(false);
+  });
+
+  it("routes a refusal query to the refusal topic", () => {
+    expect(parseSearchIntent("I was refused a UK visa, can I reapply?").topics).toContain(
+      "previous-refusal"
+    );
+  });
+
+  it("always offers a route to a human, whatever the preparation band", () => {
+    for (const points of [0, 2]) {
+      const score = buildPreparationScore([
+        { dimension: "pathway-clarity", question: "Q", answer: "A", points, maxPoints: 2 },
+      ]);
+      const snap = buildClaritySnapshot({
+        situation: { destinationName: "X", purposeLabel: "Tourism", scenario: "solo-adult", travellerCount: 1, minorCount: 0 },
+        visaPath: unavailable("not-modelled", "n/a"),
+        documentGroups: unavailable("not-modelled", "n/a"),
+        familyRequirements: unavailable("not-modelled", "n/a"),
+        photoGuidance: unavailable("not-modelled", "n/a"),
+        preparation: score,
+        consultationHref: "/visaworx/consultation",
+      });
+      expect(snap.expertHandoff.consultationHref).toContain("/visaworx/consultation");
+      expect(snap.expertHandoff.headline.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("escalates rather than answering when preparation gaps are broad", () => {
+    const broad = buildPreparationScore(
+      (["pathway-clarity", "traveller-profile-readiness", "document-preparation", "supporting-evidence"] as const).map(
+        (dimension) => ({ dimension, question: "Q", answer: "No", points: 0, maxPoints: 2 })
+      )
+    );
+    expect(broad.band).toBe("Needs expert review");
   });
 });

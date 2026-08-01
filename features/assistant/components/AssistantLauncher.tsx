@@ -1,18 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { Bot, MessageSquare } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Bot } from "lucide-react";
 import { AssistantPanel } from "./AssistantPanel";
+import { routes } from "../../../common/config/routes";
 import type { AssistantPageContext } from "../../../common/ai/types/assistant";
 
 export function AssistantLauncher({ context }: { context?: AssistantPageContext }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // On the dedicated assistant route the floating launcher is redundant, and
+  // it sat directly on top of the assistant's own message input.
+  if (pathname === routes.assistant) return null;
 
   return (
     <>
-      <div className="fixed bottom-5 right-5 z-40">
+      <div
+        className="fixed right-5 z-40"
+        style={{ bottom: "calc(1.25rem + env(safe-area-inset-bottom, 0px))" }}
+      >
         <button
           type="button"
+          data-assistant-launcher="true"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label={isOpen ? "Close Visaworx AI Assistant" : "Open Visaworx AI Assistant"}
           aria-expanded={isOpen}

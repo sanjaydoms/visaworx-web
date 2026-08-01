@@ -3,11 +3,14 @@ import { expect, type Page } from "@playwright/test";
 export const CONSULTATION_PATH = "/visaworx/consultation";
 
 /**
- * Promissory approval claims. Deliberately narrow: the flow legitimately says
- * "does not guarantee ... visa approval", so only affirmative promises count.
+ * Promissory approval claims. Deliberately narrow, because the site
+ * legitimately both disclaims ("does not guarantee ... visa approval") and
+ * poses FAQ questions ("Does Visaworx guarantee visa approval?" — answered
+ * "No"). The lookbehinds exclude those two shapes so only an affirmative
+ * promise trips this.
  */
 export const PROMISSORY_CLAIM =
-  /(we|visaworx|klar)\s+guarantee|guaranteed\s+(visa\s+)?approval|approval\s+guaranteed|100%\s+(success|approval)|assured\s+visa/;
+  /(?<!does\s)(?<!not\s)(we|visaworx|klar)\s+guarantee(?!s?\s+(visa\s+)?approval\?)|guaranteed\s+(visa\s+)?approval|approval\s+(is\s+)?guaranteed|100%\s+(success|approval)|assured\s+visa/;
 
 /** Marked so any lead that reaches a real destination is obviously a test record. */
 export const TEST_CONTACT = {

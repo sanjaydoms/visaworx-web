@@ -1,6 +1,9 @@
 "use client";
 
 import { Container } from "../../common/components/Container";
+import { PageShell } from "../../common/components/PageShell";
+import { StickyActionBar } from "../../common/components/StickyActionBar";
+import { OptionCard } from "../../common/components/OptionCard";
 import { ConsultationHero } from "../../common/components/ConsultationHero";
 import { ConsultationStepper } from "../../common/components/ConsultationStepper";
 import { ConsultationProgress } from "../../common/components/ConsultationProgress";
@@ -28,7 +31,7 @@ export function ConsultationPage() {
   } = useConsultationFlow();
 
   return (
-    <div className="space-y-10 py-8 sm:py-14">
+    <PageShell spacing="tight">
       <Container>
         <ConsultationHero />
       </Container>
@@ -88,26 +91,18 @@ export function ConsultationPage() {
                   {countriesData.map((c) => {
                     const selected = formData.destination.countrySlug === c.slug;
                     return (
-                      <button
+                      <OptionCard
                         key={c.slug}
-                        type="button"
-                        onClick={() =>
+                        selected={selected}
+                        onSelect={() =>
                           updateFormData((prev) => ({
                             ...prev,
                             destination: { countrySlug: c.slug, undecided: false },
                           }))
                         }
-                        className={`flex min-h-[56px] items-center justify-between rounded-2xl border p-4 text-left font-bold transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
-                          selected
-                            ? "border-[#071f4a] bg-[#071f4a]/5 text-[#071f4a] shadow-sm"
-                            : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
-                        }`}
-                      >
-                        <span className="flex items-center gap-2 text-sm">
-                          <Globe className="h-4 w-4 text-[#e6282f]" /> {c.name}
-                        </span>
-                        {selected && <CheckCircle2 className="h-5 w-5 text-[#071f4a]" />}
-                      </button>
+                        title={c.name}
+                        icon={<Globe className="h-4 w-4 text-[#c92027]" />}
+                      />
                     );
                   })}
                 </div>
@@ -150,27 +145,19 @@ export function ConsultationPage() {
                   {servicesData.map((s) => {
                     const selected = formData.service.serviceSlug === s.slug;
                     return (
-                      <button
+                      <OptionCard
                         key={s.slug}
-                        type="button"
-                        onClick={() =>
+                        selected={selected}
+                        onSelect={() =>
                           updateFormData((prev) => ({
                             ...prev,
                             service: { serviceSlug: s.slug, undecided: false },
                           }))
                         }
-                        className={`flex flex-col justify-between rounded-2xl border p-4 text-left font-bold transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
-                          selected
-                            ? "border-[#071f4a] bg-[#071f4a]/5 text-[#071f4a] shadow-sm"
-                            : "border-slate-200 bg-white text-slate-700 hover:border-slate-300"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-extrabold">{s.title}</span>
-                          {selected && <CheckCircle2 className="h-5 w-5 text-[#071f4a]" />}
-                        </div>
-                        <p className="mt-1 text-xs font-normal text-slate-500 line-clamp-2">{s.shortDescription}</p>
-                      </button>
+                        title={s.title}
+                        description={s.shortDescription}
+                        layout="stack"
+                      />
                     );
                   })}
                 </div>
@@ -465,8 +452,9 @@ export function ConsultationPage() {
             </div>
           )}
 
-          {/* Navigation Controls */}
-          <div className="pt-6 border-t border-slate-100 flex items-center justify-between gap-4">
+          {/* Navigation Controls — pinned on small viewports so the primary
+              action stays reachable in long steps. */}
+          <StickyActionBar className="flex items-center justify-between gap-4 sm:border-t sm:border-slate-100 sm:pt-6">
             {currentStep > 1 ? (
               <button
                 type="button"
@@ -498,13 +486,13 @@ export function ConsultationPage() {
                 {isSubmitting ? "Submitting..." : "Request Consultation"}
               </button>
             )}
-          </div>
+          </StickyActionBar>
         </div>
       </Container>
 
       <Container>
         <ConsultationDisclaimer />
       </Container>
-    </div>
+    </PageShell>
   );
 }

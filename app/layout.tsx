@@ -18,7 +18,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main>{children}</main>
+        {/* Bottom clearance so the floating assistant launcher never lands on
+            top of a page's final call to action, plus the iOS home-indicator
+            inset. Applied once here rather than per page. */}
+        <main
+          style={{
+            paddingBottom: "calc(var(--vw-launcher-clearance) + env(safe-area-inset-bottom, 0px))",
+          }}
+        >
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

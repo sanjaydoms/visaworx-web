@@ -10,7 +10,9 @@ export function AssistantMessage({ message }: { message: AssistantMessageType })
       <div className="flex justify-end">
         <div className="max-w-[85%] rounded-2xl bg-[#071f4a] p-3.5 text-xs leading-5 text-white shadow-sm">
           <p>{message.text}</p>
-          <span className="mt-1 block text-[10px] text-white/60 text-right">{message.timestamp}</span>
+          {message.timestamp && (
+            <span className="mt-1 block text-[10px] text-white/60 text-right">{message.timestamp}</span>
+          )}
         </div>
       </div>
     );
@@ -86,7 +88,9 @@ export function AssistantMessage({ message }: { message: AssistantMessageType })
           </div>
         )}
 
-        <span className="block text-[10px] text-slate-400">{message.timestamp}</span>
+        {message.timestamp && (
+          <span className="block text-[10px] text-slate-500">{message.timestamp}</span>
+        )}
       </div>
     </div>
   );

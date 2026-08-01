@@ -9,6 +9,20 @@
 @layer base {
   :root {
     color-scheme: light;
+
+    /* Height of the sticky header plus the announcement bar above it.
+       Anything scrolled to by an in-page anchor must clear this. */
+    --vw-header-offset: 128px;
+    /* Clearance reserved at the bottom of a page so the floating assistant
+       launcher never sits on top of the last interactive row. */
+    --vw-launcher-clearance: 88px;
+  }
+
+  /* In-page anchors (guide tables of contents, deep links) previously scrolled
+     their target to y=0, leaving it hidden behind the sticky header. */
+  :target,
+  [id] {
+    scroll-margin-top: var(--vw-header-offset);
   }
 
   * {

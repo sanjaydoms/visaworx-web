@@ -3,11 +3,17 @@
 import { useCallback, useState } from "react";
 import type { AssistantMessage, AssistantPageContext, AssistantResponse } from "../../../common/ai/types/assistant";
 
+/**
+ * The welcome message carries no timestamp on purpose. Computing one at module
+ * scope evaluates on both server and client, and the two clocks/timezones
+ * disagree — that produced a hydration mismatch (React #418) on every render
+ * of the assistant. A greeting does not need a time anyway.
+ */
 const INITIAL_WELCOME: AssistantMessage = {
   id: "msg_welcome",
   sender: "assistant",
   text: "Hello! I am the Visaworx AI Assistant. I can help answer questions about visa categories, document preparation, and readiness, using approved Visaworx resources.",
-  timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+  timestamp: "",
   data: {
     answer: "Hello! I am the Visaworx AI Assistant. I can help answer questions about visa categories, document preparation, and readiness, using approved Visaworx resources.",
     sources: [],

@@ -1,6 +1,7 @@
 import type { TravelPurpose } from "../types/journey";
 import type { TravelScenario } from "../family/types";
 import { countryRegistry } from "../countries/registry";
+import { destinations } from "../countries/destinations";
 import { visaCategoryRegistry } from "../visa-categories/registry";
 import type { CountryCode } from "../types/core";
 
@@ -66,15 +67,23 @@ const APPLICANT_PATTERNS: Array<["adult" | "minor" | "infant", RegExp]> = [
   ["minor", /\bchild|minor|kid|son|daughter|teenager\b/i],
 ];
 
+/** Escapes user-facing terms before they are used in a RegExp. */
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 export function parseSearchIntent(query: string): SearchIntent {
   const q = query.trim();
   const lower = q.toLowerCase();
 
-  // Country: longest name first, so "United Kingdom" is not shadowed by a
-  // shorter partial match.
-  const countryMatch = [...countryRegistry]
-    .sort((a, b) => b.value.name.length - a.value.name.length)
-    .find((c) => lower.includes(c.value.name.toLowerCase()));
+  // Match on the full name or any alias, longest term first so "South Korea"
+  // is not shadowed by "Korea" and "South Africa" is not shadowed by "SA".
+  const candidates = destinations
+    .flatMap((d) => [d.name, ...(d.aliases ?? [])].map((term) => ({ term: term.toLowerCase(), d })))
+    .sort((a, b) => b.term.length - a.term.length);
+
+  const hit = candidates.find(({ term }) => new RegExp(`\\b${escapeRegex(term)}\\b`, "i").test(lower));
+  const countryMatch = hit ? countryRegistry.find((c) => c.value.code === hit.d.code) : undefined;
 
   const category = visaCategoryRegistry.find((c) =>
     (CATEGORY_ALIASES[c.purpose] ?? []).some((alias) => new RegExp(`\\b${alias}`, "i").test(lower))

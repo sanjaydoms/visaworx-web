@@ -381,3 +381,23 @@ describe("Phase 9 - tenancy", () => {
     expect(visible[0]).toBe(items[0]);
   });
 });
+
+describe("Phase 7 - search across the expanded destination list", () => {
+  it("resolves destinations that have no published content yet", () => {
+    // Recognition is separate from having guidance: the engine must route a
+    // query about India even though no Visaworx content exists for it.
+    expect(parseSearchIntent("India student visa").countryName).toBe("India");
+    expect(parseSearchIntent("Brazil tourist visa").countryName).toBe("Brazil");
+  });
+
+  it("resolves the Schengen Area, which is not a country", () => {
+    const i = parseSearchIntent("Schengen business invitation");
+    expect(i.countryName).toBe("Schengen Area");
+    expect(i.topics).toContain("invitation");
+  });
+
+  it("prefers the longest matching name so partial names do not shadow", () => {
+    expect(parseSearchIntent("South Korea work visa").countryName).toBe("South Korea");
+    expect(parseSearchIntent("South Africa tourist visa").countryName).toBe("South Africa");
+  });
+});

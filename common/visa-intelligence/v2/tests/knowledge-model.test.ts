@@ -83,12 +83,34 @@ describe("verification gate", () => {
 });
 
 describe("country resolution", () => {
-  it("models every destination V1 already covers", () => {
-    expect(countryRegistry).toHaveLength(10);
+  it("recognises 50 destinations", () => {
+    expect(countryRegistry).toHaveLength(50);
     expect(findCountryBySlug("united-states")?.value.code).toBe(countryCode("US"));
   });
 
-  it("carries an official source across for each destination", () => {
+  it("resolves EVERY destination to a real code, with none falling back to ??", () => {
+    // Regression guard. The original hand-written slug map mismapped Schengen
+    // ("schengen-area" vs the real slug "schengen"), leaving it with a "??"
+    // code. A length-only assertion passed while that entry was broken.
+    const unresolved = countryRegistry.filter((c) => String(c.value.code) === "??");
+    expect(unresolved.map((c) => c.value.name)).toEqual([]);
+  });
+
+  it("links all ten destinations that have published content", () => {
+    const linked = countryRegistry.filter((c) => c.value.legacySlug);
+    expect(linked).toHaveLength(10);
+    expect(findCountryBySlug("schengen")?.value.code).toBe(countryCode("SCHENGEN"));
+  });
+
+  it("attaches no source to a destination with no published content", () => {
+    // The honest state: recognised, but nothing held about it.
+    const india = countryRegistry.find((c) => c.value.name === "India")!;
+    expect(india.value.legacySlug).toBeUndefined();
+    expect(india.sources).toEqual([]);
+    expect(resolveVerified(india, NOW).available).toBe(false);
+  });
+
+  it("carries an official source across for each destination that has one", () => {
     expect(officialSources.length).toBe(10);
     for (const s of officialSources) expect(s.url).toMatch(/^https?:\/\//);
   });
@@ -105,7 +127,7 @@ describe("country resolution", () => {
   it("does not serve migrated content as verified before an editorial pass", () => {
     // Migrated V1 content is authored, not source-checked. Until a human
     // verifies it, resolution must produce a gap rather than assert accuracy.
-    expect(listUnverifiedCountries()).toHaveLength(10);
+    expect(listUnverifiedCountries()).toHaveLength(50);
     const r = resolveCountry(countryCode("US"), NOW);
     expect(r.available).toBe(false);
   });

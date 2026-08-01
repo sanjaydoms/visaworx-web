@@ -3,26 +3,19 @@ import { countryCode, isoDate, unavailable, available, GAP_GUIDANCE } from "../t
 import type { CountryCode, KnowledgeResult } from "../types/core";
 import type { CountryProfile, VerifiedCountryProfile } from "./types";
 import type { OfficialSource } from "../sources/types";
+import { destinations, type Destination } from "./destinations";
 import { resolveVerified } from "../verification/types";
 import type { Verified } from "../verification/types";
 
 /**
- * ISO codes for the destinations V1 already covers. Kept as an explicit map
- * rather than derived from the slug, because slugs are editorial and codes are
- * the stable key the V2 engine resolves on.
+ * Legacy slug to destination code, derived from the destination list rather
+ * than hand-maintained. The previous hand-written map silently mismapped
+ * Schengen ("schengen-area" vs the actual slug "schengen"), which fell through
+ * to a "??" code - a count-based test passed while the entry was broken.
  */
-const SLUG_TO_CODE: Record<string, string> = {
-  "united-states": "US",
-  "united-kingdom": "GB",
-  canada: "CA",
-  australia: "AU",
-  "new-zealand": "NZ",
-  "schengen-area": "EU",
-  "united-arab-emirates": "AE",
-  singapore: "SG",
-  japan: "JP",
-  "south-korea": "KR",
-};
+const SLUG_TO_CODE: Record<string, string> = Object.fromEntries(
+  destinations.filter((d) => d.legacySlug).map((d) => [d.legacySlug as string, d.code])
+);
 
 /** Official sources carried across from the V1 country content. */
 export const officialSources: OfficialSource[] = countriesData
@@ -37,25 +30,45 @@ export const officialSources: OfficialSource[] = countriesData
   }));
 
 /**
- * Country profiles migrated from V1.
+ * Profiles for every destination the engine recognises.
  *
- * Status is `unverified` on purpose. The V1 content was authored for the
- * website and carries a source link and a review date, but it has not been
- * checked field-by-field against those sources as part of this migration, and
- * this layer must not assert a verification that nobody performed. Promotion
- * to `verified` is a human editorial action — see `promoteToVerified`.
+ * Built from the destination list, not from V1 content, so recognising a
+ * destination is separate from having guidance for it. Ten carry provenance
+ * migrated from V1; the other forty are identity records with no sources
+ * attached, which the verification gate turns into an honest "not held" gap.
+ *
+ * Status is `unverified` throughout, on purpose. The V1 content was authored
+ * for the website and carries a source link and a review date, but it has not
+ * been checked field-by-field against those sources as part of this migration,
+ * and this layer must not assert a verification nobody performed. Promotion is
+ * a human editorial action — see `promoteToVerified`.
  */
-export const countryRegistry: VerifiedCountryProfile[] = countriesData.map((c) => ({
-  value: {
-    code: countryCode(SLUG_TO_CODE[c.slug] ?? "??"),
-    name: c.name,
-    legacySlug: c.slug,
-    visaCategoryIds: c.visaPurposes.map((p) => `cat-${p.toLowerCase()}`),
-  },
-  sources: c.officialSourceUrl ? [{ sourceId: `src-${c.slug}`, url: c.officialSourceUrl }] : [],
-  lastVerified: isoDate(c.lastReviewed ?? "1970-01-01"),
-  status: "unverified",
-}));
+export const countryRegistry: VerifiedCountryProfile[] = destinations.map(
+  (d: Destination): VerifiedCountryProfile => {
+    const legacy = d.legacySlug
+      ? countriesData.find((c) => c.slug === d.legacySlug)
+      : undefined;
+
+    return {
+      value: {
+        code: countryCode(d.code),
+        name: d.name,
+        legacySlug: d.legacySlug,
+        visaCategoryIds: legacy
+          ? legacy.visaPurposes.map((p) => `cat-${p.toLowerCase()}`)
+          : [],
+      },
+      // No legacy content means no source, which is the correct honest state:
+      // the engine knows the destination exists and holds nothing about it.
+      sources:
+        legacy?.officialSourceUrl && d.legacySlug
+          ? [{ sourceId: `src-${d.legacySlug}`, url: legacy.officialSourceUrl }]
+          : [],
+      lastVerified: isoDate(legacy?.lastReviewed ?? "1970-01-01"),
+      status: "unverified",
+    };
+  }
+);
 
 /**
  * Records that a human has checked a fact against its official source.

@@ -1,32 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: light;
-}
+/*
+ * These resets live in @layer base so Tailwind utilities can override them.
+ * Unlayered CSS beats layered CSS in the cascade, so an unlayered
+ * `a { color: inherit }` silently defeats every text-colour utility applied
+ * to a link (e.g. `text-white` on the primary CTA).
+ */
+@layer base {
+  :root {
+    color-scheme: light;
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  background: #ffffff;
-  color: #0f172a;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 :focus-visible {

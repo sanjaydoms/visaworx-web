@@ -21,7 +21,7 @@ export function ButtonLink({
 
   const variantStyles =
     variant === "primary"
-      ? "bg-[#e6282f] text-white hover:bg-[#c92027] focus:ring-[#e6282f]"
+      ? "bg-[#c92027] text-white hover:bg-[#a81a20] focus:ring-[#e6282f]"
       : "border border-[#071f4a] bg-white text-[#071f4a] shadow-sm hover:bg-[#f4f7fb] hover:shadow-md hover:-translate-y-0.5 focus:ring-[#071f4a]";
 
   const widthStyles = fullWidth ? "w-full" : "w-full sm:w-auto";

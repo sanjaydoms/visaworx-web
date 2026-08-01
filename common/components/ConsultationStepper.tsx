@@ -38,7 +38,7 @@ export function ConsultationStepper({
                 </div>
                 <span
                   className={`hidden text-xs font-bold sm:inline ${
-                    isCurrent ? "text-[#071f4a]" : isCompleted ? "text-slate-700" : "text-slate-400"
+                    isCurrent ? "text-[#071f4a]" : isCompleted ? "text-slate-700" : "text-slate-500"
                   }`}
                 >
                   {label}

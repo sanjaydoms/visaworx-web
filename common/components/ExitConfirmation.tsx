@@ -53,7 +53,7 @@ export function ExitConfirmation({
           <button
             type="button"
             onClick={onConfirm}
-            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#e6282f] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#c92027] focus:outline-none focus:ring-2 focus:ring-[#e6282f]"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full bg-[#c92027] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#a81a20] focus:outline-none focus:ring-2 focus:ring-[#e6282f]"
           >
             Yes, Restart
           </button>

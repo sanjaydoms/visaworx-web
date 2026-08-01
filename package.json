@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test",
+    "test:e2e:live": "E2E_BASE_URL=https://visaworx-web.vercel.app playwright test"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -16,6 +18,8 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.3",

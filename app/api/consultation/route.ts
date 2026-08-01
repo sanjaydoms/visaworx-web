@@ -32,9 +32,12 @@ export async function POST(req: Request) {
       service: validData.service,
       situation: validData.situation,
       contact: validData.contact,
+      // Carry the consent the applicant actually gave. The schema already
+      // rejects anything other than an explicit true, so this records a real
+      // decision rather than asserting one on the applicant's behalf.
       consent: {
-        contactPermission: true,
-        privacyAccepted: true,
+        contactPermission: validData.consent.contactPermission,
+        privacyAccepted: validData.consent.privacyAccepted,
       },
     };
 

@@ -23,7 +23,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
         {/* Step 1 Review */}
         <div className="flex items-start justify-between border-b border-slate-100 pb-4">
           <div>
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">Step 1 — Destination</h3>
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-600">Step 1 — Destination</h3>
             <p className="mt-1 text-base font-bold text-[#071f4a]">{destName || "Not Selected"}</p>
           </div>
           <button
@@ -39,7 +39,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
         {/* Step 2 Review */}
         <div className="flex items-start justify-between border-b border-slate-100 pb-4">
           <div>
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">Step 2 — Required Service</h3>
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-600">Step 2 — Required Service</h3>
             <p className="mt-1 text-base font-bold text-[#071f4a]">{serviceName || "Not Selected"}</p>
           </div>
           <button
@@ -55,7 +55,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
         {/* Step 3 Review */}
         <div className="flex items-start justify-between border-b border-slate-100 pb-4">
           <div className="space-y-2">
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">Step 3 — Situation Summary</h3>
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-600">Step 3 — Situation Summary</h3>
             <p className="text-sm text-slate-700 font-medium">"{data.situation.summary}"</p>
             <div className="grid gap-2 text-xs text-slate-600 sm:grid-cols-2 pt-1">
               <div><span className="font-semibold text-[#071f4a]">Travel Timeframe:</span> {data.situation.travelTimeframe || "Not specified"}</div>
@@ -79,7 +79,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
         {/* Step 4 Review */}
         <div className="flex items-start justify-between">
           <div className="space-y-2">
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">Step 4 — Contact Details</h3>
+            <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-600">Step 4 — Contact Details</h3>
             <div className="grid gap-2 text-xs text-slate-700 sm:grid-cols-2">
               <div><span className="font-semibold text-[#071f4a]">Full Name:</span> {data.contact.fullName}</div>
               <div><span className="font-semibold text-[#071f4a]">Email:</span> {data.contact.email}</div>

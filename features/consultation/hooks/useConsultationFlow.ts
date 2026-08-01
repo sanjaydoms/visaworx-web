@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { ConsultationFormInput } from "../../../common/validation/consultation";
 import { consultationSchema } from "../../../common/validation/consultation";
@@ -43,11 +43,27 @@ export const initialFormInput: ConsultationFormInput = {
     preferredDate: "",
     preferredTime: "",
   },
+  // Consent must be granted by the applicant, never pre-granted on their
+  // behalf. These are cast because the schema type narrows to `true`; the
+  // form starts un-consented and submission is blocked until it is checked.
   consent: {
-    contactPermission: true,
-    privacyAccepted: true,
+    contactPermission: false as unknown as true,
+    privacyAccepted: false as unknown as true,
   },
 };
+
+/**
+ * Progress is persisted so a reload does not lose the applicant's place, but
+ * contact details are personal data and are deliberately never written to
+ * browser storage.
+ */
+function toStorableProgress(data: ConsultationFormInput) {
+  const { contact, consent, honeypot, ...rest } = data;
+  void contact;
+  void consent;
+  void honeypot;
+  return rest;
+}
 
 export function useConsultationFlow() {
   const router = useRouter();
@@ -58,6 +74,7 @@ export function useConsultationFlow() {
   const [validationError, setValidationError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionError, setSubmissionError] = useState<string | null>(null);
+  const inFlightRef = useRef(false);
 
   // Parse & preselect query parameter context on mount
   useEffect(() => {
@@ -101,15 +118,13 @@ export function useConsultationFlow() {
       const saved = sessionStorage.getItem(SESSION_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
+        // Only non-personal progress is ever stored, so restore it as-is and
+        // keep the in-memory contact and consent state untouched.
         setFormData((prev) => ({
           ...prev,
           ...parsed,
-          contact: {
-            ...prev.contact,
-            fullName: "", // Keep contact fields clear for security
-            email: "",
-            phone: "",
-          },
+          contact: prev.contact,
+          consent: prev.consent,
         }));
       }
     } catch {
@@ -123,7 +138,7 @@ export function useConsultationFlow() {
     setFormData((prev) => {
       const next = updater(prev);
       try {
-        sessionStorage.setItem(SESSION_KEY, JSON.stringify(next));
+        sessionStorage.setItem(SESSION_KEY, JSON.stringify(toStorableProgress(next)));
       } catch {
         // Ignore
       }
@@ -189,6 +204,11 @@ export function useConsultationFlow() {
   }, []);
 
   const submitForm = useCallback(async () => {
+    // Guard against double submission from rapid clicks or an Enter keypress
+    // landing while a request is already in flight. A ref is used because
+    // state updates are not applied synchronously.
+    if (inFlightRef.current) return;
+
     setValidationError(null);
     setSubmissionError(null);
 
@@ -200,6 +220,7 @@ export function useConsultationFlow() {
       return;
     }
 
+    inFlightRef.current = true;
     setIsSubmitting(true);
 
     try {
@@ -225,6 +246,7 @@ export function useConsultationFlow() {
     } catch {
       setSubmissionError("The request is taking longer than expected. Please check your connection and try again.");
     } finally {
+      inFlightRef.current = false;
       setIsSubmitting(false);
     }
   }, [formData, router]);

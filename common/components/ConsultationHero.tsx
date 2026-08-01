@@ -8,7 +8,9 @@ export function ConsultationHero() {
     <div className="max-w-3xl space-y-4">
       <div className="flex items-center gap-2">
         <ShieldCheck className="h-5 w-5 text-[#e6282f]" />
-        <p className="text-xs font-extrabold uppercase tracking-widest text-[#e6282f] sm:text-sm">
+        {/* #c92027 rather than the #e6282f surface red: at this size the
+            brighter red is 4.45:1 on white and misses WCAG AA. */}
+        <p className="text-xs font-extrabold uppercase tracking-widest text-[#c92027] sm:text-sm">
           {eyebrow}
         </p>
       </div>

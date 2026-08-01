@@ -235,13 +235,15 @@ export function ConsultationPage() {
                   <label htmlFor="situation-summary" className="block text-xs font-bold text-[#071f4a] uppercase tracking-wider">
                     Short Situation Summary *
                   </label>
-                  <span className="text-xs text-slate-400">
+                  <span id="situation-summary-count" className="text-xs text-slate-500">
                     {formData.situation.summary.length} / 1,000 chars
                   </span>
                 </div>
                 <textarea
                   id="situation-summary"
                   rows={4}
+                  maxLength={1000}
+                  aria-describedby="situation-summary-count"
                   value={formData.situation.summary}
                   onChange={(e) =>
                     updateFormData((prev) => ({
@@ -270,7 +272,7 @@ export function ConsultationPage() {
                           situation: { ...prev.situation, priorRefusal: option },
                         }))
                       }
-                      className={`inline-flex min-h-[44px] items-center rounded-xl px-5 py-2 text-xs font-bold transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
+                      className={`inline-flex min-h-[48px] items-center rounded-xl px-5 py-2 text-xs font-bold transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
                         formData.situation.priorRefusal === option
                           ? "bg-[#071f4a] text-white"
                           : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -382,7 +384,7 @@ export function ConsultationPage() {
                             contact: { ...prev.contact, preferredMethod: method },
                           }))
                         }
-                        className={`flex-1 rounded-xl py-3 text-xs font-bold capitalize transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
+                        className={`flex-1 min-h-[48px] rounded-xl py-3 text-xs font-bold capitalize transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
                           formData.contact.preferredMethod === method
                             ? "bg-[#071f4a] text-white"
                             : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -411,7 +413,7 @@ export function ConsultationPage() {
                           contact: { ...prev.contact, preferredWindow: window },
                         }))
                       }
-                      className={`inline-flex min-h-[44px] items-center rounded-xl px-4 py-2 text-xs font-bold capitalize transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
+                      className={`inline-flex min-h-[48px] items-center rounded-xl px-4 py-2 text-xs font-bold capitalize transition focus:outline-none focus:ring-2 focus:ring-[#071f4a] ${
                         formData.contact.preferredWindow === window
                           ? "bg-[#071f4a] text-white"
                           : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -491,7 +493,7 @@ export function ConsultationPage() {
                 type="button"
                 onClick={submitForm}
                 disabled={isSubmitting}
-                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-[#e6282f] px-8 py-3 text-xs font-bold text-white hover:bg-[#c81e25] focus:outline-none focus:ring-2 focus:ring-[#e6282f] disabled:opacity-50"
+                className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-[#c92027] px-8 py-3 text-xs font-bold text-white hover:bg-[#a81a20] focus:outline-none focus:ring-2 focus:ring-[#e6282f] disabled:opacity-50"
               >
                 {isSubmitting ? "Submitting..." : "Request Consultation"}
               </button>

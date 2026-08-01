@@ -76,7 +76,7 @@ export function AssistantMessage({ message }: { message: AssistantMessageType })
                 href={ns.href}
                 className={`inline-flex items-center rounded-xl px-3 py-1.5 text-[11px] font-bold transition ${
                   ns.type === "consultation"
-                    ? "bg-[#e6282f] text-white hover:bg-[#c81e25]"
+                    ? "bg-[#c92027] text-white hover:bg-[#a81a20]"
                     : "bg-[#071f4a] text-white hover:bg-[#0b3478]"
                 }`}
               >

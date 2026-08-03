@@ -12,7 +12,7 @@ export function EmptyState({ onReset }: EmptyStateProps) {
       </div>
       <h3 className="mt-4 text-xl font-bold text-[#071f4a]">No matching destinations found</h3>
       <p className="mt-2 max-w-md text-sm leading-6 text-slate-600">
-        We couldn't find any country matching your current search query or visa purpose filter. Try adjusting your filters or search terms.
+        We couldn&#39;t find any country matching your current search query or visa purpose filter. Try adjusting your filters or search terms.
       </p>
       {onReset && (
         <button

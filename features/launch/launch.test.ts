@@ -1,4 +1,4 @@
-import assert from "node:assert";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { countriesData } from "../../common/content/countries";
 import { servicesData } from "../../common/content/services";
 import { guidesData } from "../../common/content/guides";
@@ -6,14 +6,18 @@ import { faqsData } from "../../common/content/faqs";
 import { glossaryData } from "../../common/content/glossary";
 import { evaluateReadiness } from "../../common/config/readiness-rules";
 import { processAssistantQuery } from "../../common/ai/adapters/provider";
+import { FORBIDDEN_MARKETING_PHRASES } from "../../common/content/forbidden-phrases";
 
-console.log("Running Phase 8 Production Launch & Master E2E Test Suite...");
+// Launch journeys must pass against approved content only, with no live model.
+beforeEach(() => {
+  vi.stubEnv("AI_API_KEY", "");
+  return () => vi.unstubAllEnvs();
+});
 
-async function runLaunchTests() {
-  // Test 1: Journey 1 — Homepage -> Country -> Readiness -> Result -> Consultation
-  {
-    const country = countriesData[0]; // Canada
-    assert.ok(country, "Canada country object must exist");
+describe("launch journey: country -> readiness -> result", () => {
+  it("evaluates a well-prepared applicant to Good Foundation", () => {
+    const country = countriesData[0];
+    expect(country).toBeDefined();
 
     const evaluation = evaluateReadiness(
       {
@@ -33,85 +37,58 @@ async function runLaunchTests() {
       country.name
     );
 
-    assert.strictEqual(evaluation.band, "Good Foundation", "Good foundation inputs must evaluate to 'Good Foundation'");
-    console.log("✓ Test 1 Passed: Journey 1 (Homepage -> Country -> Readiness -> Result)");
-  }
+    expect(evaluation.band).toBe("Good Foundation");
+  });
+});
 
-  // Test 2: Journey 2 — Homepage -> Service -> Consultation
-  {
-    const service = servicesData[0]; // Tourist Visa
-    assert.ok(service, "Tourist Visa service must exist");
-    assert.ok(service.slug === "tourist-visa", "Tourist Visa slug must be 'tourist-visa'");
-    console.log("✓ Test 2 Passed: Journey 2 (Homepage -> Service -> Consultation)");
-  }
+describe("launch journey: service -> consultation", () => {
+  it("exposes the tourist visa service as an entry point", () => {
+    expect(servicesData.find((s) => s.slug === "tourist-visa")).toBeDefined();
+  });
+});
 
-  // Test 3: Journey 3 — Resource Guide -> AI Assistant -> Escalation -> Consultation
-  {
-    const guide = guidesData[0];
-    assert.ok(guide, "Guide must exist");
+describe("launch journey: assistant -> escalation -> consultation", () => {
+  it("has guides available as assistant entry points", () => {
+    expect(guidesData.length).toBeGreaterThan(0);
+  });
 
-    const refusalResult = await processAssistantQuery({ message: "I got a 214(b) visa refusal last month" });
-    assert.strictEqual(refusalResult.escalation?.required, true, "Refusal query must trigger escalation.required = true");
-    assert.ok(
-      refusalResult.nextSteps.some((ns) => ns.type === "consultation"),
-      "Escalation response must include consultation nextStep CTA"
-    );
-    console.log("✓ Test 3 Passed: Journey 3 (Guide -> AI Assistant -> Escalation -> Consultation)");
-  }
+  it("escalates a refusal question to a human consultation", async () => {
+    const result = await processAssistantQuery({
+      message: "I got a 214(b) visa refusal last month",
+    });
+    expect(result.escalation?.required).toBe(true);
+    expect(result.nextSteps.some((ns) => ns.type === "consultation")).toBe(true);
+  });
 
-  // Test 4: Journey 4 — Consultation Failure Recovery & Dev Fallback
-  {
-    const fallbackResponse = await processAssistantQuery({ message: "How to check official visa rules?" });
-    assert.ok(fallbackResponse.sources.length > 0, "Fallback must return approved sources");
-    console.log("✓ Test 4 Passed: Journey 4 (AI Fallback & Source Link Resolution)");
-  }
+  it("cites approved sources for a supported question", async () => {
+    const result = await processAssistantQuery({
+      message: "How to check official visa rules?",
+    });
+    expect(result.sources.length).toBeGreaterThan(0);
+  });
 
-  // Test 5: Journey 5 — AI Unsupported Question -> Safe Uncertainty -> Expert CTA
-  {
-    const unsupportedResult = await processAssistantQuery({ message: "What are the rules for visa unmapped topic xyz999?" });
-    assert.ok(
-      unsupportedResult.answer.includes("do not have enough approved information"),
-      "Unsupported query must state insufficient approved information"
-    );
-    assert.ok(
-      unsupportedResult.nextSteps.some((ns) => ns.type === "consultation"),
-      "Unsupported response must provide human expert consultation CTA"
-    );
-    console.log("✓ Test 5 Passed: Journey 5 (AI Unsupported Question -> Safe Uncertainty -> Expert CTA)");
-  }
+  it("admits uncertainty and offers an expert for an unsupported question", async () => {
+    const result = await processAssistantQuery({
+      message: "What are the rules for visa unmapped topic xyz999?",
+    });
+    expect(result.answer).toContain("do not have enough approved information");
+    expect(result.nextSteps.some((ns) => ns.type === "consultation")).toBe(true);
+  });
+});
 
-  // Test 6: STRICT SAFETY CHECK — Zero approval guarantees across all content models
-  {
-    const forbiddenPhrases = [
-      "guaranteed approval",
-      "100% success",
-      "embassy-approved",
-      "fastest visa",
-      "no rejection",
-      "risk-free",
-    ];
+describe("launch content safety", () => {
+  const models: Array<[string, unknown]> = [
+    ["countries", countriesData],
+    ["services", servicesData],
+    ["guides", guidesData],
+    ["faqs", faqsData],
+    ["glossary", glossaryData],
+  ];
 
-    const allContent = [
-      JSON.stringify(countriesData),
-      JSON.stringify(servicesData),
-      JSON.stringify(guidesData),
-      JSON.stringify(faqsData),
-      JSON.stringify(glossaryData),
-    ].join(" ").toLowerCase();
-
-    for (const phrase of forbiddenPhrases) {
-      assert.ok(
-        !allContent.includes(phrase),
-        `All content models must NEVER contain forbidden phrase '${phrase}'`
-      );
+  it.each(models)("%s content makes no approval claims", (_name, data) => {
+    const content = JSON.stringify(data).toLowerCase();
+    for (const phrase of FORBIDDEN_MARKETING_PHRASES) {
+      expect(content).not.toContain(phrase);
     }
-    console.log("✓ Test 6 Passed: Safety Check — Zero approval guarantees across all content models");
-  }
-
-  console.log("ALL PHASE 8 PRODUCTION LAUNCH & E2E TESTS PASSED SUCCESSFULLY!");
-}
-
-runLaunchTests().catch((err) => {
-  console.error("Launch tests failed:", err);
-  process.exit(1);
+  });
 });

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Compass, Home } from "lucide-react";
+import { Compass, Home } from "lucide-react";
 import { Container } from "../common/components/Container";
 import { ButtonLink } from "../common/components/ButtonLink";
 import { routes } from "../common/config/routes";
@@ -18,7 +18,7 @@ export default function NotFound() {
           </p>
 
           <h1 className="text-3xl font-black text-[#071f4a] sm:text-4xl lg:text-5xl">
-            We couldn't find that page.
+            We couldn&#39;t find that page.
           </h1>
 
           <p className="text-base leading-7 text-slate-600 sm:text-lg">

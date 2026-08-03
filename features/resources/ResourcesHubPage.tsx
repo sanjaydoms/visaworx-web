@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, BookOpen, FileText, HelpCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, FileText, HelpCircle, ShieldCheck } from "lucide-react";
 import { Container } from "../../common/components/Container";
 import { ResourceHero } from "../../common/components/ResourceHero";
 import { ResourceSearch } from "../../common/components/ResourceSearch";

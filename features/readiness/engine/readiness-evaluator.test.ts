@@ -1,10 +1,7 @@
-import assert from "node:assert";
+import { describe, expect, it } from "vitest";
 import { evaluateReadiness } from "./readiness-evaluator";
 import type { ReadinessAnswers } from "../../../common/types/readiness";
 
-console.log("Running Phase 3 Readiness Engine Test Suite...");
-
-// Sample Base Answers
 const baseAnswers: ReadinessAnswers = {
   destinationSlug: "united-states",
   visaPurpose: "Tourist",
@@ -22,61 +19,52 @@ const baseAnswers: ReadinessAnswers = {
   hasPriorRefusalDocs: false,
 };
 
-// Test 1: Good Foundation Band
-{
-  const result = evaluateReadiness(baseAnswers, "United States");
-  assert.strictEqual(result.band, "Good Foundation", "Should classify complete profile as Good Foundation");
-  assert.ok(result.strengths.length >= 3, "Should report multiple strengths");
-  console.log("✓ Test 1 Passed: Good Foundation classification");
-}
+describe("readiness banding", () => {
+  it("classifies a complete profile as Good Foundation with multiple strengths", () => {
+    const result = evaluateReadiness(baseAnswers, "United States");
+    expect(result.band).toBe("Good Foundation");
+    expect(result.strengths.length).toBeGreaterThanOrEqual(3);
+  });
 
-// Test 2: Early Preparation Band (Missing Passport or Unclear Purpose)
-{
-  const earlyAnswers = { ...baseAnswers, validPassport: "no" as const };
-  const result = evaluateReadiness(earlyAnswers, "United States");
-  assert.strictEqual(result.band, "Early Preparation", "Should classify missing passport as Early Preparation");
-  console.log("✓ Test 2 Passed: Early Preparation classification (Missing Passport)");
-}
+  it("classifies a missing passport as Early Preparation", () => {
+    const result = evaluateReadiness({ ...baseAnswers, validPassport: "no" }, "United States");
+    expect(result.band).toBe("Early Preparation");
+  });
 
-// Test 3: Prior Refusal Escalation -> Needs Expert Review
-{
-  const refusalAnswers = { ...baseAnswers, priorRefusal: "yes" as const };
-  const result = evaluateReadiness(refusalAnswers, "United States");
-  assert.strictEqual(result.band, "Needs Expert Review", "Prior refusal must escalate to Needs Expert Review");
-  assert.ok(
-    result.attentionAreas.some((a) => a.toLowerCase().includes("prior visa refusal")),
-    "Should list prior refusal in attention areas"
-  );
-  console.log("✓ Test 3 Passed: Prior Refusal escalation to Needs Expert Review");
-}
+  it("escalates a prior refusal to Needs Expert Review and names it", () => {
+    const result = evaluateReadiness({ ...baseAnswers, priorRefusal: "yes" }, "United States");
+    expect(result.band).toBe("Needs Expert Review");
+    expect(result.attentionAreas.some((a) => a.toLowerCase().includes("prior visa refusal"))).toBe(
+      true
+    );
+  });
 
-// Test 4: Developing Readiness (Missing core prep items)
-{
-  const developingAnswers: ReadinessAnswers = {
-    ...baseAnswers,
-    hasFinancialEvidence: false,
-    hasTravelItinerary: false,
-    hasPurposeDocs: false,
-  };
-  const result = evaluateReadiness(developingAnswers, "United States");
-  assert.strictEqual(result.band, "Developing Readiness", "Fewer prep items should classify as Developing Readiness");
-  console.log("✓ Test 4 Passed: Developing Readiness classification");
-}
+  it("classifies missing core preparation items as Developing Readiness", () => {
+    const result = evaluateReadiness(
+      {
+        ...baseAnswers,
+        hasFinancialEvidence: false,
+        hasTravelItinerary: false,
+        hasPurposeDocs: false,
+      },
+      "United States"
+    );
+    expect(result.band).toBe("Developing Readiness");
+  });
+});
 
-// Test 5: STRICT SAFETY CHECK — No percentages or approval predictions in outputs
-{
-  const testAnswersList = [baseAnswers, { ...baseAnswers, validPassport: "no" as const }, { ...baseAnswers, priorRefusal: "yes" as const }];
+describe("readiness output safety", () => {
+  const scenarios: Array<[string, ReadinessAnswers]> = [
+    ["complete profile", baseAnswers],
+    ["missing passport", { ...baseAnswers, validPassport: "no" }],
+    ["prior refusal", { ...baseAnswers, priorRefusal: "yes" }],
+  ];
 
-  for (const answers of testAnswersList) {
-    const result = evaluateReadiness(answers, "United States");
-    const jsonStr = JSON.stringify(result);
-
-    assert.ok(!jsonStr.includes("%"), "Output must NEVER contain percentage symbols (%)");
-    assert.ok(!jsonStr.includes("approval probability"), "Output must NEVER contain 'approval probability'");
-    assert.ok(!jsonStr.includes("success rate"), "Output must NEVER contain 'success rate'");
-    assert.ok(!jsonStr.includes("guaranteed"), "Output must NEVER contain 'guaranteed'");
-  }
-  console.log("✓ Test 5 Passed: Safety Check — 0% percentage or prediction text in engine output");
-}
-
-console.log("ALL PHASE 3 READINESS ENGINE TESTS PASSED SUCCESSFULLY!");
+  it.each(scenarios)("emits no probability or guarantee language for %s", (_label, answers) => {
+    const output = JSON.stringify(evaluateReadiness(answers, "United States"));
+    expect(output).not.toContain("%");
+    expect(output).not.toContain("approval probability");
+    expect(output).not.toContain("success rate");
+    expect(output).not.toContain("guaranteed");
+  });
+});

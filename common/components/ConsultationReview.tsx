@@ -56,7 +56,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
         <div className="flex items-start justify-between border-b border-slate-100 pb-4">
           <div className="space-y-2">
             <h3 className="text-xs font-extrabold uppercase tracking-wider text-slate-600">Step 3 — Situation Summary</h3>
-            <p className="text-sm text-slate-700 font-medium">"{data.situation.summary}"</p>
+            <p className="text-sm text-slate-700 font-medium">&quot;{data.situation.summary}&quot;</p>
             <div className="grid gap-2 text-xs text-slate-600 sm:grid-cols-2 pt-1">
               <div><span className="font-semibold text-[#071f4a]">Travel Timeframe:</span> {data.situation.travelTimeframe || "Not specified"}</div>
               <div><span className="font-semibold text-[#071f4a]">Prior Refusal:</span> {data.situation.priorRefusal}</div>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "../../common/components/Container";
 import { Breadcrumb } from "../../common/components/Breadcrumb";

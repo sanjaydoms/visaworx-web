@@ -12,7 +12,6 @@ import { RelatedServices } from "../../common/components/RelatedServices";
 import { ButtonLink } from "../../common/components/ButtonLink";
 import { useReadinessAssessment } from "./hooks/useReadinessAssessment";
 import { routes } from "../../common/config/routes";
-import { site } from "../../common/config/site";
 
 export function ReadinessResultPage() {
   const { answers, evaluationResult, destinationObj, restartAssessment } = useReadinessAssessment();

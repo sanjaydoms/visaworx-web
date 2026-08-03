@@ -14,7 +14,7 @@ import { SubmissionError } from "../../common/components/SubmissionError";
 import { useConsultationFlow } from "./hooks/useConsultationFlow";
 import { countriesData } from "../../common/content/countries";
 import { servicesData } from "../../common/content/services";
-import { ArrowLeft, ArrowRight, CheckCircle2, Globe, Shield, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Globe } from "lucide-react";
 
 export function ConsultationPage() {
   const {
@@ -62,7 +62,7 @@ export function ConsultationPage() {
               <div>
                 <h2 className="text-2xl font-black text-[#071f4a]">Where are you planning to travel?</h2>
                 <p className="mt-1 text-xs text-slate-500">
-                  Select your primary destination country or mark "Not decided yet."
+                  Select your primary destination country or mark &quot;Not decided yet.&quot;
                 </p>
               </div>
 

@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 export function NextSteps({ steps }: { steps: string[] }) {
   if (steps.length === 0) return null;
 

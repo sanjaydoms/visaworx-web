@@ -76,7 +76,12 @@ export function useConsultationFlow() {
   const [submissionError, setSubmissionError] = useState<string | null>(null);
   const inFlightRef = useRef(false);
 
-  // Parse & preselect query parameter context on mount
+  // Parse & preselect query parameter context.
+  //
+  // This stays in an effect because the preselection has to re-apply whenever
+  // the URL context changes - a client-side navigation from
+  // ?country=canada to ?service=refusal-review keeps this hook mounted, so a
+  // lazy initialiser would silently ignore the new context.
   useEffect(() => {
     const countryParam = searchParams.get("country");
     const serviceParam = searchParams.get("service");
@@ -84,6 +89,7 @@ export function useConsultationFlow() {
     const guideParam = searchParams.get("guide");
     const readinessBandParam = searchParams.get("readinessBand");
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- see above
     setFormData((prev) => {
       const validCountry = countriesData.find((c) => c.slug === countryParam)?.slug || prev.destination.countrySlug;
       const validService = servicesData.find((s) => s.slug === serviceParam)?.slug || prev.service.serviceSlug;
@@ -112,7 +118,12 @@ export function useConsultationFlow() {
     });
   }, [searchParams]);
 
-  // Restore non-sensitive data from sessionStorage if present
+  // Restore non-sensitive data from sessionStorage if present.
+  //
+  // Kept in an effect for the same reason as the readiness flow: sessionStorage
+  // is unavailable during the server render, so reading it in render would
+  // break hydration. It runs after the query-param effect above, so saved
+  // progress wins over URL preselection - existing behaviour, unchanged.
   useEffect(() => {
     try {
       const saved = sessionStorage.getItem(SESSION_KEY);
@@ -120,6 +131,7 @@ export function useConsultationFlow() {
         const parsed = JSON.parse(saved);
         // Only non-personal progress is ever stored, so restore it as-is and
         // keep the in-memory contact and consent state untouched.
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- see above
         setFormData((prev) => ({
           ...prev,
           ...parsed,

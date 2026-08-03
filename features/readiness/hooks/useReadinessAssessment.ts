@@ -34,12 +34,19 @@ export function useReadinessAssessment(initialDestinationSlug?: string) {
   });
   const [validationError, setValidationError] = useState<string | null>(null);
 
-  // Restore non-sensitive answers from sessionStorage on mount
+  // Restore non-sensitive answers from sessionStorage on mount.
+  //
+  // This deliberately stays in an effect rather than moving into the lazy
+  // useState initialiser above. sessionStorage does not exist during the
+  // server render, so reading it in render would make the first client render
+  // disagree with the server HTML and break hydration. Restoring after mount
+  // costs one extra render on a page that is already interactive.
   useEffect(() => {
     try {
       const saved = sessionStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- see above
         setAnswers((prev) => ({
           ...prev,
           ...parsed,

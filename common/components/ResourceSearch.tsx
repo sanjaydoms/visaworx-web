@@ -62,7 +62,7 @@ export function ResourceSearch() {
 
           {results.totalCount === 0 ? (
             <div className="py-6 text-center text-sm text-slate-500">
-              No matching resources found for "{query}".
+              No matching resources found for &quot;{query}&quot;.
             </div>
           ) : (
             <div className="space-y-4 text-left">

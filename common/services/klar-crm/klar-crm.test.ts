@@ -1,111 +1,112 @@
-import assert from "node:assert";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { mapToKlarCrmPayloads } from "./mapper";
 import { redactSensitiveData, getKlarCrmConfig } from "./client";
 import { KlarCrmError } from "./errors";
 import type { ConsultationRequest } from "../../types/consultation";
 
-console.log("Running Klar CRM Integration Unit Test Suite...");
+const mockRequest: ConsultationRequest = {
+  id: "req_xyz999",
+  submittedAt: "2026-08-01T12:00:00.000Z",
+  source: {
+    pageType: "country",
+    countrySlug: "canada",
+    readinessBand: "Good Foundation",
+    guideSlug: "how-to-prepare-financial-evidence",
+  },
+  destination: {
+    countrySlug: "canada",
+    undecided: false,
+  },
+  service: {
+    serviceSlug: "tourist-visa",
+    undecided: false,
+  },
+  situation: {
+    travelTimeframe: "October 2026",
+    summary: "Detailed travel plan to visit Banff and Vancouver for 14 days with my spouse.",
+    priorRefusal: "no",
+    preferredLanguage: "English",
+  },
+  contact: {
+    fullName: "Alex Rivera",
+    email: "alex.rivera@example.com",
+    phone: "+15559876543",
+    preferredMethod: "whatsapp",
+    preferredWindow: "afternoon",
+  },
+  consent: {
+    contactPermission: true,
+    privacyAccepted: true,
+  },
+};
 
-// Test 1: Field Mapping Accuracy
-{
-  const mockRequest: ConsultationRequest = {
-    id: "req_xyz999",
-    submittedAt: "2026-08-01T12:00:00.000Z",
-    source: {
-      pageType: "country",
-      countrySlug: "canada",
-      readinessBand: "Good Foundation",
-      guideSlug: "how-to-prepare-financial-evidence",
-    },
-    destination: {
-      countrySlug: "canada",
-      undecided: false,
-    },
-    service: {
-      serviceSlug: "tourist-visa",
-      undecided: false,
-    },
-    situation: {
-      travelTimeframe: "October 2026",
-      summary: "Detailed travel plan to visit Banff and Vancouver for 14 days with my spouse.",
-      priorRefusal: "no",
-      preferredLanguage: "English",
-    },
-    contact: {
-      fullName: "Alex Rivera",
-      email: "alex.rivera@example.com",
-      phone: "+15559876543",
-      preferredMethod: "whatsapp",
-      preferredWindow: "afternoon",
-    },
-    consent: {
-      contactPermission: true,
-      privacyAccepted: true,
-    },
-  };
-
+describe("klar crm field mapping", () => {
   const { contact, consultation } = mapToKlarCrmPayloads(mockRequest);
 
-  assert.strictEqual(contact.contact_name, "Alex Rivera", "Contact name must map to fullName");
-  assert.strictEqual(contact.contact_email, "alex.rivera@example.com", "Contact email must map to email");
-  assert.strictEqual(contact.contact_phone, "+15559876543", "Contact phone must map to phone");
-  assert.strictEqual(contact.communication_preference, "whatsapp", "Communication preference must map to preferredMethod");
-  assert.strictEqual(contact.external_reference, "VISAWORX-req_xyz999", "External reference must match VISAWORX-{id}");
+  it("maps the contact record", () => {
+    expect(contact.contact_name).toBe("Alex Rivera");
+    expect(contact.contact_email).toBe("alex.rivera@example.com");
+    expect(contact.contact_phone).toBe("+15559876543");
+    expect(contact.communication_preference).toBe("whatsapp");
+    expect(contact.external_reference).toBe("VISAWORX-req_xyz999");
+  });
 
-  assert.strictEqual(consultation.external_reference, "VISAWORX-req_xyz999", "Consultation external_reference must match VISAWORX-{id}");
-  assert.strictEqual(consultation.status, "New Consultation Request", "Status must default to 'New Consultation Request'");
-  assert.strictEqual(consultation.destination_country, "Canada", "Destination country slug must map to display name 'Canada'");
-  assert.strictEqual(consultation.service_category, "Tourist Visa Support", "Service category slug must map to title 'Tourist Visa Support'");
-  assert.strictEqual(consultation.travel_timeframe, "October 2026", "Travel timeframe must map correctly");
-  assert.strictEqual(consultation.previous_refusal, "no", "Previous refusal must map correctly");
-  assert.strictEqual(consultation.readiness_status, "Good Foundation", "Readiness status must map to readiness band");
-  assert.strictEqual(consultation.lead_source, "country", "Lead source must map to pageType");
+  it("maps the consultation record and resolves slugs to display names", () => {
+    expect(consultation.external_reference).toBe("VISAWORX-req_xyz999");
+    expect(consultation.status).toBe("New Consultation Request");
+    expect(consultation.destination_country).toBe("Canada");
+    expect(consultation.service_category).toBe("Tourist Visa Support");
+    expect(consultation.travel_timeframe).toBe("October 2026");
+    expect(consultation.previous_refusal).toBe("no");
+    expect(consultation.readiness_status).toBe("Good Foundation");
+    expect(consultation.lead_source).toBe("country");
+  });
+});
 
-  console.log("✓ Test 1 Passed: Field mapping accuracy verified");
-}
+describe("log redaction", () => {
+  it("masks contact details and drops the free-text summary", () => {
+    const redacted = redactSensitiveData({
+      contact_name: "Jane Smith",
+      contact_email: "jane.smith@example.com",
+      contact_phone: "+15551234567",
+      consultation_summary: "Private personal summary information",
+    });
 
-// Test 2: Log Redaction Helper
-{
-  const rawPayload = {
-    contact_name: "Jane Smith",
-    contact_email: "jane.smith@example.com",
-    contact_phone: "+15551234567",
-    consultation_summary: "Private personal summary information",
-  };
+    expect(redacted.contact_name).toBe("Jane Smith");
+    expect(redacted.contact_email).toBe("ja***@example.com");
+    expect(redacted.contact_phone).toBe("********4567");
+    expect(redacted.consultation_summary).toBe("[REDACTED SUMMARY]");
+  });
+});
 
-  const redacted = redactSensitiveData(rawPayload);
+describe("klar crm configuration", () => {
+  afterEach(() => {
+    vi.unstubAllEnvs();
+  });
 
-  assert.strictEqual(redacted.contact_name, "Jane Smith", "Name should be retained");
-  assert.strictEqual(redacted.contact_email, "ja***@example.com", "Email must be redacted in logs");
-  assert.strictEqual(redacted.contact_phone, "********4567", "Phone must be masked in logs");
-  assert.strictEqual(redacted.consultation_summary, "[REDACTED SUMMARY]", "Summary must be redacted in logs");
+  it("reads credentials from the environment and trims the api url", () => {
+    vi.stubEnv("KLAR_CRM_API_URL", "https://crm.klartravels.com/");
+    vi.stubEnv("KLAR_CRM_API_TOKEN", "secret_token_123");
+    vi.stubEnv("KLAR_CRM_TENANT_ID", "tenant_visaworx");
 
-  console.log("✓ Test 2 Passed: Log redaction helper verified");
-}
+    const config = getKlarCrmConfig();
+    expect(config).not.toBeNull();
+    expect(config?.apiUrl).toBe("https://crm.klartravels.com");
+    expect(config?.apiToken).toBe("secret_token_123");
+    expect(config?.tenantId).toBe("tenant_visaworx");
+  });
 
-// Test 3: Environment Config Retrieval
-{
-  process.env.KLAR_CRM_API_URL = "https://crm.klartravels.com/";
-  process.env.KLAR_CRM_API_TOKEN = "secret_token_123";
-  process.env.KLAR_CRM_TENANT_ID = "tenant_visaworx";
+  it("returns null when the api url is not configured", () => {
+    vi.stubEnv("KLAR_CRM_API_URL", "");
+    expect(getKlarCrmConfig()).toBeNull();
+  });
+});
 
-  const config = getKlarCrmConfig();
-  assert.ok(config, "Config should return non-null when KLAR_CRM_API_URL is set");
-  assert.strictEqual(config?.apiUrl, "https://crm.klartravels.com", "Trailing slashes must be trimmed");
-  assert.strictEqual(config?.apiToken, "secret_token_123");
-  assert.strictEqual(config?.tenantId, "tenant_visaworx");
-
-  console.log("✓ Test 3 Passed: Environment config retrieval verified");
-}
-
-// Test 4: Custom Error Class
-{
-  const err = new KlarCrmError("API unauthorized", "UNAUTHORIZED", 401);
-  assert.strictEqual(err.name, "KlarCrmError");
-  assert.strictEqual(err.code, "UNAUTHORIZED");
-  assert.strictEqual(err.statusCode, 401);
-
-  console.log("✓ Test 4 Passed: Custom KlarCrmError verified");
-}
-
-console.log("ALL KLAR CRM INTEGRATION UNIT TESTS PASSED!");
+describe("KlarCrmError", () => {
+  it("carries the code and status alongside the message", () => {
+    const err = new KlarCrmError("API unauthorized", "UNAUTHORIZED", 401);
+    expect(err.name).toBe("KlarCrmError");
+    expect(err.code).toBe("UNAUTHORIZED");
+    expect(err.statusCode).toBe(401);
+  });
+});

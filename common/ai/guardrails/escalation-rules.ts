@@ -23,12 +23,18 @@ export function detectEscalationTopic(input: string): { shouldEscalate: boolean;
     return { shouldEscalate: true, reason: "Personal eligibility determination" };
   }
 
+  // A disclosed refusal must reach a human. The literal phrases below were too
+  // narrow - "I have a prior refusal from 2024" matched none of them, and only
+  // escalated because retrieval happened to return nothing and the unsupported
+  // branch escalates too. Once retrieval started finding refusal content, that
+  // accident stopped holding, so the intent is now expressed directly.
   if (
-    lower.includes("got refused") ||
-    lower.includes("visa refusal") ||
-    lower.includes("refusal letter") ||
     lower.includes("214(b)") ||
-    lower.includes("reapplied after refusal")
+    lower.includes("refusal letter") ||
+    /\b(prior|previous|past|earlier|my|a)\s+(visa\s+)?(refusal|rejection)\b/.test(lower) ||
+    /\b(was|been|got|were)\s+(refused|rejected|denied)\b/.test(lower) ||
+    /\bvisa\s+(refusal|was\s+(refused|rejected|denied))\b/.test(lower) ||
+    /\breappl\w*\s+after\s+(a\s+)?(refusal|rejection)\b/.test(lower)
   ) {
     return { shouldEscalate: true, reason: "Previous visa refusal" };
   }

@@ -28,7 +28,7 @@ export async function processAssistantQuery(
   }
 
   // 4. Execute Retrieval over Approved Visaworx Content
-  const ragResult = searchApprovedContent(cleanInput);
+  const ragResult = searchApprovedContent(cleanInput, payload.context);
   const retrievalContext = buildRetrievalContext(ragResult, payload.context);
 
   const apiKey = process.env.AI_API_KEY;
@@ -68,7 +68,43 @@ export async function processAssistantQuery(
     }
   }
 
-  // 6. Deterministic Approved Fallback Engine (RAG-backed)
+  // 6. The query named a destination Visaworx holds no reviewed guidance for.
+  //
+  // This takes precedence over the generic fallback below even when other
+  // content matched. "Mexico document requirements" retrieves the general
+  // documentation guides, and answering from those alone would present
+  // destination-agnostic material as if it described Mexico. The gap is stated
+  // first; anything genuinely relevant is still offered underneath.
+  if (ragResult.unpublishedDestinations.length > 0) {
+    const destination = ragResult.unpublishedDestinations[0];
+    const hasGeneralContent =
+      ragResult.matchedServices.length > 0 ||
+      ragResult.matchedGuides.length > 0 ||
+      ragResult.matchedFaqs.length > 0;
+
+    return {
+      answer:
+        `Visaworx supports consultations for ${destination.name}, but we have not published reviewed visa guidance for it yet, so I cannot describe its requirements.` +
+        (hasGeneralContent
+          ? " I can point you to general preparation material, though it is not specific to this destination."
+          : ""),
+      explanation:
+        "Publishing requirements we have not verified against the official authority is how applicants end up preparing the wrong documents. A consultant can review the current rules with you instead.",
+      sources: ragResult.sources,
+      limitation: `Visaworx holds no reviewed ${destination.name} guidance. Confirm current requirements with the ${destination.officialSourceLabel}.`,
+      nextSteps: [
+        {
+          label: `Speak to an expert about ${destination.name}`,
+          href: `${routes.consultation}?source=assistant&topic=unpublished-destination`,
+          type: "consultation",
+        },
+        { label: "Browse published destinations", href: routes.countriesList, type: "country" },
+      ],
+      escalation: { required: true, reason: "Destination without published guidance" },
+    };
+  }
+
+  // 7. Deterministic Approved Fallback Engine (RAG-backed)
   if (ragResult.sources.length > 0) {
     const primarySource = ragResult.sources[0];
     return {
@@ -85,7 +121,7 @@ export async function processAssistantQuery(
     };
   }
 
-  // 7. Unsupported Query Fallback
+  // 8. Unsupported Query Fallback
   return {
     answer: "I do not have enough approved information to answer that confidently. A Visaworx expert can review your situation.",
     explanation: "Visaworx AI only responds using verified, approved content to prevent misinformation or unsupported claims.",

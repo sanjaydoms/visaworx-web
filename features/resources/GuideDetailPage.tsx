@@ -12,7 +12,7 @@ import { ResourceDisclaimer } from "../../common/components/ResourceDisclaimer";
 import { ButtonLink } from "../../common/components/ButtonLink";
 import type { Guide } from "../../common/content/guides";
 import { routes } from "../../common/config/routes";
-import { ArrowRight } from "lucide-react";
+import { ReadinessCTA } from "../../common/components/ReadinessCTA";
 
 export function GuideDetailPage({ guide }: { guide: Guide }) {
   const breadcrumbItems = [
@@ -50,24 +50,11 @@ export function GuideDetailPage({ guide }: { guide: Guide }) {
             <RelatedFAQs faqIds={guide.faqIds} />
 
             {/* Readiness Banner */}
-            <section aria-label="Visa Readiness Callout" className="rounded-3xl bg-[#071f4a] p-8 text-white sm:p-10">
-              <div className="max-w-2xl space-y-4">
-                <p className="text-xs font-extrabold uppercase tracking-widest text-[#ff7377]">
-                  Preparation Check
-                </p>
-                <h2 className="text-2xl font-black sm:text-3xl">
-                  Evaluate your preparation before submitting.
-                </h2>
-                <p className="text-sm leading-6 text-white/80">
-                  Use our rule-based readiness assessment to review passport validity, purpose proof, and financial documents.
-                </p>
-                <div className="pt-2">
-                  <ButtonLink href={routes.readiness}>
-                    Check My Readiness <ArrowRight className="ml-2 h-4 w-4" />
-                  </ButtonLink>
-                </div>
-              </div>
-            </section>
+            <ReadinessCTA
+              eyebrow="Preparation Check"
+              title="Evaluate your preparation before submitting."
+              description="Use our rule-based readiness assessment to review passport validity, purpose proof, and financial documents."
+            />
 
             {/* Human Consultation CTA */}
             <ExpertCTA

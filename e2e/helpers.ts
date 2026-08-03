@@ -40,7 +40,9 @@ export function continueButton(page: Page) {
 }
 
 export function backButton(page: Page) {
-  return page.getByRole("button", { name: /^Back$/ });
+  // The visible label is "Back"; the shared BackButton overrides the accessible
+  // name with a more descriptive aria-label, so match either.
+  return page.getByRole("button", { name: /^(Back|Go back to previous step)$/i });
 }
 
 export function submitButton(page: Page) {

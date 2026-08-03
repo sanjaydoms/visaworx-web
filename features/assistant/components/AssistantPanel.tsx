@@ -6,6 +6,7 @@ import { AssistantMessage } from "./AssistantMessage";
 import { AssistantInput } from "./AssistantInput";
 import { SuggestedQuestions } from "./SuggestedQuestions";
 import { AssistantDisclaimer } from "./AssistantDisclaimer";
+import { TypingIndicator } from "./TypingIndicator";
 import { useAssistant } from "../hooks/useAssistant";
 import type { AssistantPageContext } from "../../../common/ai/types/assistant";
 
@@ -43,12 +44,7 @@ export function AssistantPanel({
           <AssistantMessage key={msg.id} message={msg} />
         ))}
 
-        {isLoading && (
-          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 bg-white p-3 rounded-2xl w-max border border-slate-200">
-            <span className="h-2 w-2 rounded-full bg-[#071f4a] animate-ping" />
-            Analyzing approved Visaworx intelligence...
-          </div>
-        )}
+        {isLoading && <TypingIndicator />}
       </div>
 
       {/* Suggested Questions */}

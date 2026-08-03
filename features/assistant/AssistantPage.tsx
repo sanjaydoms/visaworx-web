@@ -5,8 +5,10 @@ import { AssistantMessage } from "./components/AssistantMessage";
 import { AssistantInput } from "./components/AssistantInput";
 import { SuggestedQuestions } from "./components/SuggestedQuestions";
 import { AssistantDisclaimer } from "./components/AssistantDisclaimer";
+import { TypingIndicator } from "./components/TypingIndicator";
+import { StartOverButton } from "./components/StartOverButton";
 import { useAssistant } from "./hooks/useAssistant";
-import { Bot, RotateCcw } from "lucide-react";
+import { Bot } from "lucide-react";
 
 export function AssistantPage() {
   const { messages, isLoading, sendMessage, clearMessages } = useAssistant({ pageType: "assistant" });
@@ -30,13 +32,7 @@ export function AssistantPage() {
               </div>
             </div>
 
-            <button
-              type="button"
-              onClick={clearMessages}
-              className="inline-flex min-h-[48px] items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#071f4a]"
-            >
-              <RotateCcw className="h-4 w-4" /> Start Over
-            </button>
+            <StartOverButton onClick={clearMessages} />
           </div>
 
           <div className="min-h-[420px] rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm space-y-4">
@@ -44,12 +40,7 @@ export function AssistantPage() {
               <AssistantMessage key={msg.id} message={msg} />
             ))}
 
-            {isLoading && (
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 bg-white p-3 rounded-2xl w-max border border-slate-200">
-                <span className="h-2 w-2 rounded-full bg-[#071f4a] animate-ping" />
-                Analyzing approved Visaworx intelligence...
-              </div>
-            )}
+            {isLoading && <TypingIndicator />}
           </div>
 
           {messages.length <= 2 && (

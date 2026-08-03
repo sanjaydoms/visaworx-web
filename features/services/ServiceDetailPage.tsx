@@ -15,7 +15,7 @@ import { ServiceDisclaimer } from "../../common/components/ServiceDisclaimer";
 import { ButtonLink } from "../../common/components/ButtonLink";
 import type { Service } from "../../common/content/services";
 import { routes } from "../../common/config/routes";
-import { ArrowRight } from "lucide-react";
+import { ReadinessCTA } from "../../common/components/ReadinessCTA";
 
 export function ServiceDetailPage({ service }: { service: Service }) {
   const breadcrumbItems = [
@@ -67,24 +67,11 @@ export function ServiceDetailPage({ service }: { service: Service }) {
             <PreparationChecklist checklist={service.preparationChecklist} />
 
             {/* Visa Readiness CTA Banner */}
-            <section aria-label="Visa Readiness Callout" className="rounded-3xl bg-[#071f4a] p-8 text-white sm:p-10">
-              <div className="max-w-2xl space-y-4">
-                <p className="text-xs font-extrabold uppercase tracking-widest text-[#ff7377]">
-                  Check Preparation Alignment
-                </p>
-                <h2 className="text-2xl font-black sm:text-3xl">
-                  Assess your visa readiness before requesting service support.
-                </h2>
-                <p className="text-sm leading-6 text-white/80">
-                  Our structured readiness assessment evaluates your document preparation, identifies gaps, and recommends actionable next steps.
-                </p>
-                <div className="pt-2">
-                  <ButtonLink href={routes.readiness}>
-                    Check My Readiness <ArrowRight className="ml-2 h-4 w-4" />
-                  </ButtonLink>
-                </div>
-              </div>
-            </section>
+            <ReadinessCTA
+              eyebrow="Check Preparation Alignment"
+              title="Assess your visa readiness before requesting service support."
+              description="Our structured readiness assessment evaluates your document preparation, identifies gaps, and recommends actionable next steps."
+            />
 
             {/* Service FAQs */}
             <ServiceFAQ faqs={service.faqs} />

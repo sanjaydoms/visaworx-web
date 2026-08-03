@@ -1,4 +1,5 @@
-import { Bot, RotateCcw, X } from "lucide-react";
+import { Bot, X } from "lucide-react";
+import { StartOverButton } from "./StartOverButton";
 
 export function AssistantHeader({
   onClose,
@@ -20,15 +21,7 @@ export function AssistantHeader({
       </div>
 
       <div className="flex items-center gap-2">
-        <button
-          type="button"
-          onClick={onReset}
-          aria-label="Start over"
-          title="Start over conversation"
-          className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-white/80 transition hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
-        >
-          <RotateCcw className="h-4 w-4" />
-        </button>
+        <StartOverButton onClick={onReset} variant="icon" />
         {onClose && (
           <button
             type="button"

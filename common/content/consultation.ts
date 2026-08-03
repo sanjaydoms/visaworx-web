@@ -18,8 +18,16 @@ export const consultationContent = {
     { step: 4, label: "Contact Details" },
     { step: 5, label: "Review" },
   ],
+  // This is the wording the consent step has been rendering. It differs from
+  // the Phase 6 prompt text, which reads "I agree that Visaworx may contact me
+  // regarding this consultation request. I understand that this is not a visa
+  // application and does not guarantee approval." - the live copy adds Klar
+  // Travels and says "not an official visa application". The two were never
+  // reconciled because this field was unused and the step hardcoded its own
+  // string. Kept as displayed; reconciling consent wording needs business and
+  // legal sign-off, not a refactor.
   consentText:
-    "I agree that Visaworx may contact me regarding this consultation request. I understand that this is not a visa application and does not guarantee approval.",
+    "I agree that Visaworx / Klar Travels may contact me regarding this consultation request. I understand that this is not an official visa application and does not guarantee approval.",
   privacyLinkText: "Klar Travels Privacy Policy",
   submitButtonText: "Request Consultation",
   disclaimer:

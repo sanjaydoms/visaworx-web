@@ -3,6 +3,12 @@ import { consultationSchema } from "../../common/validation/consultation";
 import { submitConsultationRequest } from "../../common/services/consultation";
 import type { ConsultationRequest } from "../../common/types/consultation";
 import { FORBIDDEN_MARKETING_PHRASES } from "../../common/content/forbidden-phrases";
+import {
+  CONTACT_METHOD_OPTIONS,
+  CONTACT_WINDOW_OPTIONS,
+  PRIOR_REFUSAL_OPTIONS,
+  SITUATION_SUMMARY_LIMITS,
+} from "../../common/config/consultation";
 
 const validPayload = {
   source: {
@@ -36,6 +42,66 @@ const validPayload = {
     privacyAccepted: true,
   },
 };
+
+describe("consultation config is the single source of truth", () => {
+  it("enforces the configured summary bounds", () => {
+    const tooShort = "a".repeat(SITUATION_SUMMARY_LIMITS.min - 1);
+    const tooLong = "a".repeat(SITUATION_SUMMARY_LIMITS.max + 1);
+    const atMin = "a".repeat(SITUATION_SUMMARY_LIMITS.min);
+    const atMax = "a".repeat(SITUATION_SUMMARY_LIMITS.max);
+
+    const parse = (summary: string) =>
+      consultationSchema.safeParse({
+        ...validPayload,
+        situation: { ...validPayload.situation, summary },
+      }).success;
+
+    expect(parse(tooShort)).toBe(false);
+    expect(parse(atMin)).toBe(true);
+    expect(parse(atMax)).toBe(true);
+    expect(parse(tooLong)).toBe(false);
+  });
+
+  it("accepts every configured option value and rejects anything else", () => {
+    for (const option of PRIOR_REFUSAL_OPTIONS) {
+      const result = consultationSchema.safeParse({
+        ...validPayload,
+        situation: { ...validPayload.situation, priorRefusal: option },
+      });
+      expect(result.success, `priorRefusal '${option}'`).toBe(true);
+    }
+
+    for (const method of CONTACT_METHOD_OPTIONS) {
+      const result = consultationSchema.safeParse({
+        ...validPayload,
+        contact: { ...validPayload.contact, preferredMethod: method },
+      });
+      expect(result.success, `preferredMethod '${method}'`).toBe(true);
+    }
+
+    for (const window of CONTACT_WINDOW_OPTIONS) {
+      const result = consultationSchema.safeParse({
+        ...validPayload,
+        contact: { ...validPayload.contact, preferredWindow: window },
+      });
+      expect(result.success, `preferredWindow '${window}'`).toBe(true);
+    }
+
+    expect(
+      consultationSchema.safeParse({
+        ...validPayload,
+        contact: { ...validPayload.contact, preferredMethod: "carrier-pigeon" },
+      }).success
+    ).toBe(false);
+  });
+
+  it("never collects the identifiers the flow is forbidden from requesting", () => {
+    const schemaShape = JSON.stringify(consultationSchema).toLowerCase();
+    for (const field of ["passport", "aadhaar", "bankaccount", "nationalid", "payment"]) {
+      expect(schemaShape).not.toContain(field);
+    }
+  });
+});
 
 describe("consultation schema validation", () => {
   it("accepts a complete, well-formed request", () => {

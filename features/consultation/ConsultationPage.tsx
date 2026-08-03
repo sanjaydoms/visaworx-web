@@ -15,6 +15,12 @@ import { useConsultationFlow } from "./hooks/useConsultationFlow";
 import { countriesData } from "../../common/content/countries";
 import { servicesData } from "../../common/content/services";
 import { ArrowLeft, ArrowRight, Globe } from "lucide-react";
+import {
+  CONTACT_METHOD_OPTIONS,
+  PRIOR_REFUSAL_OPTIONS,
+  SITUATION_SUMMARY_LIMITS,
+  UNDECIDED_LABELS,
+} from "../../common/config/consultation";
 
 export function ConsultationPage() {
   const {
@@ -82,7 +88,7 @@ export function ConsultationPage() {
                   }
                   className="h-5 w-5 rounded border-slate-300 text-[#071f4a] focus:ring-[#071f4a]"
                 />
-                <span className="text-sm">Not decided yet / Multiple destinations</span>
+                <span className="text-sm">{UNDECIDED_LABELS.destination} / Multiple destinations</span>
               </label>
 
               {/* Country Cards */}
@@ -136,7 +142,7 @@ export function ConsultationPage() {
                   }
                   className="h-5 w-5 rounded border-slate-300 text-[#071f4a] focus:ring-[#071f4a]"
                 />
-                <span className="text-sm">Not sure yet / General consultation</span>
+                <span className="text-sm">{UNDECIDED_LABELS.service} / General consultation</span>
               </label>
 
               {/* Service Cards */}
@@ -223,13 +229,13 @@ export function ConsultationPage() {
                     Short Situation Summary *
                   </label>
                   <span id="situation-summary-count" className="text-xs text-slate-500">
-                    {formData.situation.summary.length} / 1,000 chars
+                    {formData.situation.summary.length} / {SITUATION_SUMMARY_LIMITS.max.toLocaleString("en-US")} chars
                   </span>
                 </div>
                 <textarea
                   id="situation-summary"
                   rows={4}
-                  maxLength={1000}
+                  maxLength={SITUATION_SUMMARY_LIMITS.max}
                   aria-describedby="situation-summary-count"
                   value={formData.situation.summary}
                   onChange={(e) =>
@@ -238,7 +244,7 @@ export function ConsultationPage() {
                       situation: { ...prev.situation, summary: e.target.value },
                     }))
                   }
-                  placeholder="Describe your travel purpose, current employment/study status, or key questions (min 20 characters)..."
+                  placeholder={`Describe your travel purpose, current employment/study status, or key questions (min ${SITUATION_SUMMARY_LIMITS.min} characters)...`}
                   className="w-full rounded-2xl border border-slate-300 bg-white p-4 text-sm font-medium text-[#071f4a] focus:border-[#071f4a] focus:outline-none focus:ring-2 focus:ring-[#071f4a]"
                 />
               </div>
@@ -249,7 +255,7 @@ export function ConsultationPage() {
                   Have you experienced a prior visa refusal?
                 </label>
                 <div className="flex flex-wrap gap-3">
-                  {(["no", "yes", "prefer-not-to-say"] as const).map((option) => (
+                  {PRIOR_REFUSAL_OPTIONS.map((option) => (
                     <button
                       key={option}
                       type="button"
@@ -361,7 +367,7 @@ export function ConsultationPage() {
                     Preferred Contact Channel
                   </label>
                   <div className="flex gap-2">
-                    {(["phone", "whatsapp", "email"] as const).map((method) => (
+                    {CONTACT_METHOD_OPTIONS.map((method) => (
                       <button
                         key={method}
                         type="button"

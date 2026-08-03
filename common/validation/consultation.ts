@@ -1,4 +1,13 @@
 import { z } from "zod";
+import {
+  CONTACT_FIELD_LIMITS,
+  CONTACT_METHOD_OPTIONS,
+  CONTACT_WINDOW_OPTIONS,
+  PRIOR_REFUSAL_OPTIONS,
+  SITUATION_SUMMARY_LIMITS,
+  SOURCE_PAGE_TYPES,
+  UNDECIDED_LABELS,
+} from "../config/consultation";
 
 export const consultationSchema = z
   .object({
@@ -6,7 +15,7 @@ export const consultationSchema = z
     submittedAt: z.string().optional(),
     honeypot: z.string().max(0, "Bot detected").optional(),
     source: z.object({
-      pageType: z.enum(["homepage", "country", "service", "readiness", "guide", "direct", "other"]),
+      pageType: z.enum(SOURCE_PAGE_TYPES),
       sourcePath: z.string().optional(),
       countrySlug: z.string().optional(),
       serviceSlug: z.string().optional(),
@@ -25,17 +34,25 @@ export const consultationSchema = z
       travelTimeframe: z.string().optional(),
       summary: z
         .string()
-        .min(20, "Please describe your situation in at least 20 characters so the expert can prepare.")
-        .max(1000, "Situation summary cannot exceed 1,000 characters."),
-      priorRefusal: z.enum(["yes", "no", "prefer-not-to-say"]),
+        .min(
+          SITUATION_SUMMARY_LIMITS.min,
+          `Please describe your situation in at least ${SITUATION_SUMMARY_LIMITS.min} characters so the expert can prepare.`
+        )
+        .max(
+          SITUATION_SUMMARY_LIMITS.max,
+          `Situation summary cannot exceed ${SITUATION_SUMMARY_LIMITS.max.toLocaleString("en-US")} characters.`
+        ),
+      priorRefusal: z.enum(PRIOR_REFUSAL_OPTIONS),
       preferredLanguage: z.string().optional(),
     }),
     contact: z.object({
-      fullName: z.string().min(2, "Enter your full name."),
+      fullName: z.string().min(CONTACT_FIELD_LIMITS.fullNameMin, "Enter your full name."),
       email: z.string().email("Enter a valid email address."),
-      phone: z.string().min(7, "Enter a valid phone number with country code."),
-      preferredMethod: z.enum(["phone", "whatsapp", "email"]),
-      preferredWindow: z.enum(["morning", "afternoon", "evening", "no-preference"]),
+      phone: z
+        .string()
+        .min(CONTACT_FIELD_LIMITS.phoneMin, "Enter a valid phone number with country code."),
+      preferredMethod: z.enum(CONTACT_METHOD_OPTIONS),
+      preferredWindow: z.enum(CONTACT_WINDOW_OPTIONS),
       preferredDate: z.string().optional(),
       preferredTime: z.string().optional(),
     }),
@@ -51,14 +68,14 @@ export const consultationSchema = z
   .refine(
     (data) => data.destination.undecided || Boolean(data.destination.countrySlug),
     {
-      message: 'Choose a destination or select "Not decided yet."',
+      message: `Choose a destination or select "${UNDECIDED_LABELS.destination}."`,
       path: ["destination", "countrySlug"],
     }
   )
   .refine(
     (data) => data.service.undecided || Boolean(data.service.serviceSlug),
     {
-      message: 'Choose a service or select "Not sure yet."',
+      message: `Choose a service or select "${UNDECIDED_LABELS.service}."`,
       path: ["service", "serviceSlug"],
     }
   );

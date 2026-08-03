@@ -2,6 +2,7 @@ import { Edit2 } from "lucide-react";
 import type { ConsultationFormInput } from "../validation/consultation";
 import { countriesData } from "../content/countries";
 import { servicesData } from "../content/services";
+import { CONSULTATION_DEFAULT_LANGUAGE, UNDECIDED_LABELS } from "../config/consultation";
 
 type ConsultationReviewProps = {
   data: ConsultationFormInput;
@@ -10,11 +11,11 @@ type ConsultationReviewProps = {
 
 export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps) {
   const destName = data.destination.undecided
-    ? "Not decided yet"
+    ? UNDECIDED_LABELS.destination
     : countriesData.find((c) => c.slug === data.destination.countrySlug)?.name || data.destination.countrySlug;
 
   const serviceName = data.service.undecided
-    ? "Not sure yet"
+    ? UNDECIDED_LABELS.service
     : servicesData.find((s) => s.slug === data.service.serviceSlug)?.title || data.service.serviceSlug;
 
   return (
@@ -60,7 +61,7 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
             <div className="grid gap-2 text-xs text-slate-600 sm:grid-cols-2 pt-1">
               <div><span className="font-semibold text-[#071f4a]">Travel Timeframe:</span> {data.situation.travelTimeframe || "Not specified"}</div>
               <div><span className="font-semibold text-[#071f4a]">Prior Refusal:</span> {data.situation.priorRefusal}</div>
-              <div><span className="font-semibold text-[#071f4a]">Preferred Language:</span> {data.situation.preferredLanguage || "English"}</div>
+              <div><span className="font-semibold text-[#071f4a]">Preferred Language:</span> {data.situation.preferredLanguage || CONSULTATION_DEFAULT_LANGUAGE}</div>
               {data.source.readinessBand && (
                 <div><span className="font-semibold text-[#071f4a]">Readiness Band Context:</span> {data.source.readinessBand}</div>
               )}

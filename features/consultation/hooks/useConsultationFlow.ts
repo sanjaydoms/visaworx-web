@@ -7,8 +7,15 @@ import { consultationSchema } from "../../../common/validation/consultation";
 import { countriesData } from "../../../common/content/countries";
 import { servicesData } from "../../../common/content/services";
 import { routes } from "../../../common/config/routes";
-
-const SESSION_KEY = "visaworx_consultation_form";
+import {
+  CONSULTATION_DEFAULT_LANGUAGE,
+  CONSULTATION_FIRST_STEP,
+  CONSULTATION_LAST_STEP,
+  CONSULTATION_SESSION_KEY,
+  CONTACT_FIELD_LIMITS,
+  SITUATION_SUMMARY_LIMITS,
+  UNDECIDED_LABELS,
+} from "../../../common/config/consultation";
 
 export const initialFormInput: ConsultationFormInput = {
   honeypot: "",
@@ -32,7 +39,7 @@ export const initialFormInput: ConsultationFormInput = {
     travelTimeframe: "",
     summary: "",
     priorRefusal: "no",
-    preferredLanguage: "English",
+    preferredLanguage: CONSULTATION_DEFAULT_LANGUAGE,
   },
   contact: {
     fullName: "",
@@ -69,7 +76,7 @@ export function useConsultationFlow() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [currentStep, setCurrentStep] = useState<number>(1);
+  const [currentStep, setCurrentStep] = useState<number>(CONSULTATION_FIRST_STEP);
   const [formData, setFormData] = useState<ConsultationFormInput>(initialFormInput);
   const [validationError, setValidationError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -126,7 +133,7 @@ export function useConsultationFlow() {
   // progress wins over URL preselection - existing behaviour, unchanged.
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem(SESSION_KEY);
+      const saved = sessionStorage.getItem(CONSULTATION_SESSION_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
         // Only non-personal progress is ever stored, so restore it as-is and
@@ -150,7 +157,7 @@ export function useConsultationFlow() {
     setFormData((prev) => {
       const next = updater(prev);
       try {
-        sessionStorage.setItem(SESSION_KEY, JSON.stringify(toStorableProgress(next)));
+        sessionStorage.setItem(CONSULTATION_SESSION_KEY, JSON.stringify(toStorableProgress(next)));
       } catch {
         // Ignore
       }
@@ -164,21 +171,31 @@ export function useConsultationFlow() {
 
       if (step === 1) {
         if (!formData.destination.undecided && !formData.destination.countrySlug) {
-          setValidationError('Please select a destination country or choose "Not decided yet."');
+          setValidationError(
+            `Please select a destination country or choose "${UNDECIDED_LABELS.destination}."`
+          );
           return false;
         }
       } else if (step === 2) {
         if (!formData.service.undecided && !formData.service.serviceSlug) {
-          setValidationError('Please select a service or choose "Not sure yet."');
+          setValidationError(`Please select a service or choose "${UNDECIDED_LABELS.service}."`);
           return false;
         }
       } else if (step === 3) {
-        if (!formData.situation.summary || formData.situation.summary.length < 20) {
-          setValidationError("Please describe your situation in at least 20 characters.");
+        if (
+          !formData.situation.summary ||
+          formData.situation.summary.length < SITUATION_SUMMARY_LIMITS.min
+        ) {
+          setValidationError(
+            `Please describe your situation in at least ${SITUATION_SUMMARY_LIMITS.min} characters.`
+          );
           return false;
         }
       } else if (step === 4) {
-        if (!formData.contact.fullName || formData.contact.fullName.trim().length < 2) {
+        if (
+          !formData.contact.fullName ||
+          formData.contact.fullName.trim().length < CONTACT_FIELD_LIMITS.fullNameMin
+        ) {
           setValidationError("Please enter your full name.");
           return false;
         }
@@ -186,7 +203,10 @@ export function useConsultationFlow() {
           setValidationError("Please enter a valid email address.");
           return false;
         }
-        if (!formData.contact.phone || formData.contact.phone.trim().length < 7) {
+        if (
+          !formData.contact.phone ||
+          formData.contact.phone.trim().length < CONTACT_FIELD_LIMITS.phoneMin
+        ) {
           setValidationError("Please enter a valid phone number.");
           return false;
         }
@@ -199,14 +219,14 @@ export function useConsultationFlow() {
 
   const nextStep = useCallback(() => {
     if (validateStep(currentStep)) {
-      setCurrentStep((prev) => Math.min(prev + 1, 5));
+      setCurrentStep((prev) => Math.min(prev + 1, CONSULTATION_LAST_STEP));
     }
   }, [currentStep, validateStep]);
 
   const prevStep = useCallback(() => {
     setValidationError(null);
     setSubmissionError(null);
-    setCurrentStep((prev) => Math.max(prev - 1, 1));
+    setCurrentStep((prev) => Math.max(prev - 1, CONSULTATION_FIRST_STEP));
   }, []);
 
   const jumpToStep = useCallback((step: number) => {
@@ -247,7 +267,7 @@ export function useConsultationFlow() {
       if (res.ok && json.success) {
         // Clear session storage on success
         try {
-          sessionStorage.removeItem(SESSION_KEY);
+          sessionStorage.removeItem(CONSULTATION_SESSION_KEY);
         } catch {
           // Ignore
         }

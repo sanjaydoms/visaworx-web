@@ -1,3 +1,5 @@
+import { destinations } from "../visa-intelligence/v2/countries/destinations";
+
 export type VisaPurpose = "Tourist" | "Business" | "Student" | "Work" | "Family";
 
 export type Country = {
@@ -22,9 +24,16 @@ export type Country = {
   officialSourceLabel: string;
   officialSourceUrl?: string;
   lastReviewed?: string;
+  /**
+   * Whether Visaworx holds published, reviewed guidance for this destination.
+   * `awaiting-verification` destinations are listed and routable so travellers
+   * can find them and reach an expert, but carry no requirements, checklists
+   * or FAQs - publishing unverified visa requirements is prohibited.
+   */
+  coverage?: "published" | "awaiting-verification";
 };
 
-export const countriesData: Country[] = [
+const publishedCountries: Country[] = [
   {
     slug: "united-states",
     name: "United States",
@@ -536,3 +545,44 @@ export const countriesData: Country[] = [
     lastReviewed: "2026-07-01",
   },
 ];
+
+
+/**
+ * Destinations Visaworx recognises but has not yet published guidance for.
+ *
+ * Derived from the V2 destination registry so the two lists cannot drift.
+ * These carry deliberately empty content: they exist so a traveller searching
+ * for Brazil or India finds Visaworx and reaches a human expert, rather than
+ * hitting a 404. They state plainly that verified guidance is not yet held.
+ */
+const awaitingCountries: Country[] = destinations
+  .filter((d) => !d.legacySlug)
+  .map((d) => ({
+    slug: d.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+    name: d.name,
+    summary: `Expert visa consultation and preparation support for travel to ${d.name}.`,
+    popular: false,
+    visaPurposes: [],
+    overview: "",
+    preparationChecklist: [],
+    applicationStages: [],
+    commonMistakes: [],
+    faqs: [],
+    // Destination-agnostic Visaworx services. Linking a destination to our own
+    // advisory offerings is a navigation decision, not a claim about that
+    // country's visa rules, so it is safe to do without verified source data -
+    // and it keeps every country page offering a real next step.
+    relatedServiceSlugs: ["visa-readiness-review", "documentation-review", "interview-preparation"],
+    officialSourceLabel: `Official ${d.name} government immigration authority`,
+    coverage: "awaiting-verification" as const,
+  }));
+
+/** All destinations Visaworx lists, published guidance first. */
+export const countriesData: Country[] = [
+  ...publishedCountries.map((c) => ({ ...c, coverage: "published" as const })),
+  ...awaitingCountries,
+];
+
+export function isPublished(country: Country): boolean {
+  return country.coverage !== "awaiting-verification";
+}

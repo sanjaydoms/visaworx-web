@@ -280,3 +280,37 @@ describe("KnowledgeResult contract", () => {
     if (!gap.available) expect(gap.guidance).toBe("no data");
   });
 });
+
+describe("site-wide destination coverage", () => {
+  it("lists all 50 destinations on the site", async () => {
+    const { countriesData, isPublished } = await import("../../../content/countries");
+    expect(countriesData).toHaveLength(50);
+    expect(countriesData.filter(isPublished)).toHaveLength(10);
+  });
+
+  it("gives every destination a unique, url-safe slug", async () => {
+    const { countriesData } = await import("../../../content/countries");
+    const slugs = countriesData.map((c) => c.slug);
+    expect(new Set(slugs).size).toBe(50);
+    for (const s of slugs) expect(s).toMatch(/^[a-z0-9-]+$/);
+  });
+
+  it("publishes no requirements, checklists or FAQs for unverified destinations", async () => {
+    // The load-bearing guarantee: a destination without verified sources must
+    // never present visa guidance, because inventing it gets applications
+    // rejected.
+    const { countriesData, isPublished } = await import("../../../content/countries");
+    for (const c of countriesData.filter((x) => !isPublished(x))) {
+      expect(c.preparationChecklist).toEqual([]);
+      expect(c.applicationStages).toEqual([]);
+      expect(c.commonMistakes).toEqual([]);
+      expect(c.faqs).toEqual([]);
+      expect(c.overview).toBe("");
+    }
+  });
+
+  it("keeps the site list and the V2 registry in step", async () => {
+    const { countriesData } = await import("../../../content/countries");
+    expect(countriesData).toHaveLength(countryRegistry.length);
+  });
+});

@@ -10,7 +10,8 @@ import { RelatedServices } from "../../common/components/RelatedServices";
 import { ExpertCTA } from "../../common/components/ExpertCTA";
 import { Disclaimer } from "../../common/components/Disclaimer";
 import { ButtonLink } from "../../common/components/ButtonLink";
-import type { Country } from "../../common/content/countries";
+import { isPublished, type Country } from "../../common/content/countries";
+import { CoveragePending } from "../../common/components/CoveragePending";
 import { routes } from "../../common/config/routes";
 
 export function CountryDetailPage({ country }: { country: Country }) {
@@ -30,6 +31,16 @@ export function CountryDetailPage({ country }: { country: Country }) {
         <CountryHero country={country} />
       </Container>
 
+      {/* Destinations without published guidance stop here: an honest
+          "not yet published" state plus a route to a human, rather than
+          empty requirement sections that read as "nothing is required". */}
+      {!isPublished(country) && (
+        <Container>
+          <CoveragePending country={country} />
+        </Container>
+      )}
+
+      {isPublished(country) && (
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1fr_320px]">
           <div className="space-y-14">
@@ -145,6 +156,7 @@ export function CountryDetailPage({ country }: { country: Country }) {
           </aside>
         </div>
       </Container>
+      )}
     </article>
   );
 }

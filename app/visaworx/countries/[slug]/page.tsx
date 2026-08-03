@@ -23,8 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${country.name} Visa Guidance for Indian Travellers | Visaworx`;
-  const description = `Understand common visa purposes, preparation steps, avoidable mistakes and expert consultation options for ${country.name}.`;
+  // Titles must not promise guidance that is not published.
+  const title =
+    country.coverage === "awaiting-verification"
+      ? `${country.name} Visa Consultation | Visaworx`
+      : `${country.name} Visa Guidance for Indian Travellers | Visaworx`;
+  const description =
+    country.coverage === "awaiting-verification"
+      ? `Visa consultation and preparation support for ${country.name}. Speak to a Visaworx expert about your travel.`
+      : `Understand common visa purposes, preparation steps, avoidable mistakes and expert consultation options for ${country.name}.`;
 
   return {
     title,
@@ -93,10 +100,14 @@ export default async function CountryPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
+      {/* Only emit FAQ structured data when there are real FAQs. An empty
+          FAQPage schema is invalid and harms search presentation. */}
+      {country.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <CountryDetailPage country={country} />
     </>
   );

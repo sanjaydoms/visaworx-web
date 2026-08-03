@@ -51,6 +51,22 @@ describe("klar crm field mapping", () => {
     expect(contact.external_reference).toBe("VISAWORX-req_xyz999");
   });
 
+  it("forwards the callback preferences the consultant needs", () => {
+    expect(consultation.preferred_contact_window).toBe("afternoon");
+  });
+
+  it("omits an unset preferred date or time rather than sending an empty value", () => {
+    expect(consultation).not.toHaveProperty("preferred_date");
+    expect(consultation).not.toHaveProperty("preferred_time");
+
+    const { consultation: withSlot } = mapToKlarCrmPayloads({
+      ...mockRequest,
+      contact: { ...mockRequest.contact, preferredDate: "2026-09-14", preferredTime: "15:30" },
+    });
+    expect(withSlot.preferred_date).toBe("2026-09-14");
+    expect(withSlot.preferred_time).toBe("15:30");
+  });
+
   it("maps the consultation record and resolves slugs to display names", () => {
     expect(consultation.external_reference).toBe("VISAWORX-req_xyz999");
     expect(consultation.status).toBe("New Consultation Request");

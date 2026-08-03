@@ -2,8 +2,22 @@ import { TextField } from "../../../common/components/TextField";
 import { PhoneInput } from "../../../common/components/PhoneInput";
 import { PreferredContactMethod } from "../../../common/components/PreferredContactMethod";
 import { PreferredContactWindow } from "../../../common/components/PreferredContactWindow";
+import { DateInput } from "../../../common/components/DateInput";
+import { TimeInput } from "../../../common/components/TimeInput";
 import type { ConsultationFormInput } from "../../../common/validation/consultation";
 import { StepHeading } from "./StepHeading";
+
+/**
+ * Local date in the format a native date input expects. Built from local
+ * calendar parts rather than toISOString(), which converts to UTC and can name
+ * yesterday for anyone east of Greenwich - blocking today as a valid choice.
+ */
+function todayISO(): string {
+  const now = new Date();
+  const month = `${now.getMonth() + 1}`.padStart(2, "0");
+  const day = `${now.getDate()}`.padStart(2, "0");
+  return `${now.getFullYear()}-${month}-${day}`;
+}
 
 export function ContactStep({
   formData,
@@ -93,6 +107,34 @@ export function ContactStep({
           }))
         }
       />
+
+      <div className="space-y-2">
+        <div className="grid gap-4 sm:grid-cols-2">
+          <DateInput
+            value={formData.contact.preferredDate || ""}
+            min={todayISO()}
+            onChange={(value) =>
+              updateFormData((prev) => ({
+                ...prev,
+                contact: { ...prev.contact, preferredDate: value },
+              }))
+            }
+          />
+
+          <TimeInput
+            value={formData.contact.preferredTime || ""}
+            onChange={(value) =>
+              updateFormData((prev) => ({
+                ...prev,
+                contact: { ...prev.contact, preferredTime: value },
+              }))
+            }
+          />
+        </div>
+        <p className="text-xs leading-5 text-slate-500">
+          A preference only. Nothing is reserved, and our team will confirm an actual time with you.
+        </p>
+      </div>
     </div>
   );
 }

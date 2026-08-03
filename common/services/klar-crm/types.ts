@@ -30,6 +30,21 @@ export type KlarCrmConsultationPayload = {
   guide_reference: string;
   contact_email: string;
   contact_phone: string;
+
+  /**
+   * Callback preferences. Optional because they are a preference and not a
+   * booking - Visaworx reserves no slot, and the consultant confirms an actual
+   * time with the applicant.
+   *
+   * These are new to the payload: the contact window was collected but never
+   * forwarded, so consultants were calling back without knowing when the
+   * applicant asked to be reached. Operations should confirm Klar CRM accepts
+   * these keys; unknown fields are normally ignored, so the worst case is that
+   * they are dropped exactly as they are today.
+   */
+  preferred_contact_window?: string;
+  preferred_date?: string;
+  preferred_time?: string;
 };
 
 export type KlarCrmApiResponse<T = unknown> =

@@ -87,6 +87,12 @@ export function ConsultationReview({ data, onEditStep }: ConsultationReviewProps
               <div><span className="font-semibold text-[#071f4a]">Phone:</span> {data.contact.phone}</div>
               <div><span className="font-semibold text-[#071f4a]">Preferred Method:</span> {data.contact.preferredMethod}</div>
               <div><span className="font-semibold text-[#071f4a]">Preferred Window:</span> {data.contact.preferredWindow}</div>
+              {data.contact.preferredDate && (
+                <div><span className="font-semibold text-[#071f4a]">Preferred Date:</span> {data.contact.preferredDate}</div>
+              )}
+              {data.contact.preferredTime && (
+                <div><span className="font-semibold text-[#071f4a]">Preferred Time:</span> {data.contact.preferredTime}</div>
+              )}
             </div>
           </div>
           <button

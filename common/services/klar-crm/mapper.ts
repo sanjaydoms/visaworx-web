@@ -41,6 +41,9 @@ export function mapToKlarCrmPayloads(request: ConsultationRequest): {
     guide_reference: request.source.guideSlug || "N/A",
     contact_email: request.contact.email,
     contact_phone: request.contact.phone,
+    preferred_contact_window: request.contact.preferredWindow,
+    ...(request.contact.preferredDate ? { preferred_date: request.contact.preferredDate } : {}),
+    ...(request.contact.preferredTime ? { preferred_time: request.contact.preferredTime } : {}),
   };
 
   return { contact, consultation };

@@ -6,10 +6,15 @@ import { Bot } from "lucide-react";
 import { AssistantPanel } from "./AssistantPanel";
 import { routes } from "../../../common/config/routes";
 import type { AssistantPageContext } from "../../../common/ai/types/assistant";
+import { contextFromPath } from "../context-from-path";
 
 export function AssistantLauncher({ context }: { context?: AssistantPageContext }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  // The launcher is mounted once in the header, so no page can pass its own
+  // context down. Derive it from the route unless a caller supplied one.
+  const pageContext = context ?? contextFromPath(pathname);
 
   // On the dedicated assistant route the floating launcher is redundant, and
   // it sat directly on top of the assistant's own message input.
@@ -34,7 +39,7 @@ export function AssistantLauncher({ context }: { context?: AssistantPageContext 
         </button>
       </div>
 
-      <AssistantPanel isOpen={isOpen} onClose={() => setIsOpen(false)} context={context} />
+      <AssistantPanel isOpen={isOpen} onClose={() => setIsOpen(false)} context={pageContext} />
     </>
   );
 }

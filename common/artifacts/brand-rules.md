@@ -12,3 +12,17 @@
    - restrained copy
    - no obvious AI aesthetic
 7. Never claim guaranteed approval, 100% success or embassy endorsement.
+
+## Reversed artwork (open item)
+
+Both supplied logo files are dark ink on transparency and are illegible on the
+navy footer. Until official reversed files exist, the site serves placeholders
+derived from the masters — the ink recoloured to white, the red accents left
+untouched, the transparency shape unchanged:
+
+- `public/brand/visaworx-logo-reversed.png`
+- `public/brand/klar-travels-logo-reversed.png`
+
+The masters are unmodified and still serve every light surface. This is a
+deliberate, recorded exception to rule 3. Replace both files with official
+reversed artwork when the brand owners supply it; nothing else needs to change.

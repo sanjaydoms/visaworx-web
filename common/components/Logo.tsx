@@ -3,21 +3,32 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Intrinsic pixel sizes of the supplied files. These set the aspect ratio the
-// browser reserves before the image loads, so they must track the real assets —
-// a mismatch letterboxes the artwork inside a wrongly shaped box.
+// width/height are the intrinsic pixel sizes of the supplied files. They set the
+// aspect ratio the browser reserves before the image loads, so they must track
+// the real assets — a mismatch letterboxes the artwork inside a wrongly shaped box.
+//
+// srcOnDark is knockout artwork for dark surfaces: both supplied logos are dark
+// ink on transparency and are illegible on the navy footer. Each was derived from
+// its master by recolouring the ink to white and leaving the red accent alone;
+// the masters are untouched and still serve every light surface. brand-rules.md
+// makes both logos immutable, so these are placeholders — when the brand owners
+// supply official reversed files, replace the assets and these two lines still
+// point at them.
 const logos = {
   visaworx: {
     src: "/brand/visaworx-logo.png",
-    // Knockout for dark surfaces: the navy ink recoloured to white with the red
-    // accent untouched, derived from the master above. Placeholder until the
-    // brand owner supplies an official reversed file — swap it in here.
     srcOnDark: "/brand/visaworx-logo-reversed.png",
     alt: "Visaworx",
     width: 1728,
     height: 524,
   },
-  klar: { src: "/brand/klar-travels-logo.png", alt: "Klar Travels", width: 1320, height: 624 },
+  klar: {
+    src: "/brand/klar-travels-logo.png",
+    srcOnDark: "/brand/klar-travels-logo-reversed.png",
+    alt: "Klar Travels",
+    width: 1320,
+    height: 624,
+  },
 } as const;
 
 type LogoProps = {
@@ -35,11 +46,10 @@ export function Logo({ kind = "visaworx", onDark = false, className = "" }: Logo
   }
 
   const logo = logos[kind];
-  const source = onDark && "srcOnDark" in logo ? logo.srcOnDark : logo.src;
 
   return (
     <Image
-      src={source}
+      src={onDark ? logo.srcOnDark : logo.src}
       alt={logo.alt}
       width={logo.width}
       height={logo.height}

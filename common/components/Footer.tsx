@@ -4,11 +4,6 @@ import { Logo } from "./Logo";
 import { routes } from "../config/routes";
 import { site } from "../config/site";
 
-// The Klar mark is dark ink on transparency and vanishes against the footer's
-// navy. It sits on its own light surface rather than being recoloured — it is
-// another company's logo and immutable. Visaworx has its own knockout artwork.
-const lightSurface = "inline-flex rounded-lg bg-white p-2.5";
-
 export function Footer() {
   return (
     <footer className="bg-[#071f4a] text-white">
@@ -44,9 +39,7 @@ export function Footer() {
           <div>
             <h2 className="text-sm font-bold uppercase tracking-wider text-slate-200">Klar Travels</h2>
             <div className="mt-3 mb-2">
-              <span className={lightSurface}>
-                <Logo kind="klar" className="h-auto max-w-[160px] object-contain" />
-              </span>
+              <Logo kind="klar" onDark className="h-auto max-w-[160px] object-contain" />
             </div>
             <div className="flex flex-col gap-1 text-sm text-slate-300">
               <a

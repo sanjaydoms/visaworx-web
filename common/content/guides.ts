@@ -1912,4 +1912,381 @@ export const guidesData: Guide[] = [
         "Indian passport holders cannot lodge a Singapore visa directly - it goes through a local contact or authorised agent. The SGD 30 fee, timing, and the e-Pass.",
     },
   },
+  {
+    slug: "new-zealand-visitor-visa-from-india",
+    title: "New Zealand Visitor Visa from India: The Levy Nobody Budgets For",
+    summary: "Indian passport holders need a visitor visa rather than an NZeTA, and the visa fee is not the whole cost. What the conservation levy adds, why it is not refunded if you are declined, and how the length-of-stay maths actually works.",
+    category: "Country Guides",
+    readingTime: "7 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Nikhil budgeted for the visa fee, found it steep but manageable, and submitted. What he had not accounted for was a second charge added at the same moment, for something that is not a visa at all and is not returned if the application fails. It is not hidden. It is simply not the number people quote each other.",
+      },
+      {
+        type: "paragraph",
+        text: "Nikhil is an illustration, but the gap between the advertised fee and the actual cost is real, and New Zealand is unusual in how firmly it applies it. There is also a second surprise waiting in the small print of how long you are allowed to stay.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian passport holders need a Visitor Visa, not an NZeTA, because India is not on New Zealand's visa waiver list. The visa starts from NZD 441, and most visitors also pay the International Visitor Conservation and Tourism Levy of NZD 100 at the same time. The levy is not refunded if your application is declined.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why the NZeTA Is Not Your Route",
+      },
+      {
+        type: "paragraph",
+        text: "The NZeTA is for travellers holding passports from countries on New Zealand's visa waiver list. It is a light authorisation layered on visa-free travel, not an alternative to a visa.",
+      },
+      {
+        type: "paragraph",
+        text: "India is not on that list, so an Indian passport holder applies for a Visitor Visa. Australian citizens travelling on an Australian passport need neither, which is worth knowing if you hold dual citizenship or are travelling with someone who does.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Actually Costs",
+      },
+      {
+        type: "list",
+        items: [
+          "Visitor Visa: from NZD 441.",
+          "International Visitor Conservation and Tourism Levy: NZD 100, paid at the same time as the visa application.",
+          "The levy is not refunded if the application is declined.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "A declined application still costs you the levy",
+        text: "Immigration New Zealand states plainly that the levy is not refunded even where an application is declined. That makes a weak application more expensive here than in most places, and it is a good argument for getting the file right the first time rather than submitting hopefully and reapplying.",
+      },
+      {
+        type: "paragraph",
+        text: "Some travellers are exempt from the levy, including Australian and New Zealand passport holders, many Pacific Island nationals, transit passengers at Auckland, and holders of a Business Visitor Visa or an APEC business travel card. Check whether your category is exempt before assuming the levy applies to you.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Long You Can Actually Stay",
+      },
+      {
+        type: "paragraph",
+        text: "This is where planning goes wrong, because the limit is expressed as a total across a period rather than a single continuous stay:",
+      },
+      {
+        type: "list",
+        items: [
+          "On a multiple-entry visa, you may stay up to a total of 6 months in each 12-month period.",
+          "On a single-entry visa, you may stay up to 9 months within an 18-month period.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The multiple-entry figure is cumulative, not per visit. Three separate trips of two and a half months each will exhaust it, and leaving the country between them does not reset the count. Anyone planning repeat family visits inside a year should work out the total before booking the second trip.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the Application Has to Establish",
+      },
+      {
+        type: "paragraph",
+        text: "Immigration New Zealand assesses a visitor on a small number of clear tests. Each of your documents is evidence for one of them:",
+      },
+      {
+        type: "list",
+        items: [
+          "That you have plans to leave New Zealand at the end of your stay.",
+          "That you have enough money for your living expenses, or an acceptable sponsor.",
+          "That you do not plan to work in New Zealand, unless you are working remotely for a business overseas.",
+          "That you are in good health and of good character.",
+          "That your reasons for visiting are genuine.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Remote work is explicitly allowed, in one narrow sense",
+        text: "New Zealand carves out working remotely for an overseas business, which many countries do not. That is useful if you are visiting family for several weeks and intend to keep answering email. It is not permission to take up work in New Zealand, and describing your trip loosely as a work visit will get it read the wrong way.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "Budgeting for the visa fee alone and being surprised by the levy at payment.",
+          "Submitting a thin application on the assumption that reapplying is cheap. It is not, because the levy does not come back.",
+          "Treating the six-month allowance as per visit rather than cumulative across twelve months.",
+          "A sponsor named in the application but not evidenced as acceptable.",
+          "Describing remote work in terms that read as intending to work in New Zealand.",
+          "Health or character matters left undisclosed rather than explained.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You are visiting family who will sponsor your stay.",
+          "You have already spent time in New Zealand in the past twelve months.",
+          "You intend to work remotely for your Indian employer while there.",
+          "You have a health condition that may need declaring.",
+          "You have a previous refusal from New Zealand or elsewhere.",
+          "You are travelling with dependants or elderly parents.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for Immigration New Zealand. What we can do is check the file against the five tests above before you pay, which matters more here than in most places precisely because a declined application does not return the levy. If you are unsure whether your funds or your sponsor will read as sufficient, that is worth resolving first.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Budget the visa fee and the levy together, not the fee alone.",
+          "Check whether your category is exempt from the levy before assuming it applies.",
+          "Add up any time already spent in New Zealand in the relevant period.",
+          "Evidence your sponsor rather than naming them.",
+          "Be precise about remote work if it applies to you.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Fees, the levy and stay entitlements all change, and the levy amount was revised in recent years. Everything here was verified against Immigration New Zealand on 21 August 2026. Confirm the current figures on the official pages listed with this guide before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["new-zealand"],
+    relatedServiceSlugs: ["tourist-visa", "family-dependent-visa", "documentation-review"],
+    faqIds: ["nz-in-1", "nz-in-2", "nz-in-3", "nz-in-4", "nz-in-5"],
+    officialReferences: [
+      {
+        label: "Immigration New Zealand - Visitor Visa",
+        url: "https://www.immigration.govt.nz/new-zealand-visas/visas/visa/visitor-visa",
+      },
+      {
+        label: "Immigration New Zealand - paying the International Visitor Levy",
+        url: "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/fees-processing-times-and-refunds/paying-the-international-visitor-levy/",
+      },
+      {
+        label: "Immigration New Zealand - visa waiver countries and territories",
+        url: "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/visa-waiver-countries-and-territories/",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "New Zealand Visitor Visa from India: Fees and Stay Limits",
+      description:
+        "Indian travellers need a New Zealand visitor visa, not an NZeTA. The NZD 441 fee, the NZD 100 levy that is not refunded if declined, and how the stay limits work.",
+    },
+  },
+  {
+    slug: "japan-visa-from-india",
+    title: "Japan Visa from India: There Is No Sticker in Your Passport Any More",
+    summary: "Japan issues Indian applicants an electronic visa rather than a sticker, and you have to show it on a phone at the airport. What the eVisa changed, what it costs, and the practical failure nobody warns you about.",
+    category: "Country Guides",
+    readingTime: "7 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Ananya kept flipping through her passport looking for the visa. She had applied, she had been approved, she had the confirmation. There was nothing pasted on any page, and for a worrying half hour before her flight she was convinced something had gone wrong. Nothing had. Japan simply does not put a sticker in Indian applicants' passports any more.",
+      },
+      {
+        type: "paragraph",
+        text: "Ananya is an illustration, but the confusion is genuine and it has a sharper edge than mere anxiety. The electronic visa has to be produced at the airport, on a screen, and that requirement has a practical failure mode most travellers do not plan for.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Japan has issued eVisas in India since 1 April 2024, for single-entry short-term tourism of up to 90 days. Applications go through the Japan Visa Application Centres run by VFS Global, and the visa arrives electronically rather than as a sticker. From 1 July 2026 the visa fee for Indian nationals is INR 500 for single or multiple entry, with the VFS service fee charged on top.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the eVisa Changed",
+      },
+      {
+        type: "paragraph",
+        text: "The Japan eVisa system started in India on 1 April 2024. It covers single-entry short-term stays for tourism, of up to 90 days, and is open to Indian nationals and to foreign nationals resident in India.",
+      },
+      {
+        type: "paragraph",
+        text: "The mechanics of applying did not change as much as people expect. You still submit through a Japan Visa Application Centre operated by VFS Global. What changed is the output: instead of a visa sticker in your passport, you receive a visa issuance notice in electronic form.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "You need a working phone and internet at the airport",
+        text: "The visa issuance notice has to be shown on a mobile device at the airport, and displaying it needs internet access. A screenshot is not what is being asked for, a dead battery is a problem, and an Indian SIM with no roaming in a transit airport is a problem. Charge the phone, and know how you will get online before you reach the counter.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Costs",
+      },
+      {
+        type: "list",
+        items: [
+          "Visa fee for Indian nationals, from 1 July 2026: INR 500, for single or multiple entry.",
+          "The VFS Global service fee is charged in addition to that.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "By international standards this is a low fee, and it is worth saying so plainly, because the gap between the government fee and what some intermediaries charge is wide. If a service is quoting you many multiples of this, you are paying for their handling rather than for the visa.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Short-Term Stay Means What It Says",
+      },
+      {
+        type: "paragraph",
+        text: "The eVisa route covers short-term tourism of up to 90 days. It is not a work permission, not a study permission, and not a route to a longer stay that gets extended after arrival.",
+      },
+      {
+        type: "paragraph",
+        text: "If your purpose is anything other than a short visit, the eVisa is the wrong instrument and applying under it because it is the convenient one is the kind of mismatch that causes trouble at the border rather than at the application stage.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a Japanese Visitor Application Rests On",
+      },
+      {
+        type: "paragraph",
+        text: "Japan places unusual weight on the itinerary. Where some consulates want to see funds and ties above all, a Japanese application is read for whether the trip described actually hangs together:",
+      },
+      {
+        type: "list",
+        items: [
+          "A day-by-day schedule that is internally consistent and matches your bookings.",
+          "Financial capacity for the trip as described, from an explainable source.",
+          "Accommodation that corresponds to the itinerary rather than contradicting it.",
+          "A clear, temporary purpose with a defined end.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "The itinerary is not a formality",
+        text: "A schedule assembled quickly to fill a required field, with cities in an impossible order or hotel dates that do not match the travel days, undermines the rest of a perfectly good application. Build the itinerary from the bookings you actually hold, not the other way round.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Go Wrong",
+      },
+      {
+        type: "list",
+        items: [
+          "Searching the passport for a sticker that will not be there, and assuming the application failed.",
+          "Arriving at the airport with a flat phone or no way to get online to display the visa issuance notice.",
+          "Paying an intermediary many times the actual visa fee without realising how low the official charge is.",
+          "An itinerary that does not match the accommodation or flight dates.",
+          "Applying under short-term tourism for a trip whose real purpose is something else.",
+          "Leaving too little time before travel, because the eVisa still goes through a visa application centre.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You are a foreign national resident in India rather than an Indian citizen.",
+          "You are travelling for business meetings rather than tourism.",
+          "You are visiting relatives who will host you.",
+          "You need multiple entries rather than one.",
+          "You have a previous refusal from Japan or elsewhere.",
+          "Your trip is longer than a short-term stay allows.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue Japanese visas and we do not speak for the Ministry of Foreign Affairs or its visa application centres. Where we are useful is in checking that the trip you are describing holds together on paper before it is submitted, and that you are applying under the right category for what you actually intend to do.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Fly",
+      },
+      {
+        type: "list",
+        items: [
+          "Expect an electronic notice, not a sticker.",
+          "Charge your phone and arrange internet access for the airport.",
+          "Check the government fee before agreeing to any handling charge.",
+          "Make the itinerary match the bookings exactly.",
+          "Apply under the category that matches your real purpose.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Japanese visa fees and the scope of the eVisa system have both changed since it launched in India, and the fee stated here took effect on 1 July 2026. Everything was verified against Ministry of Foreign Affairs and Embassy of Japan sources on 21 August 2026. Confirm the current position before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["japan"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "documentation-review"],
+    faqIds: ["jp-in-1", "jp-in-2", "jp-in-3", "jp-in-4", "jp-in-5"],
+    officialReferences: [
+      {
+        label: "Ministry of Foreign Affairs of Japan - the JAPAN eVISA system",
+        url: "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html",
+      },
+      {
+        label: "Ministry of Foreign Affairs of Japan - visa fees",
+        url: "https://www.mofa.go.jp/j_info/visit/visa/procedure/fee.html",
+      },
+      {
+        label: "Embassy of Japan in India - visa information",
+        url: "https://www.in.emb-japan.go.jp/itpr_en/Visa.html",
+      },
+      {
+        label: "Ministry of Foreign Affairs of Japan - eVISA FAQ",
+        url: "https://www.mofa.go.jp/j_info/visit/visa/page22e_000999.html",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Japan Visa from India: eVisa, Fees and Airport Checks",
+      description:
+        "Japan issues Indian applicants an electronic visa, not a passport sticker, and it must be shown on a phone at the airport. The INR 500 fee and what to prepare.",
+    },
+  },
 ];

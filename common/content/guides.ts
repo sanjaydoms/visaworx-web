@@ -2484,4 +2484,204 @@ export const guidesData: Guide[] = [
         "K-ETA is only for visa-free nationals, so Indian travellers need a C-3-9 tourist visa. What it costs, where it is submitted, and the agency warning to heed.",
     },
   },
+  {
+    slug: "travel-authorisations-are-not-visas",
+    title: "ETA, eTA, ETIAS, NZeTA, K-ETA: None of Them Are Your Visa",
+    summary: "Five countries now run quick online travel authorisations, and Indian passport holders are eligible for none of them. Why that is, how to tell an authorisation from an eVisa, and what the distinction costs travellers who miss it.",
+    category: "Visa Preparation",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "The same conversation happens in five different shapes. Someone reads that Britain now has a quick online travel authorisation, or that Europe is introducing one, or that Korea requires one, and concludes that visiting has become simpler. They go looking for the application, and either cannot complete it or pay somebody who says they can. What almost nothing they read said plainly is who these schemes were built for.",
+      },
+      {
+        type: "paragraph",
+        text: "They were built for travellers who did not need a visa in the first place. If you hold an Indian passport, that describes none of these destinations, and the authorisation is not a route you can take.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "An electronic travel authorisation is a light pre-screening layered on top of visa-free travel. It is not a visa, not a cheaper alternative to one, and not available to travellers whose nationality requires a visa. Indian passport holders are not eligible for the UK ETA, the Canadian eTA, ETIAS, the NZeTA or K-ETA, and in each case the route remains a visa.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What an Authorisation Actually Is",
+      },
+      {
+        type: "paragraph",
+        text: "Countries that allow certain nationalities to arrive without a visa historically knew nothing about those travellers until they reached the border. An electronic travel authorisation closes that gap: a short online form, screened in advance, for people who were already going to be let in.",
+      },
+      {
+        type: "paragraph",
+        text: "That is the whole design. It adds a check to visa-free travel. It does not create a new way in for anyone who needed a visa before, which is why eligibility is decided by your nationality before anything else about you is considered.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Five, and Where Indian Passports Stand",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "United Kingdom - ETA",
+      },
+      {
+        type: "paragraph",
+        text: "Open only to nationalities on the ETA national list. India is not on it, and GOV.UK states directly that other nationalities cannot get an ETA and should check whether they need a visa instead. The route is a Standard Visitor visa.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Canada - eTA",
+      },
+      {
+        type: "paragraph",
+        text: "Canada is the interesting one, because it does extend the eTA to citizens of some visa-required countries, on condition they have held a Canadian visitor visa in the past ten years or hold a valid US non-immigrant visa, and only for travel by air. That has convinced a lot of people that a US visa is the key. It is not: the nationality has to be on the eligible list first, and India is not currently among them. Indian citizens apply for a Temporary Resident Visa.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "European Union - ETIAS",
+      },
+      {
+        type: "paragraph",
+        text: "For nationals who may enter the Schengen Area without a visa. Indian passport holders need a Schengen visa, so ETIAS does not apply to them, and it is not yet in operation for anyone. If you hold a valid Schengen visa, that visa is your authorisation.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "New Zealand - NZeTA",
+      },
+      {
+        type: "paragraph",
+        text: "For passports on New Zealand's visa waiver list. India is not on it, so the route is a Visitor Visa. Australian citizens travelling on an Australian passport need neither.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "South Korea - K-ETA",
+      },
+      {
+        type: "paragraph",
+        text: "For nationals of countries that can enter Korea without a visa. Indian passport holders require a visa, so the route is a short-term visitor visa. Korea's own K-ETA service warns that applications are made only through its website or app, and cautions against third-party agencies charging inflated fees.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Why this keeps costing people money",
+        text: "These schemes are cheap, heavily publicised and easy to imitate. A site that looks official, charges a fee and returns a document is a low-effort business, and the traveller often does not discover the problem until departure. Korea's authority has said so publicly. If a service is selling you a travel authorisation for a country where you need a visa, there is nothing genuine to buy.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "An eVisa Is Not the Same Thing",
+      },
+      {
+        type: "paragraph",
+        text: "This is where the vocabulary genuinely misleads, because some destinations do issue Indian travellers a visa electronically, and that is a completely different animal.",
+      },
+      {
+        type: "paragraph",
+        text: "Japan is the clear example. Since April 2024 Indian applicants receive an eVisa: a real short-term visa, assessed on the same basis as before, delivered as an electronic issuance notice rather than a sticker in the passport. The delivery mechanism changed. The permission did not.",
+      },
+      {
+        type: "list",
+        items: [
+          "A travel authorisation screens people who do not need a visa. Nationality decides eligibility.",
+          "An eVisa is a visa, assessed as one, delivered digitally. Your circumstances decide the outcome.",
+          "A conditional visa on arrival, such as the UAE's for Indian passport holders with certain other visas or residence permits, is a third thing again, and depends on documents you already hold.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Read the noun, not the format",
+        text: "Whether something arrives by email tells you nothing about what it is. Ask instead what the scheme is for. If the answer is people who do not need a visa, it is not for you. If it is a visa that happens to be issued electronically, it is, and the usual preparation applies in full.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What This Costs When It Is Missed",
+      },
+      {
+        type: "list",
+        items: [
+          "Time. Weeks spent pursuing an authorisation are weeks not spent on the visa, and several of these destinations have narrow application windows.",
+          "Money paid to intermediaries for a document that does not apply.",
+          "Trips planned around an authorisation timeline of days, when a visa needs considerably longer.",
+          "Bookings made non-refundable on the assumption that entry was already sorted.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "None of these is a documentation problem. They all happen before the application starts, which is exactly why they are cheap to avoid and expensive to discover late.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How to Check, in Order",
+      },
+      {
+        type: "list",
+        items: [
+          "Start with your nationality, not the destination's newest scheme.",
+          "Find the destination's own eligibility list and look for India on it.",
+          "If India is absent, the scheme is not your route, whatever the coverage says.",
+          "Establish which visa category matches your purpose.",
+          "Work the timeline back from that, not from an authorisation turnaround.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue visas or authorisations and we do not speak for any government. What we do is settle this question first, because it is upstream of everything else: which route actually applies to your passport and your purpose. Almost every expensive visa mistake we see began with a route decision made on a headline rather than an eligibility list.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Eligibility lists change and have been extended more than once. All five schemes were checked against their own official sources on 21 August 2026. Before you plan around any of this, confirm the current position on the destination's official eligibility page, because the day India appears on one of these lists, the answer for that country changes.",
+      },
+    ],
+    relatedCountrySlugs: ["united-kingdom", "canada", "schengen", "new-zealand", "south-korea"],
+    relatedServiceSlugs: ["tourist-visa", "visa-readiness-review"],
+    faqIds: ["auth-1", "auth-2", "auth-3", "auth-4", "auth-5"],
+    officialReferences: [
+      {
+        label: "GOV.UK - check if you can get an ETA",
+        url: "https://www.gov.uk/guidance/check-when-you-can-get-an-electronic-travel-authorisation-eta",
+      },
+      {
+        label: "IRCC - eTA eligibility, citizens from some visa-required countries",
+        url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility/eta-x.html",
+      },
+      {
+        label: "European Union - ETIAS",
+        url: "https://travel-europe.europa.eu/etias_en",
+      },
+      {
+        label: "Immigration New Zealand - visa waiver countries and territories",
+        url: "https://www.immigration.govt.nz/visit/what-you-need-to-visit-new-zealand/visa-waiver-countries-and-territories/",
+      },
+      {
+        label: "K-ETA - official application service",
+        url: "https://www.k-eta.go.kr/portal/apply/index.do",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "ETA, eTA, ETIAS, NZeTA, K-ETA: Not Visas for Indians",
+      description:
+        "Five online travel authorisations, and Indian passport holders are eligible for none. How they differ from an eVisa, and what missing the distinction costs.",
+    },
+  },
 ];

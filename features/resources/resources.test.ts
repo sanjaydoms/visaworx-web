@@ -27,6 +27,7 @@ const expectedGuideSlugs = [
   "new-zealand-visitor-visa-from-india",
   "japan-visa-from-india",
   "south-korea-visa-from-india",
+  "travel-authorisations-are-not-visas",
 ];
 
 describe("guides content model", () => {

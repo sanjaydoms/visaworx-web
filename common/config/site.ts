@@ -10,7 +10,7 @@
  * the preview deployment, staging, or the production domain once Visaworx is
  * mounted under it. The fallback is the intended production origin.
  */
-const origin = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.klartravels.com").replace(
+const origin = (process.env.NEXT_PUBLIC_SITE_URL || "https://visaworx.klartravels.com").replace(
   /\/+$/,
   "",
 );

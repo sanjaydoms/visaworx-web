@@ -27,7 +27,8 @@
   domain that does not host the app tells Google to index a page that is not
   there, so nothing gets indexed — not the wrong page, no page. Set it per
   environment: the preview host for previews, the production domain once
-  Visaworx is mounted under it. Defaults to `https://www.klartravels.com`.
+  Visaworx is mounted under it. Production is `https://visaworx.klartravels.com`,
+  which is also the built-in fallback.
 
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: Search Console verification token,
   meta-tag method. Leave unset and no tag is emitted at all. The HTML-file

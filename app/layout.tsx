@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "../common/components/Header";
 import { Footer } from "../common/components/Footer";
+import { site } from "../common/config/site";
 
 export const metadata: Metadata = {
+  // Without this every page's canonical and og:url stays relative, which
+  // disagrees with the absolute URLs the sitemap publishes.
+  metadataBase: new URL(site.url),
   title: "Visaworx | Visa Intelligence & Expert Guidance",
   description:
     "Visa intelligence, readiness and human consultation within the Klar Travels ecosystem.",

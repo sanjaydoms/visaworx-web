@@ -7,6 +7,9 @@ import { glossaryData } from "../../common/content/glossary";
 import { evaluateReadiness } from "../../common/config/readiness-rules";
 import { processAssistantQuery } from "../../common/ai/adapters/provider";
 import { FORBIDDEN_MARKETING_PHRASES } from "../../common/content/forbidden-phrases";
+import { site } from "../../common/config/site";
+import sitemap from "../../app/sitemap";
+import robots from "../../app/robots";
 
 // Launch journeys must pass against approved content only, with no live model.
 beforeEach(() => {
@@ -90,5 +93,51 @@ describe("launch content safety", () => {
     for (const phrase of FORBIDDEN_MARKETING_PHRASES) {
       expect(content).not.toContain(phrase);
     }
+  });
+});
+
+describe("launch indexing: sitemap and robots agree", () => {
+  const entries = sitemap();
+  const paths = entries.map((entry) => entry.url.replace(site.url, ""));
+  const rules = robots().rules as {
+    allow?: string[];
+    disallow?: string[];
+  };
+
+  // Wildcards cover generated detail pages, which are asserted by count below.
+  const literal = (patterns: string[] = []) =>
+    patterns.filter((pattern) => !pattern.endsWith("*"));
+
+  it.each(literal(rules.allow).map((path) => [path]))(
+    "publishes the crawlable route %s in the sitemap",
+    (path) => {
+      expect(paths).toContain(path);
+    },
+  );
+
+  it.each(literal(rules.disallow).map((path) => [path]))(
+    "keeps the blocked route %s out of the sitemap",
+    (path) => {
+      expect(paths).not.toContain(path);
+    },
+  );
+
+  it("lists every country, service and guide detail page", () => {
+    expect(paths.filter((p) => p.startsWith("/visaworx/countries/"))).toHaveLength(
+      countriesData.length,
+    );
+    expect(paths.filter((p) => p.startsWith("/visaworx/services/"))).toHaveLength(
+      servicesData.length,
+    );
+    expect(
+      paths.filter((p) => p.startsWith("/visaworx/resources/guides/")),
+    ).toHaveLength(guidesData.length);
+  });
+
+  it("emits absolute urls and no duplicates", () => {
+    for (const entry of entries) {
+      expect(entry.url.startsWith(`${site.url}/`)).toBe(true);
+    }
+    expect(new Set(paths).size).toBe(paths.length);
   });
 });

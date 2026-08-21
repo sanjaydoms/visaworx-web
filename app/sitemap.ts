@@ -2,9 +2,10 @@ import type { MetadataRoute } from "next";
 import { countriesData } from "../common/content/countries";
 import { servicesData } from "../common/content/services";
 import { guidesData } from "../common/content/guides";
+import { site } from "../common/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.klartravels.com";
+  const baseUrl = site.url;
 
   const countryUrls = countriesData.map((country) => ({
     url: `${baseUrl}/visaworx/countries/${country.slug}`,
@@ -48,6 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...serviceUrls,
+    {
+      url: `${baseUrl}/visaworx/readiness`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/visaworx/resources`,
       lastModified: new Date(),

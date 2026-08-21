@@ -202,7 +202,7 @@ describe("Phase 5 - clarity snapshot", () => {
     familyRequirements: unavailable("not-modelled", "No verified family requirements."),
     photoGuidance: unavailable("not-modelled", "No verified photo requirements."),
     preparation: score,
-    consultationHref: "/visaworx/consultation?source=clarity",
+    consultationHref: "/consultation?source=clarity",
   });
 
   it("marks the score as secondary", () => {
@@ -225,7 +225,7 @@ describe("Phase 5 - clarity snapshot", () => {
   });
 
   it("always offers a human expert handoff", () => {
-    expect(snapshot.expertHandoff.consultationHref).toContain("/visaworx/consultation");
+    expect(snapshot.expertHandoff.consultationHref).toContain("/consultation");
   });
 });
 
@@ -329,7 +329,7 @@ describe("Phase 8 - CRM handoff", () => {
     funding: { type: "sponsored", sponsor: "parent" },
     aiSummaryConsentGiven: false,
     aiTopicSummary: "Discussed photo requirements",
-    sourcePage: "/visaworx/readiness/result",
+    sourcePage: "/readiness/result",
   });
 
   it("preserves every existing CRM field name and value", () => {
@@ -434,9 +434,9 @@ describe("Spec coverage - previous refusal and human escalation", () => {
         familyRequirements: unavailable("not-modelled", "n/a"),
         photoGuidance: unavailable("not-modelled", "n/a"),
         preparation: score,
-        consultationHref: "/visaworx/consultation",
+        consultationHref: "/consultation",
       });
-      expect(snap.expertHandoff.consultationHref).toContain("/visaworx/consultation");
+      expect(snap.expertHandoff.consultationHref).toContain("/consultation");
       expect(snap.expertHandoff.headline.length).toBeGreaterThan(0);
     }
   });

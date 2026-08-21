@@ -26,7 +26,7 @@ test.describe("Accessibility", () => {
   });
 
   test("success page has no serious or critical axe violations", async ({ page }) => {
-    await page.goto("/visaworx/consultation/success");
+    await page.goto("/consultation/success");
     const results = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
       .analyze();

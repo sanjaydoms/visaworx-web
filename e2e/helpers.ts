@@ -1,6 +1,6 @@
 import { expect, type Page } from "@playwright/test";
 
-export const CONSULTATION_PATH = "/visaworx/consultation";
+export const CONSULTATION_PATH = "/consultation";
 
 /**
  * Promissory approval claims. Deliberately narrow, because the site

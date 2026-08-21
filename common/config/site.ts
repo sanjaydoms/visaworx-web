@@ -18,10 +18,10 @@ const origin = (process.env.NEXT_PUBLIC_SITE_URL || "https://visaworx.klartravel
 export const site = {
   name: "Visaworx",
   parentBrand: "Klar Travels",
-  basePath: "/visaworx",
+  basePath: "",
   tagline: "Visa Intelligence. Expert Guidance. Confident Journeys.",
   supportEmail: "support@klartravels.com",
   url: origin,
   klarTravelsUrl: "https://www.klartravels.com/",
-  consultationUrl: "/visaworx/consultation",
+  consultationUrl: "/consultation",
 } as const;

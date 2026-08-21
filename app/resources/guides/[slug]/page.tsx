@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { guidesData } from "../../../../../common/content/guides";
-import { GuideDetailPage } from "../../../../../features/resources/GuideDetailPage";
+import { guidesData } from "../../../../common/content/guides";
+import { GuideDetailPage } from "../../../../features/resources/GuideDetailPage";
+import { site } from "../../../../common/config/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -27,14 +28,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: guide.seo.title,
     description: guide.seo.description,
     alternates: {
-      canonical: `/visaworx/resources/guides/${guide.slug}`,
+      canonical: `/resources/guides/${guide.slug}`,
     },
     openGraph: {
     siteName: "Visaworx",
     locale: "en_IN",
       title: guide.seo.title,
       description: guide.seo.description,
-      url: `/visaworx/resources/guides/${guide.slug}`,
+      url: `/resources/guides/${guide.slug}`,
       type: "article",
     },
   };
@@ -56,25 +57,25 @@ export default async function GuidePage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.klartravels.com/visaworx",
+        item: site.url,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Resources",
-        item: "https://www.klartravels.com/visaworx/resources",
+        item: `${site.url}/resources`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Guides",
-        item: "https://www.klartravels.com/visaworx/resources/guides",
+        item: `${site.url}/resources/guides`,
       },
       {
         "@type": "ListItem",
         position: 4,
         name: guide.title,
-        item: `https://www.klartravels.com/visaworx/resources/guides/${guide.slug}`,
+        item: `${site.url}/resources/guides/${guide.slug}`,
       },
     ],
   };

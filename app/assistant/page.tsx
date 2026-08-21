@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { AssistantPage } from "../../../features/assistant/AssistantPage";
+import { AssistantPage } from "../../features/assistant/AssistantPage";
 
 export const metadata: Metadata = {
   title: "Visa Intelligence Assistant | Visaworx",
   description:
     "Ask general visa preparation questions for travel from India and explore approved Visaworx country, service and readiness guidance.",
   alternates: {
-    canonical: "/visaworx/assistant",
+    canonical: "/assistant",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Visa Intelligence Assistant | Visaworx",
     description:
       "Ask general visa preparation questions for travel from India and explore approved Visaworx country, service and readiness guidance.",
-    url: "/visaworx/assistant",
+    url: "/assistant",
     type: "website",
   },
 };

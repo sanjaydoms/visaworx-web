@@ -25,12 +25,12 @@ test.describe("Consultation journey", () => {
     await consentCheckbox(page).check();
     await submitButton(page).click();
 
-    await expect(page).toHaveURL(/\/visaworx\/consultation\/success/);
+    await expect(page).toHaveURL(/\/consultation\/success/);
     await expect(page.getByRole("heading", { name: /consultation request has been received/i })).toBeVisible();
   });
 
   test("success page states this is not a visa application and gives no approval guarantee", async ({ page }) => {
-    await page.goto("/visaworx/consultation/success");
+    await page.goto("/consultation/success");
     const body = (await page.locator("body").innerText()).toLowerCase();
     expect(body).toContain("not a visa application");
     expect(body).not.toMatch(PROMISSORY_CLAIM);
@@ -186,27 +186,27 @@ test.describe("Submission integrity", () => {
 
 test.describe("Contextual entry", () => {
   test("preselects a country from the query string", async ({ page }) => {
-    await page.goto("/visaworx/consultation?country=united-states&source=country");
+    await page.goto("/consultation?country=united-states&source=country");
     await continueButton(page).click();
     await expect(page.getByRole("heading", { name: /what kind of support/i })).toBeVisible();
   });
 
   test("ignores an invalid country parameter instead of accepting it", async ({ page }) => {
-    await page.goto("/visaworx/consultation?country=not-a-real-country");
+    await page.goto("/consultation?country=not-a-real-country");
     await continueButton(page).click();
     // Must block, because no valid destination was actually selected.
     await expect(validationAlert(page)).toContainText(/select a destination/i);
   });
 
   test("ignores an invalid service parameter", async ({ page }) => {
-    await page.goto("/visaworx/consultation?service=fake-service");
+    await page.goto("/consultation?service=fake-service");
     await stepOne(page);
     await continueButton(page).click();
     await expect(validationAlert(page)).toContainText(/select a service/i);
   });
 
   test("carries readiness band context through to the review screen", async ({ page }) => {
-    await page.goto("/visaworx/consultation?source=readiness&readinessBand=Developing");
+    await page.goto("/consultation?source=readiness&readinessBand=Developing");
     await stepOne(page);
     await stepTwo(page);
     await stepThree(page);
@@ -215,7 +215,7 @@ test.describe("Contextual entry", () => {
   });
 
   test("does not reflect an injected source parameter as an unvalidated value", async ({ page }) => {
-    await page.goto("/visaworx/consultation?source=<img src=x onerror=alert(1)>");
+    await page.goto("/consultation?source=<img src=x onerror=alert(1)>");
     // Page must still render normally, with no script execution.
     await expect(page.getByRole("heading", { name: /where are you planning to travel/i })).toBeVisible();
   });

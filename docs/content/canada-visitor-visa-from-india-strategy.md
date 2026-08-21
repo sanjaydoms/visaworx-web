@@ -128,11 +128,11 @@ documents second. Holding a US visa does not create eligibility on its own.
 
 | Anchor text | Destination | Intent |
 |---|---|---|
-| Canada destination guidance | `/visaworx/countries/canada` | Destination detail |
-| tourist visa consultation | `/visaworx/services/tourist-visa` | Commercial |
-| family and dependent visa support | `/visaworx/services/family-dependent-visa` | Family visits, strong fit |
-| documentation review | `/visaworx/services/documentation-review` | Host evidence |
-| US visitor visa from India | `/visaworx/resources/guides/us-visitor-visa-from-india` | Cross-cluster; overland entry |
+| Canada destination guidance | `/countries/canada` | Destination detail |
+| tourist visa consultation | `/services/tourist-visa` | Commercial |
+| family and dependent visa support | `/services/family-dependent-visa` | Family visits, strong fit |
+| documentation review | `/services/documentation-review` | Host evidence |
+| US visitor visa from India | `/resources/guides/us-visitor-visa-from-india` | Cross-cluster; overland entry |
 
 ---
 

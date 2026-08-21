@@ -18,6 +18,6 @@ git push origin main
 ```
 
 ## 3. Post-Rollback Verification
-1. Verify `/visaworx` homepage renders with 200 OK.
+1. Verify `/` homepage renders with 200 OK.
 2. Confirm consultation form endpoint `/api/consultation` is accepting requests.
 3. Notify the Klar Travels operations team.

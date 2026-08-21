@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ConsultationPage } from "../../../features/consultation/ConsultationPage";
+import { ConsultationPage } from "../../features/consultation/ConsultationPage";
 
 export const metadata: Metadata = {
   title: "Book a Visa Consultation | Visaworx",
   description:
     "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review, from India.",
   alternates: {
-    canonical: "/visaworx/consultation",
+    canonical: "/consultation",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Book a Visa Consultation | Visaworx",
     description:
       "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review, from India.",
-    url: "/visaworx/consultation",
+    url: "/consultation",
     type: "website",
   },
 };

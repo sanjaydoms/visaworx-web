@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { FaqsPage } from "../../../../features/resources/FaqsPage";
-import { faqsData } from "../../../../common/content/faqs";
+import { FaqsPage } from "../../../features/resources/FaqsPage";
+import { faqsData } from "../../../common/content/faqs";
 
 export const metadata: Metadata = {
   title: "Visa Questions and Answers | Visaworx",
   description:
     "Answers for applicants from India on visa categories, bank statements, income tax records, consular interviews and refusal reviews.",
   alternates: {
-    canonical: "/visaworx/resources/faqs",
+    canonical: "/resources/faqs",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Visa Questions and Answers | Visaworx",
     description:
       "Answers for applicants from India on visa categories, bank statements, income tax records, consular interviews and refusal reviews.",
-    url: "/visaworx/resources/faqs",
+    url: "/resources/faqs",
     type: "website",
   },
 };

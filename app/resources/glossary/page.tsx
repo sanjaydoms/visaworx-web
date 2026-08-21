@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { GlossaryPage } from "../../../../features/resources/GlossaryPage";
+import { GlossaryPage } from "../../../features/resources/GlossaryPage";
 
 export const metadata: Metadata = {
   title: "Visa Glossary | Visaworx",
   description:
     "Clear, non-technical definitions of visa terminology, consular clauses and documentation terms used by applicants from India.",
   alternates: {
-    canonical: "/visaworx/resources/glossary",
+    canonical: "/resources/glossary",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Visa Glossary | Visaworx",
     description:
       "Clear, non-technical definitions of visa terminology, consular clauses and documentation terms used by applicants from India.",
-    url: "/visaworx/resources/glossary",
+    url: "/resources/glossary",
     type: "website",
   },
 };

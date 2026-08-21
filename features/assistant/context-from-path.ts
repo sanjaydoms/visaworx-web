@@ -11,18 +11,20 @@ import type { AssistantPageContext } from "../../common/ai/types/assistant";
 export function contextFromPath(pathname: string): AssistantPageContext | undefined {
   const path = pathname.replace(/\/+$/, "");
 
-  const country = path.match(/^\/visaworx\/countries\/([^/]+)$/);
+  const country = path.match(/^\/countries\/([^/]+)$/);
   if (country) return { pageType: "country", countrySlug: country[1] };
 
-  const service = path.match(/^\/visaworx\/services\/([^/]+)$/);
+  const service = path.match(/^\/services\/([^/]+)$/);
   if (service) return { pageType: "service", serviceSlug: service[1] };
 
-  const guide = path.match(/^\/visaworx\/resources\/guides\/([^/]+)$/);
+  const guide = path.match(/^\/resources\/guides\/([^/]+)$/);
   if (guide) return { pageType: "guide", guideSlug: guide[1] };
 
-  if (path.startsWith("/visaworx/readiness")) return { pageType: "readiness" };
-  if (path.startsWith("/visaworx/consultation")) return { pageType: "consultation" };
-  if (path === "/visaworx") return { pageType: "homepage" };
+  if (path.startsWith("/readiness")) return { pageType: "readiness" };
+  if (path.startsWith("/consultation")) return { pageType: "consultation" };
+  // The homepage is the site root now that /visaworx is gone, and the trailing
+  // slash was stripped above, so "/" arrives here as an empty string.
+  if (path === "") return { pageType: "homepage" };
 
   // Listing and resource pages carry no specific subject; sending a pageType
   // with nothing attached would add noise to retrieval without adding signal.

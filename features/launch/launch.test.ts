@@ -98,7 +98,8 @@ describe("launch content safety", () => {
 
 describe("launch indexing: sitemap and robots agree", () => {
   const entries = sitemap();
-  const paths = entries.map((entry) => entry.url.replace(site.url, ""));
+  // The root entry is the bare origin, which strips to an empty string.
+  const paths = entries.map((entry) => entry.url.replace(site.url, "") || "/");
   const rules = robots().rules as {
     allow?: string[];
     disallow?: string[];
@@ -123,20 +124,20 @@ describe("launch indexing: sitemap and robots agree", () => {
   );
 
   it("lists every country, service and guide detail page", () => {
-    expect(paths.filter((p) => p.startsWith("/visaworx/countries/"))).toHaveLength(
+    expect(paths.filter((p) => p.startsWith("/countries/"))).toHaveLength(
       countriesData.length,
     );
-    expect(paths.filter((p) => p.startsWith("/visaworx/services/"))).toHaveLength(
+    expect(paths.filter((p) => p.startsWith("/services/"))).toHaveLength(
       servicesData.length,
     );
     expect(
-      paths.filter((p) => p.startsWith("/visaworx/resources/guides/")),
+      paths.filter((p) => p.startsWith("/resources/guides/")),
     ).toHaveLength(guidesData.length);
   });
 
   it("emits absolute urls and no duplicates", () => {
     for (const entry of entries) {
-      expect(entry.url.startsWith(`${site.url}/`)).toBe(true);
+      expect(entry.url === site.url || entry.url.startsWith(`${site.url}/`)).toBe(true);
     }
     expect(new Set(paths).size).toBe(paths.length);
   });

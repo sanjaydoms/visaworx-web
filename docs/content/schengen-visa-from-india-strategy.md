@@ -44,7 +44,7 @@ sub-intents (requirements, timelines), and signals freshness without clickbait.
 | **Meta description** | Schengen visa from India explained — documents, fees, processing times and the 2026 EES border changes. Understand what to prepare before you apply. *(150 chars)* |
 | **URL slug** | `schengen-visa-from-india` |
 | **Primary keyword** | Schengen visa from India |
-| **Canonical** | `/visaworx/resources/guides/schengen-visa-from-india` |
+| **Canonical** | `/resources/guides/schengen-visa-from-india` |
 
 ---
 
@@ -197,12 +197,12 @@ in-line and linked from `officialReferences`.
 
 | Anchor text | Destination | Intent served |
 |---|---|---|
-| Schengen Area destination guidance | `/visaworx/countries/schengen` | Destination detail |
-| tourist visa consultation | `/visaworx/services/tourist-visa` | Commercial |
-| documentation review | `/visaworx/services/documentation-review` | Commercial, document-quality intent |
-| visa readiness assessment | `/visaworx/readiness` | Product, preparation-gap intent |
-| how to check current official visa requirements | `/visaworx/resources/guides/how-to-check-current-official-visa-requirements` | Freshness and trust |
-| how to prepare financial evidence | `/visaworx/resources/guides/how-to-prepare-financial-evidence` | Deep dive on the weakest document |
+| Schengen Area destination guidance | `/countries/schengen` | Destination detail |
+| tourist visa consultation | `/services/tourist-visa` | Commercial |
+| documentation review | `/services/documentation-review` | Commercial, document-quality intent |
+| visa readiness assessment | `/readiness` | Product, preparation-gap intent |
+| how to check current official visa requirements | `/resources/guides/how-to-check-current-official-visa-requirements` | Freshness and trust |
+| how to prepare financial evidence | `/resources/guides/how-to-prepare-financial-evidence` | Deep dive on the weakest document |
 
 Wired through `relatedCountrySlugs`, `relatedServiceSlugs` and in-body references. The guide
 page template already renders Related Countries, Related Services, Related FAQs, a readiness
@@ -232,7 +232,7 @@ in `features/launch/launch.test.ts`.
    *destination*.
 2. **Tables.** `ContentBlock` has no table variant. Fee and timeline data is carried as lists
    instead. Adding a `table` block means extending the union and `GuideContentRenderer`.
-3. **FAQ volume.** FAQs are global entities rendered on `/visaworx/resources/faqs`. Six were
+3. **FAQ volume.** FAQs are global entities rendered on `/resources/faqs`. Six were
    added here. At scale, per-article FAQs will need either a category filter on that page or a
    guide-scoped FAQ field.
 

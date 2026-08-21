@@ -2,7 +2,7 @@
 
 **Owner:** Klar Travels  
 **Status:** Build  
-**Primary route:** `/visaworx`
+**Primary host:** `visaworx.klartravels.com`
 
 ## Product
 

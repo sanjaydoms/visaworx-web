@@ -12,7 +12,7 @@ pnpm dev
 Open:
 
 ```text
-http://localhost:3000/visaworx
+http://localhost:3000
 ```
 
 ## Folder model

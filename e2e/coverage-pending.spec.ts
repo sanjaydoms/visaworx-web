@@ -39,7 +39,7 @@ test.describe("destinations awaiting verified guidance", () => {
 
   for (const country of SAMPLE) {
     test.describe(`${country.name}`, () => {
-      const path = `/visaworx/countries/${country.slug}`;
+      const path = `/countries/${country.slug}`;
 
       test("renders the not-published state instead of empty requirement sections", async ({
         page,
@@ -71,7 +71,7 @@ test.describe("destinations awaiting verified guidance", () => {
 
         const consultationLink = page.getByRole("link", { name: /request a consultation/i });
         await expect(consultationLink).toBeVisible();
-        await expect(consultationLink).toHaveAttribute("href", /\/visaworx\/consultation\?source=country/);
+        await expect(consultationLink).toHaveAttribute("href", /\/consultation\?source=country/);
       });
 
       test("promises nothing in its title or on the page", async ({ page }) => {
@@ -93,7 +93,7 @@ test.describe("published destinations still render full guidance", () => {
   const published = countriesData.find(isPublished)!;
 
   test("shows the requirement sections and no pending notice", async ({ page }) => {
-    await page.goto(`/visaworx/countries/${published.slug}`, { waitUntil: "networkidle" });
+    await page.goto(`/countries/${published.slug}`, { waitUntil: "networkidle" });
 
     for (const heading of GUIDANCE_HEADINGS) {
       await expect(page.getByRole("heading", { name: heading })).toHaveCount(1);

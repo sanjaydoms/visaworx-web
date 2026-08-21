@@ -159,12 +159,12 @@ Standard Visitor visa required. This is the single fact the article exists to es
 
 | Anchor text | Destination | Intent |
 |---|---|---|
-| United Kingdom destination guidance | `/visaworx/countries/united-kingdom` | Destination detail |
-| tourist visa consultation | `/visaworx/services/tourist-visa` | Commercial |
-| business visa support | `/visaworx/services/business-visa` | Commercial |
-| documentation review | `/visaworx/services/documentation-review` | Document-quality intent |
-| understanding visa refusal reasons | `/visaworx/resources/guides/understanding-visa-refusal-reasons` | Refusal disclosure |
-| Schengen visa from India | `/visaworx/resources/guides/schengen-visa-from-india` | Cross-cluster, combined-trip planning |
+| United Kingdom destination guidance | `/countries/united-kingdom` | Destination detail |
+| tourist visa consultation | `/services/tourist-visa` | Commercial |
+| business visa support | `/services/business-visa` | Commercial |
+| documentation review | `/services/documentation-review` | Document-quality intent |
+| understanding visa refusal reasons | `/resources/guides/understanding-visa-refusal-reasons` | Refusal disclosure |
+| Schengen visa from India | `/resources/guides/schengen-visa-from-india` | Cross-cluster, combined-trip planning |
 
 ---
 

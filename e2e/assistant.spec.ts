@@ -18,7 +18,7 @@ import { countriesData, isPublished } from "../common/content/countries";
 const unpublished = countriesData.find((c) => !isPublished(c))!;
 
 async function ask(page: Page, question: string) {
-  await page.goto("/visaworx/assistant", { waitUntil: "networkidle" });
+  await page.goto("/assistant", { waitUntil: "networkidle" });
 
   const input = page.getByLabel(/ask visaworx ai assistant a question/i);
   await input.fill(question);
@@ -105,7 +105,7 @@ test.describe("assistant failure handling", () => {
       })
     );
 
-    await page.goto("/visaworx/assistant", { waitUntil: "networkidle" });
+    await page.goto("/assistant", { waitUntil: "networkidle" });
     await page.getByLabel(/ask visaworx ai assistant a question/i).fill("What documents do I need?");
     await page.getByRole("button", { name: /send message/i }).click();
 
@@ -118,7 +118,7 @@ test.describe("assistant failure handling", () => {
 
 test.describe("assistant panel on other routes", () => {
   test("opens from the floating launcher and answers there too", async ({ page }) => {
-    await page.goto("/visaworx/countries/canada", { waitUntil: "networkidle" });
+    await page.goto("/countries/canada", { waitUntil: "networkidle" });
 
     await page.getByRole("button", { name: /open visaworx ai assistant/i }).click();
     const panel = page.getByRole("dialog", { name: /visaworx ai assistant panel/i });

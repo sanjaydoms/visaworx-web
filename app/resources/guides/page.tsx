@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { GuidesListPage } from "../../../../features/resources/GuidesListPage";
+import { GuidesListPage } from "../../../features/resources/GuidesListPage";
 
 export const metadata: Metadata = {
   title: "Visa Guides and Preparation Resources | Visaworx",
   description:
     "Visa guides for travellers from India - preparation roadmaps, document checklists, country guidance and refusal-awareness resources.",
   alternates: {
-    canonical: "/visaworx/resources/guides",
+    canonical: "/resources/guides",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Visa Guides and Preparation Resources | Visaworx",
     description:
       "Visa guides for travellers from India - preparation roadmaps, document checklists, country guidance and refusal-awareness resources.",
-    url: "/visaworx/resources/guides",
+    url: "/resources/guides",
     type: "website",
   },
 };

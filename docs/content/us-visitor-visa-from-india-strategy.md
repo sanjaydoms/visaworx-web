@@ -121,11 +121,11 @@ convenience → therefore assume an interview and plan the timeline accordingly.
 
 | Anchor text | Destination | Intent |
 |---|---|---|
-| United States destination guidance | `/visaworx/countries/united-states` | Destination detail |
-| interview preparation | `/visaworx/services/interview-preparation` | Commercial, high relevance |
-| tourist visa consultation | `/visaworx/services/tourist-visa` | Commercial |
-| visa interview preparation guide | `/visaworx/resources/guides/visa-interview-preparation-guide` | Deep dive |
-| understanding visa refusal reasons | `/visaworx/resources/guides/understanding-visa-refusal-reasons` | Refusal disclosure |
+| United States destination guidance | `/countries/united-states` | Destination detail |
+| interview preparation | `/services/interview-preparation` | Commercial, high relevance |
+| tourist visa consultation | `/services/tourist-visa` | Commercial |
+| visa interview preparation guide | `/resources/guides/visa-interview-preparation-guide` | Deep dive |
+| understanding visa refusal reasons | `/resources/guides/understanding-visa-refusal-reasons` | Refusal disclosure |
 
 ---
 

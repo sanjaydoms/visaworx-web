@@ -24,7 +24,7 @@ export default defineConfig({
   webServer: isLocal
     ? {
         command: "npm run start",
-        url: "http://localhost:3000/visaworx/consultation",
+        url: "http://localhost:3000/consultation",
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,
       }

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { CountriesListPage } from "../../../features/countries/CountriesListPage";
+import { CountriesListPage } from "../../features/countries/CountriesListPage";
 
 export const metadata: Metadata = {
   title: "Visa Guidance by Country | Visaworx",
   description:
     "Destination-specific visa intelligence for travellers from India, with readiness guidance and expert human consultation from Visaworx.",
   alternates: {
-    canonical: "/visaworx/countries",
+    canonical: "/countries",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Visa Guidance by Country | Visaworx",
     description:
       "Destination-specific visa intelligence for travellers from India, with readiness guidance and expert human consultation from Visaworx.",
-    url: "/visaworx/countries",
+    url: "/countries",
     type: "website",
   },
 };

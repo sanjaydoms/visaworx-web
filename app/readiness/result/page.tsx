@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ReadinessResultPage } from "../../../../features/readiness/ReadinessResultPage";
+import { ReadinessResultPage } from "../../../features/readiness/ReadinessResultPage";
 
 export const metadata: Metadata = {
   title: "Visa Readiness Summary | Visaworx",

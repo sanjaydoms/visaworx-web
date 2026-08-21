@@ -12,20 +12,20 @@ import { PROMISSORY_CLAIM } from "./helpers";
  */
 
 const ROUTES = [
-  ["home", "/visaworx"],
-  ["countries list", "/visaworx/countries"],
-  ["country detail", "/visaworx/countries/united-states"],
-  ["services list", "/visaworx/services"],
-  ["service detail", "/visaworx/services/tourist-visa"],
-  ["readiness", "/visaworx/readiness"],
-  ["resources hub", "/visaworx/resources"],
-  ["faqs", "/visaworx/resources/faqs"],
-  ["glossary", "/visaworx/resources/glossary"],
-  ["guides list", "/visaworx/resources/guides"],
-  ["guide detail", "/visaworx/resources/guides/common-visa-application-mistakes"],
-  ["consultation", "/visaworx/consultation"],
-  ["consultation success", "/visaworx/consultation/success"],
-  ["assistant", "/visaworx/assistant"],
+  ["home", "/"],
+  ["countries list", "/countries"],
+  ["country detail", "/countries/united-states"],
+  ["services list", "/services"],
+  ["service detail", "/services/tourist-visa"],
+  ["readiness", "/readiness"],
+  ["resources hub", "/resources"],
+  ["faqs", "/resources/faqs"],
+  ["glossary", "/resources/glossary"],
+  ["guides list", "/resources/guides"],
+  ["guide detail", "/resources/guides/common-visa-application-mistakes"],
+  ["consultation", "/consultation"],
+  ["consultation success", "/consultation/success"],
+  ["assistant", "/assistant"],
 ] as const;
 
 for (const [name, path] of ROUTES) {
@@ -122,7 +122,7 @@ for (const [name, path] of ROUTES) {
 
 test.describe("in-page anchors", () => {
   test("guide table-of-contents links clear the sticky header", async ({ page }) => {
-    await page.goto("/visaworx/resources/guides/common-visa-application-mistakes", {
+    await page.goto("/resources/guides/common-visa-application-mistakes", {
       waitUntil: "networkidle",
     });
 
@@ -161,7 +161,7 @@ test.describe("in-page anchors", () => {
 
 test.describe("navigation", () => {
   test("primary nav reaches every top-level section", async ({ page }) => {
-    await page.goto("/visaworx", { waitUntil: "networkidle" });
+    await page.goto("/", { waitUntil: "networkidle" });
     const nav = page.locator('nav[aria-label="Primary navigation"]');
 
     // Below lg the primary nav collapses into the mobile drawer.
@@ -180,7 +180,7 @@ test.describe("navigation", () => {
     const width = page.viewportSize()!.width;
     test.skip(width >= 1024, "drawer only exists on small viewports");
 
-    await page.goto("/visaworx", { waitUntil: "networkidle" });
+    await page.goto("/", { waitUntil: "networkidle" });
     const toggle = page.getByRole("button", { name: /toggle navigation/i });
     await expect(toggle).toBeVisible();
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { countriesData } from "../../../../common/content/countries";
-import { CountryDetailPage } from "../../../../features/countries/CountryDetailPage";
+import { countriesData } from "../../../common/content/countries";
+import { CountryDetailPage } from "../../../features/countries/CountryDetailPage";
+import { site } from "../../../common/config/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -37,14 +38,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `/visaworx/countries/${country.slug}`,
+      canonical: `/countries/${country.slug}`,
     },
     openGraph: {
     siteName: "Visaworx",
     locale: "en_IN",
       title,
       description,
-      url: `/visaworx/countries/${country.slug}`,
+      url: `/countries/${country.slug}`,
       type: "article",
     },
   };
@@ -66,19 +67,19 @@ export default async function CountryPage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.klartravels.com/visaworx",
+        item: site.url,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Countries",
-        item: "https://www.klartravels.com/visaworx/countries",
+        item: `${site.url}/countries`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: country.name,
-        item: `https://www.klartravels.com/visaworx/countries/${country.slug}`,
+        item: `${site.url}/countries/${country.slug}`,
       },
     ],
   };

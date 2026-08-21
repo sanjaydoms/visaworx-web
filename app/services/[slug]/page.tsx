@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { servicesData } from "../../../../common/content/services";
-import { ServiceDetailPage } from "../../../../features/services/ServiceDetailPage";
+import { servicesData } from "../../../common/content/services";
+import { ServiceDetailPage } from "../../../features/services/ServiceDetailPage";
+import { site } from "../../../common/config/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -30,14 +31,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical: `/visaworx/services/${service.slug}`,
+      canonical: `/services/${service.slug}`,
     },
     openGraph: {
     siteName: "Visaworx",
     locale: "en_IN",
       title,
       description,
-      url: `/visaworx/services/${service.slug}`,
+      url: `/services/${service.slug}`,
       type: "article",
     },
   };
@@ -59,19 +60,19 @@ export default async function ServicePage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.klartravels.com/visaworx",
+        item: site.url,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: "https://www.klartravels.com/visaworx/services",
+        item: `${site.url}/services`,
       },
       {
         "@type": "ListItem",
         position: 3,
         name: service.title,
-        item: `https://www.klartravels.com/visaworx/services/${service.slug}`,
+        item: `${site.url}/services/${service.slug}`,
       },
     ],
   };

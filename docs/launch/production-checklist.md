@@ -12,13 +12,13 @@
 - [x] Primary government portal source links provided on all country and guide pages.
 
 ## 3. Module Functional Audit
-- [x] Homepage (`/visaworx`) — Header, Hero, Clarity Panel, Trust Strip, CTA.
-- [x] Countries Module (`/visaworx/countries` & 10 detail routes).
-- [x] Services Module (`/visaworx/services` & 9 detail routes).
-- [x] Visa Readiness Engine (`/visaworx/readiness` & `/visaworx/readiness/result`).
-- [x] Visa Intelligence Resources Module (`/visaworx/resources`, `/guides`, `/faqs`, `/glossary`).
-- [x] Consultation Module (`/visaworx/consultation` & `/visaworx/consultation/success`).
-- [x] AI Visa Intelligence Assistant (`/visaworx/assistant` & floating launcher).
+- [x] Homepage (`/`) — Header, Hero, Clarity Panel, Trust Strip, CTA.
+- [x] Countries Module (`/countries` & 10 detail routes).
+- [x] Services Module (`/services` & 9 detail routes).
+- [x] Visa Readiness Engine (`/readiness` & `/readiness/result`).
+- [x] Visa Intelligence Resources Module (`/resources`, `/guides`, `/faqs`, `/glossary`).
+- [x] Consultation Module (`/consultation` & `/consultation/success`).
+- [x] AI Visa Intelligence Assistant (`/assistant` & floating launcher).
 
 ## 4. Integration Verification
 - [x] Klar CRM Adapter (`common/services/klar-crm/`) configured with idempotency `VISAWORX-{requestId}` and fallback logging.

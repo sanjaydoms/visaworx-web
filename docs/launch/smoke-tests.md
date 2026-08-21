@@ -12,7 +12,7 @@ npm run build
 ```
 
 ## 2. Manual Smoke Test Verification
-- [ ] Visit `https://www.klartravels.com/visaworx` and confirm hero CTA buttons work.
-- [ ] Visit `https://www.klartravels.com/visaworx/countries/canada` and test `Check My Readiness` button.
-- [ ] Complete a 5-step consultation at `https://www.klartravels.com/visaworx/consultation` and verify redirect to `/success`.
+- [ ] Visit `https://visaworx.klartravels.com` and confirm hero CTA buttons work.
+- [ ] Visit `https://www.klartravels.com/countries/canada` and test `Check My Readiness` button.
+- [ ] Complete a 5-step consultation at `https://www.klartravels.com/consultation` and verify redirect to `/success`.
 - [ ] Open AI Assistant launcher and type: "What documents are needed for student visa?". Confirm response and source links.

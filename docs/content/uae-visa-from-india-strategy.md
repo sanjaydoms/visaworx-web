@@ -162,11 +162,11 @@ documents, not of the Indian passport. This is the fact the article exists to es
 
 | Anchor text | Destination | Intent |
 |---|---|---|
-| United Arab Emirates destination guidance | `/visaworx/countries/united-arab-emirates` | Destination detail |
-| tourist visa consultation | `/visaworx/services/tourist-visa` | Commercial |
-| business visa support | `/visaworx/services/business-visa` | Business travellers |
-| family and dependent visa support | `/visaworx/services/family-dependent-visa` | Family visits |
-| visa readiness assessment | `/visaworx/readiness` | Route-eligibility check |
+| United Arab Emirates destination guidance | `/countries/united-arab-emirates` | Destination detail |
+| tourist visa consultation | `/services/tourist-visa` | Commercial |
+| business visa support | `/services/business-visa` | Business travellers |
+| family and dependent visa support | `/services/family-dependent-visa` | Family visits |
+| visa readiness assessment | `/readiness` | Route-eligibility check |
 
 ---
 

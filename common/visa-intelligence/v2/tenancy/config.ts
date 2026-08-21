@@ -49,7 +49,7 @@ export const defaultTenant: TenantConfig = {
   logoPath: "/brand/visaworx-logo.png",
   theme: { primaryColor: "#071f4a", accentColor: "#c92027" },
   visibility: { countries: [], visaCategoryIds: [], serviceSlugs: [] },
-  consultationRoute: "/visaworx/consultation",
+  consultationRoute: "/consultation",
   escalationDestination: "support@klartravels.com",
   disclaimer:
     "Visaworx provides consultation and preparation guidance. Visa decisions are made by the relevant authority.",

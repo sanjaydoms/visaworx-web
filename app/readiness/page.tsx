@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ReadinessAssessmentPage } from "../../../features/readiness/ReadinessAssessmentPage";
+import { ReadinessAssessmentPage } from "../../features/readiness/ReadinessAssessmentPage";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Assess your visa preparation for travel from India, identify gaps and understand the next steps before you apply.",
   alternates: {
-    canonical: "/visaworx/readiness",
+    canonical: "/readiness",
   },
   openGraph: {
     siteName: "Visaworx",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Visa Readiness Assessment | Visaworx",
     description:
       "Assess your visa preparation for travel from India, identify gaps and understand the next steps before you apply.",
-    url: "/visaworx/readiness",
+    url: "/readiness",
     type: "website",
   },
 };

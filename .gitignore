@@ -10,3 +10,7 @@ out
 /test-results
 /playwright-report
 tsconfig.tsbuildinfo
+
+# Next.js generated agent rules
+AGENTS.md
+CLAUDE.md

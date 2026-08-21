@@ -72,7 +72,7 @@ describe("launch journey: assistant -> escalation -> consultation", () => {
 
   it("admits uncertainty and offers an expert for an unsupported question", async () => {
     const result = await processAssistantQuery({
-      message: "What are the rules for visa unmapped topic xyz999?",
+      message: "What are the qqzzx for visa frobnitz xyz999?",
     });
     expect(result.answer).toContain("do not have enough approved information");
     expect(result.nextSteps.some((ns) => ns.type === "consultation")).toBe(true);

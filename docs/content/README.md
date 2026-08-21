@@ -35,25 +35,30 @@ missions checklist for India appears in several — it says so explicitly and te
 that the consulate deciding their case governs. Presenting one mission's list as the standard
 is the most common error in competing content.
 
-### 3. Avoid generic filler in FAQ questions and answers
+### 3. Avoid filler that a realistic query would also use
 
 FAQs are indexed by the assistant's retriever: **question at weight 3, answer at weight 1.5,
-category at 1.** The assistant test suite uses deliberately unmatchable queries to prove that
-unsupported questions stay unsupported, and those queries are built from ordinary English.
+category at 1.** The assistant suite proves unsupported questions stay unsupported by asking
+things that should retrieve nothing.
 
-Twice now a new FAQ has collided with one:
+One of those is realistic. *"What are the visa rules for Madagascar?"* is a question a traveller
+would genuinely type, and the assistant must treat it as unsupported rather than serving UAE
+content. Because `visa` is a stopword it reduces to two content words, so a single hit on
+`rules` in an indexed field clears the relevance floor. **Prefer the specific noun** — "entry
+process", "eligibility conditions", "requirements published by the mission".
 
-| Word | Where it appeared | Guard query it broke |
-|---|---|---|
-| `match` | a UK FAQ answer | `xyz999 nothing matches this` |
-| `rules` | a UAE FAQ question, then two sponsorship FAQ answers | `What are the visa rules for Madagascar?` |
+Watch the **stem**, not the word. `rules` and `ruling` both reduce to `rul`, which is how a FAQ
+mentioning a court ruling started matching a query about Madagascar. The guard in
+`features/resources/resources.test.ts` uses the retriever's own `tokenize`, so it compares
+stems and cannot drift from production.
 
-Because `visa` is a stopword, a query like "visa rules for Madagascar" reduces to two content
-words, so a single hit on `rules` in an indexed field clears the relevance floor.
+The purely artificial fixtures — the ones built around `xyz999` — now use tokens that cannot
+occur in prose (`qqzzx`, `frobnitz`). They were previously assembled from ordinary English like
+"nothing matches this", which meant the growing corpus kept colliding with them and the writing
+was being contorted to satisfy a badly chosen fixture.
 
-**Prefer the specific noun.** Write "entry process", "eligibility conditions", "requirements
-published by the mission" rather than "rules". The retriever is not the problem — reaching for
-filler is. Both times, rewording was the correct fix and changing the scorer was not.
+**Fix the fixture, not the prose — unless the query is one a real traveller would ask.**
+Changing the scorer was tried twice, and was wrong both times.
 
 ### 4. No approval language, ever
 
@@ -88,6 +93,7 @@ The sitemap, canonicals and internal links follow automatically.
 | `when-someone-else-funds-your-trip` | Documentation |
 | `first-time-applicant-no-travel-history` | Visa Preparation |
 | `self-employed-visa-applications-from-india` | Documentation |
+| `travelling-with-children-indian-passport` | Family Travel |
 
 **Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
 in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.

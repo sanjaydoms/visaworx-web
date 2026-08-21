@@ -4,6 +4,7 @@ import { faqsData } from "../../common/content/faqs";
 import { glossaryData } from "../../common/content/glossary";
 import { searchResources } from "../../common/utils/resource-search";
 import { FORBIDDEN_MARKETING_PHRASES } from "../../common/content/forbidden-phrases";
+import { tokenize } from "../../common/ai/retrieval/relevance";
 
 const expectedGuideSlugs = [
   "how-to-choose-the-right-visa-category",
@@ -32,6 +33,7 @@ const expectedGuideSlugs = [
   "when-someone-else-funds-your-trip",
   "first-time-applicant-no-travel-history",
   "self-employed-visa-applications-from-india",
+  "travelling-with-children-indian-passport",
 ];
 
 describe("guides content model", () => {
@@ -95,15 +97,31 @@ describe("guide content safety", () => {
 //
 // This has happened twice. Both times the fix was to reach for the specific noun -
 // "entry process", "eligibility conditions" - rather than to loosen the retriever.
-const RETRIEVAL_FILLER = ["rules", "matches", "unmapped"];
+// Only words that appear in a *realistic* guard query belong here. "What are the
+// visa rules for Madagascar?" is a question a real traveller would ask, and the
+// assistant must answer it as unsupported rather than serving UAE content, so
+// "rules" is worth avoiding in FAQ text. The purely artificial fixtures are built
+// from unmatchable tokens instead, so they constrain nothing.
+const RETRIEVAL_FILLER = ["rules"];
 
 describe("FAQ wording does not collide with the assistant guard queries", () => {
-  it.each(RETRIEVAL_FILLER)("no FAQ question or answer contains %s", (word) => {
-    const pattern = new RegExp(`\b${word}\b`, "i");
+  // Compare stems, not literal words, using the retriever's own tokenizer so this
+  // can never drift from it. "rules" and "ruling" both stem to "rul", which is how
+  // a FAQ mentioning a court ruling started matching a query about Madagascar.
+  const fillerStems = new Set(RETRIEVAL_FILLER.flatMap((word) => tokenize(word)));
+
+  it.each(RETRIEVAL_FILLER)("no FAQ question or answer stems to %s", (word) => {
+    const stems = new Set(tokenize(word));
     const offenders = faqsData
-      .filter((faq) => pattern.test(faq.question) || pattern.test(faq.answer))
+      .filter((faq) =>
+        [...tokenize(faq.question), ...tokenize(faq.answer)].some((token) => stems.has(token)),
+      )
       .map((faq) => faq.id);
 
     expect(offenders).toEqual([]);
+  });
+
+  it("covers every filler term with a stem", () => {
+    expect(fillerStems.size).toBeGreaterThan(0);
   });
 });

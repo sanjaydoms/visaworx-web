@@ -121,7 +121,7 @@ describe("retrieval context", () => {
   });
 
   it("instructs the model not to answer when nothing matched", () => {
-    const context = buildRetrievalContext(searchApprovedContent("xyz999 nothing matches this"));
+    const context = buildRetrievalContext(searchApprovedContent("xyz999 qqzzx frobnitz"));
     expect(context).toContain("NO APPROVED CONTENT MATCHED");
     expect(context).toMatch(/do not answer from general knowledge/i);
   });

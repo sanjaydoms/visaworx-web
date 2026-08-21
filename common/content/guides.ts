@@ -3544,4 +3544,199 @@ export const guidesData: Guide[] = [
         "Business owners have no employer-issued document, so their files read thin. How GST registration, Form 26AS and filed returns rebuild the missing corroboration.",
     },
   },
+  {
+    slug: "travelling-with-children-indian-passport",
+    title: "Travelling With Children: A Child's Application Is About the Adults",
+    summary: "Consent from a non-travelling parent, custody documents, and who is named on the visa. Why family applications come apart on paperwork about the parents rather than anything about the child.",
+    category: "Family Travel",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Anjali booked the trip for herself and her eight-year-old. Her husband could not take leave, which seemed like a scheduling detail rather than a visa problem. It became one at the counter, where the missing document was not hers and not her daughter's. It was a notarised statement from a man who was not travelling and had not been asked to sign anything.",
+      },
+      {
+        type: "paragraph",
+        text: "Anjali is an illustration, but this is the single most common way a family application stalls. A child's file is only partly about the child. Most of it is about the adults: who has custody, who consents, who is accompanying, and who is expecting them at the other end.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Where a child travels with one parent, consulates commonly require a written consent statement from the parent who is not travelling, notarised by a public notary. Travelling alone, consent is needed from both. Add a birth certificate, passport copies of both parents, and a court ruling where one parent has sole custody. The child usually still attends in person.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Consent Document Is the Usual Failure",
+      },
+      {
+        type: "paragraph",
+        text: "It is missed because it belongs to somebody who is not going on the trip and therefore not thinking about the trip. Taking the checklist German missions publish for applicants in India as an illustration:",
+      },
+      {
+        type: "list",
+        items: [
+          "Travelling with one parent or guardian: a written consent statement, notarised by a public notary, from the parent or guardian who is not travelling.",
+          "Travelling alone: a notarised written consent statement from both parents or guardians.",
+          "Where the travelling parent has sole custody: a copy of the court ruling or other official proof of custody or guardianship.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Notarised means an appointment, not a signature",
+        text: "A consent statement typed at home and signed does not meet a notarisation requirement. Somebody has to attend a notary, which takes a day nobody has budgeted and is the reason this document is so often the last one outstanding. Start it early, not after everything else is assembled.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Documents About Parents, Not Just the Child",
+      },
+      {
+        type: "paragraph",
+        text: "The same checklist asks for a birth certificate for minor applicants, and passport copies, biometric and address pages, of both the mother and the father having custody or guardianship. The application form and declarations are signed by both parents.",
+      },
+      {
+        type: "paragraph",
+        text: "Read that list again and notice what it is establishing. Not the child's finances or intentions, but the legal relationship between the child and the adults involved, and that both of those adults agree to this trip. That is the question being answered.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Child Usually Still Attends",
+      },
+      {
+        type: "paragraph",
+        text: "Parents frequently assume a young child can be left out of the appointment. For Schengen applications submitted in India, the applicant must appear in person to submit the application even where they are under 18.",
+      },
+      {
+        type: "paragraph",
+        text: "Plan the appointment around a child who has to be there, rather than discovering on the morning that they do. Biometric requirements vary by age and destination, so check what applies for your child's age with the mission handling the application.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The United Kingdom Names the Accompanying Adults",
+      },
+      {
+        type: "paragraph",
+        text: "The UK approaches the same question differently and produces one detail worth planning around. An applicant under 18 must have made suitable arrangements for travel and stay, and must have enough money to support themselves without working or drawing public funds, or family and friends who can support them.",
+      },
+      {
+        type: "list",
+        items: [
+          "Travelling alone: written consent from parents or guardians, with their full contact details.",
+          "Travelling alone: proof of accommodation, including the name and date of birth of the person the child will stay with, and that person's written consent for the child to stay with them.",
+          "Accompanied by an adult who is not a parent: specific information about that adult in the application.",
+          "Up to two adults may be identified in the application, and their names appear on the visa.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Names on the visa are a commitment, not a formality",
+        text: "Because the accompanying adults are named on the child's visa, changing who travels with the child after it is issued is not a small adjustment. If there is any chance an aunt travels instead of an uncle, decide before the application rather than after.",
+      },
+      {
+        type: "paragraph",
+        text: "The UK also flags that where a child stays with someone who is not a relative for an extended period, private foster care considerations can arise and a local authority may need notifying. That is unlikely to affect a two-week holiday, but it is worth knowing before arranging a long summer stay with family friends.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Split Families and Separated Parents",
+      },
+      {
+        type: "paragraph",
+        text: "This is where preparation genuinely matters, because the standard checklist assumes two parents who are contactable and cooperative.",
+      },
+      {
+        type: "list",
+        items: [
+          "Sole custody: supply the court ruling or official proof rather than explaining the situation in a covering letter.",
+          "A parent who is uncontactable: this needs addressing with documentation, not omitted and hoped past.",
+          "A deceased parent: a death certificate, and expect it to be asked for.",
+          "Guardianship rather than parenthood: the official document establishing it.",
+          "Different surnames between parent and child, which is common and unremarkable but should be traceable through the birth certificate.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "None of these situations is unusual to a consulate. What causes difficulty is presenting them informally, because a consent framework built around two signatures has no obvious place to put an explanation.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Family Applications Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "The non-travelling parent's consent left until the final week, when it needs a notary appointment.",
+          "A consent letter signed but not notarised.",
+          "Passport copies supplied for the travelling parent only.",
+          "Custody documented in prose rather than by court order.",
+          "An accompanying adult changed after a UK visa naming them was issued.",
+          "The child left off the appointment booking on the assumption they need not attend.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for any consulate. For families the useful work is early and unglamorous: establishing which consent and custody documents your particular household composition requires, and flagging the ones that need a notary, because those are the items that determine whether you can submit on the date you planned.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Book Appointments",
+      },
+      {
+        type: "list",
+        items: [
+          "Work out who is not travelling and what they need to sign.",
+          "Book the notary before you book anything else.",
+          "Gather passport copies for both parents, not only the one going.",
+          "If custody is not shared, find the official document now.",
+          "Decide finally who is accompanying the child.",
+          "Assume the child attends the appointment unless told otherwise.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Requirements for minors are set by the authority deciding the application and differ meaningfully between destinations. The German missions checklist and the GOV.UK under-18 guidance referenced here were verified on 21 August 2026. Read what the consulate handling your case publishes for minor applicants.",
+      },
+    ],
+    relatedCountrySlugs: ["schengen", "united-kingdom"],
+    relatedServiceSlugs: ["family-dependent-visa", "documentation-review", "tourist-visa"],
+    faqIds: ["kid-1", "kid-2", "kid-3", "kid-4", "kid-5"],
+    officialReferences: [
+      {
+        label: "German Federal Foreign Office - visit family and friends checklist (India)",
+        url: "https://india.diplo.de/in-en/2674162-2674162",
+      },
+      {
+        label: "German Federal Foreign Office - tourism checklist (India)",
+        url: "https://india.diplo.de/in-en/2674158-2674158",
+      },
+      {
+        label: "GOV.UK - Standard Visitor, if you are under 18",
+        url: "https://www.gov.uk/standard-visitor/if-youre-under-18",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Travelling With Children: Consent, Custody and Visas",
+      description:
+        "Why a child's visa application is mostly about the adults: notarised consent from a non-travelling parent, custody documents, and who gets named on the visa.",
+    },
+  },
 ];

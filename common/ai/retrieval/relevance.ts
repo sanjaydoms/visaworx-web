@@ -84,13 +84,10 @@ export function scoreFields(queryTerms: string[], fields: WeightedField[]): numb
 }
 
 /**
- * Score floor a record must exceed to count as a match.
+ * Minimum normalised score for a record to count as a match.
  *
  * Set so that a single weak partial hit on one term of a multi-term question is
- * not enough, and neither is a lone hit on the lowest-weighted field of a
- * three-term question, which lands exactly on the floor and is almost always an
- * ordinary English word rather than a subject. Retrieving nothing is a safe
- * outcome - the assistant says it does not have enough approved information and
+ * not enough. Retrieving nothing is a safe outcome - the assistant says it does not have enough approved information and
  * routes to a human - whereas retrieving something irrelevant invites an answer
  * built on the wrong content.
  */
@@ -106,7 +103,7 @@ export function rank<T>(
 ): Scored<T>[] {
   return items
     .map((item) => ({ item, score: scoreFields(queryTerms, toFields(item)) }))
-    .filter((scored) => scored.score > RELEVANCE_THRESHOLD)
+    .filter((scored) => scored.score >= RELEVANCE_THRESHOLD)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit);
 }

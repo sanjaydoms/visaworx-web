@@ -30,6 +30,7 @@ const expectedGuideSlugs = [
   "travel-authorisations-are-not-visas",
   "what-indian-financial-documents-prove",
   "when-someone-else-funds-your-trip",
+  "first-time-applicant-no-travel-history",
 ];
 
 describe("guides content model", () => {
@@ -80,5 +81,28 @@ describe("guide content safety", () => {
     for (const phrase of FORBIDDEN_MARKETING_PHRASES) {
       expect(content).not.toContain(phrase);
     }
+  });
+});
+
+// The assistant suite proves that unsupported questions stay unsupported by asking
+// deliberately unmatchable things - "What are the visa rules for Madagascar?",
+// "xyz999 nothing matches this". Those queries are built from ordinary English, and
+// FAQs are indexed at the retriever's highest weights: question 3, answer 1.5.
+// Because "visa" is a stopword, such a query can reduce to two content words, so a
+// single hit on one filler term in an indexed field clears the relevance floor and a
+// nonsense question starts retrieving real content.
+//
+// This has happened twice. Both times the fix was to reach for the specific noun -
+// "entry process", "eligibility conditions" - rather than to loosen the retriever.
+const RETRIEVAL_FILLER = ["rules", "matches", "unmapped"];
+
+describe("FAQ wording does not collide with the assistant guard queries", () => {
+  it.each(RETRIEVAL_FILLER)("no FAQ question or answer contains %s", (word) => {
+    const pattern = new RegExp(`\b${word}\b`, "i");
+    const offenders = faqsData
+      .filter((faq) => pattern.test(faq.question) || pattern.test(faq.answer))
+      .map((faq) => faq.id);
+
+    expect(offenders).toEqual([]);
   });
 });

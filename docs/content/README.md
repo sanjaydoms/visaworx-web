@@ -86,6 +86,7 @@ The sitemap, canonicals and internal links follow automatically.
 | `travel-authorisations-are-not-visas` | Visa Preparation |
 | `what-indian-financial-documents-prove` | Documentation |
 | `when-someone-else-funds-your-trip` | Documentation |
+| `first-time-applicant-no-travel-history` | Visa Preparation |
 
 **Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
 in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.

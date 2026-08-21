@@ -28,6 +28,7 @@ const expectedGuideSlugs = [
   "japan-visa-from-india",
   "south-korea-visa-from-india",
   "travel-authorisations-are-not-visas",
+  "what-indian-financial-documents-prove",
 ];
 
 describe("guides content model", () => {

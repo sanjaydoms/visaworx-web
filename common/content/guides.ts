@@ -887,4 +887,239 @@ export const guidesData: Guide[] = [
       description:
         "Schengen visa from India explained - documents, fees, processing times and the 2026 EES border changes. Understand what to prepare before you apply.",
     },
-  },];
+  },
+  {
+    slug: "uk-visitor-visa-from-india",
+    title: "UK Standard Visitor Visa from India: Requirements, Fees and Timelines",
+    summary: "What Indian passport holders need for a UK Standard Visitor visa — why the ETA route is not open to you, what the visa allows and forbids, the fee, and when to apply.",
+    category: "Country Guides",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Rahul spent an hour on the wrong page. A colleague had mentioned that Britain now runs a quick online travel authorisation, so he went looking for it, found the application, started filling it in, and only stopped when the nationality dropdown did not offer India. He assumed the site was broken. It was not. He simply was not eligible for the thing he was applying for.",
+      },
+      {
+        type: "paragraph",
+        text: "Rahul is an illustration, but the confusion is real and it is getting more common. The UK does run an Electronic Travel Authorisation, and a great deal of coverage describes it as the new way into Britain. For Indian passport holders it is not the way in at all.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian nationals cannot use the UK Electronic Travel Authorisation. India is not on the ETA national list, so you need a Standard Visitor visa. It costs GBP 135 for a visa of up to six months, allows stays of up to six months, and the earliest you can apply is three months before you travel.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why the ETA Route Is Not Open to Indian Travellers",
+      },
+      {
+        type: "paragraph",
+        text: "The ETA is for nationalities that do not need a visa to visit the UK. It is a light-touch authorisation layered on top of visa-free travel, not a replacement for a visa.",
+      },
+      {
+        type: "paragraph",
+        text: "India is not on the ETA national list. The UK guidance is direct about what that means for everyone else: other nationalities cannot get an ETA, and should check whether they need a visa instead. For an Indian passport holder the answer is that you do, and the Standard Visitor visa is the route.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "A practical consequence",
+        text: "Because the ETA is quick and cheap, coverage of it tends to describe UK entry as having become easier. If you are applying from India, none of that applies to you, and planning a trip on the assumption of a same-week authorisation will leave you short of time.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the Standard Visitor Visa Allows",
+      },
+      {
+        type: "paragraph",
+        text: "The Standard Visitor visa usually permits stays of up to six months per visit. It covers considerably more than sightseeing:",
+      },
+      {
+        type: "list",
+        items: [
+          "Tourism, and visiting family or friends.",
+          "Certain business activities, such as meetings, conferences and negotiations.",
+          "Permitted paid engagements and school exchange visits.",
+          "Recreational courses of up to 30 days, and some study.",
+          "Volunteering for up to 30 days with a registered charity.",
+          "Medical visits, and transit through the UK.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "What it does not allow",
+      },
+      {
+        type: "paragraph",
+        text: "The prohibitions matter more than the permissions, because this is where genuine visitors get into difficulty without meaning to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Paid or unpaid work for a UK company, or as a self-employed person, outside a permitted paid engagement.",
+          "Claiming public funds or benefits.",
+          "Living in the UK for long periods through frequent or successive visits.",
+          "Marrying or registering a civil partnership.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "The successive visits problem",
+        text: "There is no fixed number of visits that triggers concern, which is exactly why it catches people. A visitor visa is for visiting. If your pattern of travel starts to look like residence assembled out of six-month stays, that is a question you should expect to be asked, and one worth being able to answer with your ties to India.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Costs and When to Apply",
+      },
+      {
+        type: "paragraph",
+        text: "A Standard Visitor visa costs GBP 135 for a visa of up to six months. Longer-validity visitor visas are available at higher fees, and separate charges apply for optional priority services and for the visa application centre.",
+      },
+      {
+        type: "paragraph",
+        text: "The timing rule is narrower than most travellers expect:",
+      },
+      {
+        type: "list",
+        items: [
+          "The earliest you can apply is three months before you travel.",
+          "That is a tighter window than the Schengen six months, so a Europe-plus-UK itinerary cannot be applied for on a single timetable.",
+          "Biometrics are given in person at a visa application centre in India, and appointment availability sits on top of processing time.",
+          "Applying at the start of your three-month window rather than the end is the cheapest protection you have.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a UK Visitor Application Has to Prove",
+      },
+      {
+        type: "paragraph",
+        text: "UK Visas and Immigration is assessing whether you are a genuine visitor who will leave at the end of the visit. Almost every document you submit is evidence for or against that single question.",
+      },
+      {
+        type: "list",
+        items: [
+          "That the visit is genuine, with a purpose and a plan that make sense together.",
+          "That you can meet the cost of the trip without working in the UK.",
+          "That you have reasons to return to India — employment, business, study, property or family responsibilities.",
+          "That what you say in the application agrees with what your documents show.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Do not send everything you own",
+        text: "A common instinct is to submit every statement, certificate and letter available, on the theory that more is safer. It is not. A large, unexplained bundle makes the case harder to read and invites the caseworker to find the inconsistency themselves. A focused set of documents that tells one coherent story is stronger than an exhaustive one that does not.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "Applying for the ETA first, losing weeks, and then applying for the visa inside the three-month window with no slack.",
+          "Funds that appear shortly before the application with no explanation of their source.",
+          "A sponsor covering the trip without documents establishing who they are and why they are paying.",
+          "Travel dates that contradict leave approval, hotel bookings or the stated purpose.",
+          "Understating a previous refusal from the UK or any other country, which is treated far more seriously than the refusal itself.",
+          "A visit history that reads as continuous residence rather than a series of visits.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "paragraph",
+        text: "Checklists assume a salaried applicant with a settled job and a short holiday. Plenty of genuine visitors do not fit that shape, and for them the explanation matters more than the paperwork:",
+      },
+      {
+        type: "list",
+        items: [
+          "You are self-employed, or your income varies month to month.",
+          "A relative in the UK is funding or hosting the visit.",
+          "You are visiting for medical treatment.",
+          "You have a previous UK refusal, or a refusal from another country.",
+          "You have travelled to the UK several times recently.",
+          "You are applying alongside family members whose circumstances differ from yours.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "In each case the answer is to document the complication rather than hope it goes unnoticed. A caseworker who has to guess at the missing piece will not guess in your favour.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for UK Visas and Immigration. What we can do is read a file the way a caseworker will and tell you where it does not hold together. If you have gathered the documents but cannot tell whether they tell one consistent story, the readiness assessment will show you which parts deserve a closer look before you apply.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Confirm you need a visa rather than an ETA. From India, you do.",
+          "Count backwards from your travel date and apply early in the three-month window.",
+          "Decide what your visit is for, then check every document supports that one account.",
+          "Be able to explain where your funds came from, not just that they exist.",
+          "Disclose any previous refusal, from any country.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Fees, eligible nationalities and visitor rules change. Every figure in this guide was verified against GOV.UK on 21 August 2026. Confirm the current position on the official pages listed with this guide before you apply, particularly the ETA national list, which has been expanding.",
+      },
+    ],
+    relatedCountrySlugs: ["united-kingdom"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "documentation-review"],
+    faqIds: [
+      "uk-in-1",
+      "uk-in-2",
+      "uk-in-3",
+      "uk-in-4",
+      "uk-in-5",
+      "uk-in-6",
+    ],
+    officialReferences: [
+      {
+        label: "GOV.UK - Standard Visitor visa",
+        url: "https://www.gov.uk/standard-visitor",
+      },
+      {
+        label: "GOV.UK - Check if you can get an ETA",
+        url: "https://www.gov.uk/guidance/check-when-you-can-get-an-electronic-travel-authorisation-eta",
+      },
+      {
+        label: "GOV.UK - Check if you need a UK visa",
+        url: "https://www.gov.uk/check-uk-visa",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "UK Visitor Visa from India: Fees, Rules & Timeline",
+      description:
+        "UK Standard Visitor visa from India explained - why the ETA does not apply to Indian nationals, what the visa allows, the GBP 135 fee and when to apply.",
+    },
+  },
+];

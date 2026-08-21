@@ -19,6 +19,7 @@ const expectedGuideSlugs = [
   "family-visit-visa-preparation",
   "how-to-check-current-official-visa-requirements",
   "schengen-visa-from-india",
+  "uk-visitor-visa-from-india",
 ];
 
 describe("guides content model", () => {

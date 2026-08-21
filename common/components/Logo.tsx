@@ -3,8 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 
+// Intrinsic pixel sizes of the supplied files. These set the aspect ratio the
+// browser reserves before the image loads, so they must track the real assets —
+// a mismatch letterboxes the artwork inside a wrongly shaped box.
+const logos = {
+  visaworx: { src: "/brand/visaworx-logo.png", alt: "Visaworx", width: 1728, height: 524 },
+  klar: { src: "/brand/klar-travels-logo.png", alt: "Klar Travels", width: 1320, height: 624 },
+} as const;
+
 type LogoProps = {
-  kind?: "visaworx" | "klar";
+  kind?: keyof typeof logos;
   className?: string;
 };
 
@@ -15,17 +23,14 @@ export function Logo({ kind = "visaworx", className = "" }: LogoProps) {
     return null;
   }
 
-  const source =
-    kind === "visaworx"
-      ? "/brand/visaworx-logo.png"
-      : "/brand/klar-travels-logo.png";
+  const logo = logos[kind];
 
   return (
     <Image
-      src={source}
-      alt={kind === "visaworx" ? "Visaworx" : "Klar Travels"}
-      width={kind === "visaworx" ? 420 : 220}
-      height={120}
+      src={logo.src}
+      alt={logo.alt}
+      width={logo.width}
+      height={logo.height}
       className={className}
       priority
       onError={() => setError(true)}
@@ -33,4 +38,3 @@ export function Logo({ kind = "visaworx", className = "" }: LogoProps) {
     />
   );
 }
-

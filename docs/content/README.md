@@ -87,6 +87,7 @@ The sitemap, canonicals and internal links follow automatically.
 | `what-indian-financial-documents-prove` | Documentation |
 | `when-someone-else-funds-your-trip` | Documentation |
 | `first-time-applicant-no-travel-history` | Visa Preparation |
+| `self-employed-visa-applications-from-india` | Documentation |
 
 **Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
 in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.

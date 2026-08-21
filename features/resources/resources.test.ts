@@ -31,6 +31,7 @@ const expectedGuideSlugs = [
   "what-indian-financial-documents-prove",
   "when-someone-else-funds-your-trip",
   "first-time-applicant-no-travel-history",
+  "self-employed-visa-applications-from-india",
 ];
 
 describe("guides content model", () => {

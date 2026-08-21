@@ -18,10 +18,11 @@ const expectedGuideSlugs = [
   "business-visa-document-preparation",
   "family-visit-visa-preparation",
   "how-to-check-current-official-visa-requirements",
+  "schengen-visa-from-india",
 ];
 
 describe("guides content model", () => {
-  it("contains exactly the twelve initial guides", () => {
+  it("contains exactly the published guide inventory", () => {
     expect(guidesData.map((g) => g.slug).sort()).toEqual([...expectedGuideSlugs].sort());
   });
 

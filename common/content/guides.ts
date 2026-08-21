@@ -556,4 +556,335 @@ export const guidesData: Guide[] = [
       description: "Learn how to locate official embassy portals and verify current visa rules from primary government sources.",
     },
   },
-];
+  {
+    slug: "schengen-visa-from-india",
+    title: "Schengen Visa from India: Requirements, Timelines and What Changed in 2026",
+    summary: "A preparation guide for Indian passport holders applying for a Schengen short-stay visa, covering which consulate decides your application, what the documents are meant to prove, and the border changes that took effect in 2026.",
+    category: "Country Guides",
+    readingTime: "9 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Meera had the whole trip mapped out before she thought about the visa. Three nights in Amsterdam, seven in Italy, two in Paris to finish. Flights held, hotels reserved, leave approved. When she finally sat down to apply, she went looking for the French consulate, because Paris was the part of the trip she had been picturing for two years. That was the first thing she got wrong, and it would have cost her the trip.",
+      },
+      {
+        type: "paragraph",
+        text: "Meera is an illustration rather than a real applicant, but her mistake is one of the most common in Schengen applications from India. The Schengen visa is often described as a single document that opens twenty-nine countries, which is true once it is issued and misleading while you are applying. Almost everything that goes wrong at the preparation stage comes from treating the application as a form to fill rather than a case to evidence.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian passport holders need a Schengen short-stay visa (Type C) for trips of up to 90 days in any 180-day period. The application goes to the consulate of your main destination, may be lodged up to six months before travel, and should normally be decided within 15 calendar days. The consular fee is EUR 90 for adults. ETIAS does not apply to travellers who need a visa.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a Schengen Visa Actually Covers",
+      },
+      {
+        type: "paragraph",
+        text: "A Schengen short-stay visa lets you spend up to 90 days in any 180-day period inside the Schengen Area. It is a visit permission, not a residence or work permission, and the 90 days are counted across the whole area rather than per country.",
+      },
+      {
+        type: "paragraph",
+        text: "The rules are set out in the EU Visa Code, Regulation 810/2009, which every Schengen consulate applies. That shared legal basis is why the fee and the decision deadlines are the same whether you apply to Germany, Italy or Spain, and it is also why the differences that do exist between consulates catch people out. The law is common. The document checklists are local.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Which Consulate Decides Your Application",
+      },
+      {
+        type: "paragraph",
+        text: "You apply to the country that is your main destination. This is a rule, not a preference, and you do not get to choose the consulate whose appointments are easiest to find.",
+      },
+      {
+        type: "paragraph",
+        text: "Consulates work through the question in a fixed order:",
+      },
+      {
+        type: "list",
+        items: [
+          "If you are visiting only one Schengen country, that country decides your application.",
+          "If you are visiting several, the main destination is the one where you will spend the longest, judged together with the purpose of the visit.",
+          "If you are splitting your time equally with no single main destination, you apply to the country you will enter first.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Where Meera went wrong",
+        text: "Seven of her twelve nights were in Italy, so Italy was her main destination. Not France, where she most wanted to go, and not the Netherlands, where she happened to land first. Applying to the wrong consulate does not usually produce a quiet correction. It produces a returned application and a lost appointment slot.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Do Indian Travellers Need ETIAS?",
+      },
+      {
+        type: "paragraph",
+        text: "No. ETIAS is a travel authorisation for nationals who may enter the Schengen Area without a visa. Indian passport holders need a visa, so ETIAS does not apply to them, and it is not yet in operation for anyone.",
+      },
+      {
+        type: "paragraph",
+        text: "This is worth stating plainly because the 2026 coverage of ETIAS has been heavy, and a great deal of it does not make the distinction clear. If you hold a valid Schengen visa, that visa is your authorisation to travel. There is no second online authorisation for you to buy, and any service offering to sell you one is not describing a requirement that exists.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What Changed at the European Border in 2026",
+      },
+      {
+        type: "paragraph",
+        text: "The change that does affect Indian travellers is the Entry/Exit System. The EES began operating progressively on 12 October 2025 and reached full operation on 10 April 2026, replacing the physical passport stamp for non-EU nationals making short stays.",
+      },
+      {
+        type: "paragraph",
+        text: "In practice this means your entries and exits are now recorded biometrically rather than inked into your passport:",
+      },
+      {
+        type: "list",
+        items: [
+          "Your fingerprints and facial image are registered at your first entry after the system took effect.",
+          "Entry and exit dates and locations are held electronically, along with any refusal of entry.",
+          "Your 90-day allowance is calculated from that record, so overstays are detected automatically rather than by an officer reading stamps.",
+          "Your first crossing after the change may take longer than you are used to while the record is created.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "None of this changes what you submit with your application. It changes what happens at the border, and it makes the 90 in 90/180 a good deal less forgiving than it used to be.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Documents Indian Applicants Are Asked For",
+      },
+      {
+        type: "paragraph",
+        text: "The list below reflects what German missions in India publish for tourism applications. It is representative rather than universal, and this distinction matters more than it sounds. Every consulate publishes its own checklist under the same law, and the one that governs your application is the one belonging to the consulate deciding it. Read that checklist. Treat the list below as an understanding of what each document is for.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Passport and application form",
+      },
+      {
+        type: "list",
+        items: [
+          "A passport issued within the last ten years, with at least two blank pages for the visa.",
+          "Validity extending at least three months beyond your scheduled return from the Schengen Area.",
+          "A completed and signed application form, with copies of the biometric and address pages.",
+          "Biometrics given in person. Fingerprints from a previous Schengen application can generally be reused for up to five years.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Travel medical insurance",
+      },
+      {
+        type: "paragraph",
+        text: "Cover must be at least EUR 30,000 for medical expenses, valid in every Schengen state, and must run for the entire duration of the trip. Policies that expire on the return flight date rather than after it, or that name a single country, are a recurring reason for a file being treated as incomplete.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Financial and employment evidence",
+      },
+      {
+        type: "paragraph",
+        text: "What you provide depends on how you earn, and the point is always the same: show that the trip is affordable from an income you can explain.",
+      },
+      {
+        type: "list",
+        items: [
+          "Salaried applicants: payslips for the last three months, employment contract, leave sanction letter, stamped bank statements for the last three months, and income tax records such as ITR acknowledgements or Form 16.",
+          "Self-employed and business owners: company registration with GST details, income tax acknowledgements, and stamped bank statements.",
+          "Retired applicants: pension statements alongside bank statements.",
+          "Students: enrolment certificate and a no-objection letter from the institution.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "There is no official minimum balance",
+        text: "No Schengen-wide minimum bank balance exists, and any figure presented as the official threshold is invented. What a consular officer assesses is whether your funds are consistent with the trip you have described and whether their origin is explainable. A large deposit that appears a week before you apply raises the question it was meant to answer.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Accommodation and travel",
+      },
+      {
+        type: "list",
+        items: [
+          "Hotel reservations, a rental agreement, or proof of private accommodation with the host's confirmation and identity documents.",
+          "Flight reservation and a detailed day-by-day itinerary.",
+          "Accommodation and travel dates that agree with each other and with the dates on your form.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Long It Takes and When to Apply",
+      },
+      {
+        type: "paragraph",
+        text: "An application should be decided within 15 calendar days of being lodged. That can extend to 45 days where a case needs closer examination or further documents are requested.",
+      },
+      {
+        type: "paragraph",
+        text: "The part that surprises people is where the clock starts. It runs from the day the application is lodged, not the day you begin looking for an appointment, so appointment availability sits on top of the decision period rather than inside it. The practical timeline looks like this:",
+      },
+      {
+        type: "list",
+        items: [
+          "You may lodge an application up to six months before your intended travel date.",
+          "Consulates advise lodging no later than 15 calendar days before departure.",
+          "An application received inside that final window may be returned unprocessed.",
+          "Applying early is the cheapest protection available to you, because it leaves room for an extended examination without threatening your dates.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Costs",
+      },
+      {
+        type: "paragraph",
+        text: "The consular fee is set by the Visa Code and is the same across the Schengen Area:",
+      },
+      {
+        type: "list",
+        items: [
+          "EUR 90 for adult applicants.",
+          "EUR 45 for children aged six and above but under twelve.",
+          "Visa application centres charge their own service fee in addition to the consular fee, and payment methods differ between missions in India.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The consular fee is generally not refunded if an application is refused, which is a reason to submit when the file is complete rather than when the appointment happens to be available.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications Usually Weaken",
+      },
+      {
+        type: "paragraph",
+        text: "Most files are not refused because a document is missing. They weaken because the documents disagree with each other. A consular officer is reading for a coherent account of one trip, and inconsistency reads as either carelessness or concealment.",
+      },
+      {
+        type: "list",
+        items: [
+          "Applying to the wrong consulate because a destination felt more important than the nights actually booked there.",
+          "Insurance that ends on the return date instead of after it, or that does not name all Schengen states.",
+          "An itinerary that does not match the hotel bookings, or hotel dates that do not match the flights.",
+          "Bank balances topped up shortly before applying, with no explanation of where the funds came from.",
+          "A leave sanction letter with dates that contradict the travel dates on the form.",
+          "A passport with fewer than two blank pages, or issued more than ten years ago.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Does Not Fit the Checklist",
+      },
+      {
+        type: "paragraph",
+        text: "Checklists are written for the straightforward case, and a good number of genuine applicants are not the straightforward case. If any of the following describe you, the documents matter less than the explanation you attach to them:",
+      },
+      {
+        type: "list",
+        items: [
+          "You are self-employed with income that varies month to month.",
+          "Someone else is funding the trip, whether a relative, a spouse or an employer.",
+          "You have no previous international travel history.",
+          "You have a previous refusal from any country.",
+          "You are recently between jobs, or your employment changed during the booking period.",
+          "You are travelling with minors, or as part of a group with different circumstances.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "In each of these cases the answer is not to hide the complication. It is to document it, so the officer is not left to guess at the part of the story you left out.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for any consulate; those decisions sit entirely with government authorities. What we can do is look at a file before it is submitted and tell you where it is thin. If you have the checklist but cannot tell whether your evidence actually holds together, the readiness assessment will identify the areas that deserve a closer look before you apply, and our team is available when a situation needs human judgement rather than a checklist.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "paragraph",
+        text: "Meera's trip was recoverable because she found the problem while she was still preparing. That is the whole argument for starting early: almost every serious Schengen problem is cheap to fix at the preparation stage and expensive to fix afterwards.",
+      },
+      {
+        type: "list",
+        items: [
+          "Work out your main destination from the nights booked, before anything else.",
+          "Read the deciding consulate's own checklist rather than a general one.",
+          "Check that your dates agree across the form, the flights, the hotels and the leave letter.",
+          "Buy insurance that covers the whole trip and every Schengen state.",
+          "Lodge the application with time to absorb an extended examination.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Fees, checklists and processing rules change, and consulates publish their own requirements. Every figure in this guide was verified against official sources on 21 August 2026. Before you apply, confirm the current position with the consulate deciding your application using the official references listed with this guide.",
+      },
+    ],
+    relatedCountrySlugs: ["schengen"],
+    relatedServiceSlugs: ["tourist-visa", "documentation-review", "visa-readiness-review"],
+    faqIds: [
+      "schengen-in-1",
+      "schengen-in-2",
+      "schengen-in-3",
+      "schengen-in-4",
+      "schengen-in-5",
+      "schengen-in-6",
+    ],
+    officialReferences: [
+      {
+        label: "European Commission - Schengen visa policy",
+        url: "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy_en",
+      },
+      {
+        label: "European Commission - Entry/Exit System (EES)",
+        url: "https://home-affairs.ec.europa.eu/policies/schengen/smart-borders/entry-exit-system_en",
+      },
+      {
+        label: "ETIAS - official EU travel information",
+        url: "https://travel-europe.europa.eu/etias_en",
+      },
+      {
+        label: "German Federal Foreign Office - Schengen visa FAQs (India)",
+        url: "https://india.diplo.de/in-en/service/schengen-visa-faq-2610538",
+      },
+      {
+        label: "German Federal Foreign Office - tourism checklist (India)",
+        url: "https://india.diplo.de/in-en/2674158-2674158",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Schengen Visa from India: 2026 Requirements & Timeline",
+      description:
+        "Schengen visa from India explained - documents, fees, processing times and the 2026 EES border changes. Understand what to prepare before you apply.",
+    },
+  },];

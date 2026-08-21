@@ -3933,4 +3933,196 @@ export const guidesData: Guide[] = [
         "A Schengen refusal tells you how to appeal. A UK visitor refusal carries neither appeal nor review. A US refusal has no waiver. Which one are you holding?",
     },
   },
+  {
+    slug: "transit-and-layovers-indian-passport",
+    title: "Your Layover Is a Separate Visa Question, and You May Need One",
+    summary: "Indian nationals generally need an airport transit visa for the Schengen area even without leaving the terminal. The UK splits transit by whether you cross border control. The US treats connecting as transit requiring a visa. None of it is covered by your destination visa.",
+    category: "Visa Preparation",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Nikhil found a cheap fare to Toronto with a five-hour connection in Frankfurt. He had his Canadian visa, he was not leaving the airport, and the idea that Germany had any say in a plane change had not occurred to him. It is the most expensive assumption in budget itinerary planning, and it is made constantly.",
+      },
+      {
+        type: "paragraph",
+        text: "Nikhil is an illustration, but the trap is entirely real. A visa for where you are going says nothing about the countries you pass through on the way, and for Indian passport holders several of those countries want something of their own.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian nationals generally require an airport transit visa for the Schengen area, which permits a stopover in the international transit area only, with no leaving and no overnight hotel. The UK requires a transit visa whose type depends on whether you cross border control. The United States treats connecting passengers as being in transit, requiring a transit visa. Check every stop on the itinerary, not only the destination.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Schengen: A Visa to Change Planes",
+      },
+      {
+        type: "paragraph",
+        text: "German missions state the position for applicants in India directly: Indian nationals generally require an airport transit visa for the Schengen area. This is the category A visa, and it is worth being precise about what it does and does not allow.",
+      },
+      {
+        type: "list",
+        items: [
+          "It permits a short stopover at an international airport only.",
+          "It does not permit leaving the airport's international transit area.",
+          "It does not permit an overnight stay in a hotel.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If your connection is long enough that you want a bed, or the airport requires you to clear immigration to change terminals, the transit visa is the wrong instrument and you need a short-stay visa instead.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Other visas you already hold can exempt you",
+        text: "Indian nationals holding a valid visa or residence permit from a Schengen state, Bulgaria, Romania, Cyprus, Liechtenstein, Ireland, Canada, Japan or the USA are exempt, as are holders of a UK Biometric Residence Permit. This is the same pattern the UAE uses for visa on arrival: what you already hold changes what you need. Check your existing visas before assuming you must apply.",
+      },
+      {
+        type: "paragraph",
+        text: "Timing follows the standard Schengen window: applications are submitted no earlier than six months before travel and no later than 15 working days before it. That last figure matters, because transit is exactly the kind of requirement people discover late.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "United Kingdom: It Depends on Border Control",
+      },
+      {
+        type: "paragraph",
+        text: "The UK splits transit into two visas, and the dividing line is not how long you stay but whether you pass through border control:",
+      },
+      {
+        type: "list",
+        items: [
+          "Direct Airside Transit visa: for changing flights without going through UK border control.",
+          "Visitor in Transit visa: for going through UK border control and leaving the UK within 48 hours.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "GOV.UK is explicit that the airline can tell you which applies, and it is worth asking rather than guessing, because the answer depends on the airport, the terminals and sometimes the specific booking.",
+      },
+      {
+        type: "paragraph",
+        text: "You do not need a transit visa if you already hold an electronic travel authorisation, a Standard Visitor visa or a Home Office travel document. The first of those is not available on an Indian passport, so for Indian travellers the practical exemption is holding a Standard Visitor visa already.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Beyond 48 hours it stops being transit",
+        text: "Where the stay exceeds 48 hours, or where you will transit frequently over a six-month period, a Standard Visitor visa is required instead. A generous stopover that you intended to enjoy is not a transit arrangement, and applying for the transit visa because it is cheaper does not make it one.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "United States: Connecting Is Transiting",
+      },
+      {
+        type: "paragraph",
+        text: "Transit visas are for people travelling in immediate and continuous transit through the United States en route to another country. Connecting through a US airport falls within that, so a traveller who requires a visa requires one to make the connection.",
+      },
+      {
+        type: "paragraph",
+        text: "Immediate and continuous transit is defined as a reasonably expeditious departure in the normal course of travel, assuming a prearranged itinerary without unreasonable layover privileges. Where you want the layover for another purpose, such as seeing friends or sightseeing, you need the visa appropriate to that purpose rather than a transit visa.",
+      },
+      {
+        type: "paragraph",
+        text: "In practice this means a US connection is never the incidental part of an itinerary for an Indian passport holder. If a fare routes you through the United States, price the visa and the timeline into the decision before booking it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Elsewhere on Your Itinerary",
+      },
+      {
+        type: "list",
+        items: [
+          "United Arab Emirates: transiting an airport is not the same as permission to enter. If you intend to leave the terminal during a long layover, treat that as an entry question and resolve it before travelling.",
+          "South Korea: separate arrangements exist for transfer passengers, with their own conditions. Check them with the Embassy rather than assuming they cover you.",
+          "Anywhere you change terminals: a terminal change that requires clearing immigration converts an airside connection into an entry.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Cheap Itineraries Get Expensive",
+      },
+      {
+        type: "list",
+        items: [
+          "A fare saving that is smaller than the transit visa fee it creates.",
+          "A connection booked before checking whether the transit point wants a visa.",
+          "An overnight layover planned around a hotel that the transit visa does not permit.",
+          "Separate tickets, where you must collect baggage and re-check it, which usually means entering the country.",
+          "A terminal change assumed to be airside when it is not.",
+          "The transit requirement discovered inside the fifteen working days before travel.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Ask the airline, then verify",
+        text: "Airlines know their airports and can usually tell you whether a connection is airside. They are a good first source and a poor final one, because the answer that matters is the transit country's, and the consequence of being wrong is being denied boarding at the start of the journey rather than turned back at the connection.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue transit visas and we do not speak for any authority. What we can do is read a proposed itinerary before it is booked and tell you which stops create their own requirements, which is the cheapest possible moment to find out and the one almost nobody uses.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Book the Fare",
+      },
+      {
+        type: "list",
+        items: [
+          "List every country the itinerary touches, not just the destination.",
+          "Check each one against your passport, and against visas you already hold.",
+          "Ask the airline whether the connection is airside.",
+          "Add any transit visa fee and timeline to the cost of the cheaper fare.",
+          "If the layover is long enough to want a hotel, price a short-stay visa instead.",
+          "Watch for separate tickets, which usually force an entry.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Transit requirements are set by each country passed through and change, and exemption lists in particular are revised. The German missions guidance for India, GOV.UK transit guidance and the US Department of State transit category were verified on 21 August 2026. Confirm each stop on your own itinerary before booking.",
+      },
+    ],
+    relatedCountrySlugs: ["schengen", "united-kingdom", "united-states", "united-arab-emirates", "south-korea"],
+    relatedServiceSlugs: ["tourist-visa", "visa-readiness-review", "documentation-review"],
+    faqIds: ["tr-1", "tr-2", "tr-3", "tr-4", "tr-5"],
+    officialReferences: [
+      {
+        label: "German Federal Foreign Office - airport transit visa checklist (India)",
+        url: "https://india.diplo.de/in-en/2674022-2674022",
+      },
+      {
+        label: "GOV.UK - transit visas",
+        url: "https://www.gov.uk/transit-visa",
+      },
+      {
+        label: "US Department of State - transit visa",
+        url: "https://travel.state.gov/content/travel/en/us-visas/other-visa-categories/transit.html",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Transit Visas from India: When a Layover Needs Its Own Visa",
+      description:
+        "Indian nationals generally need a Schengen airport transit visa even without leaving the terminal. How the UK and US treat connections, and what to check before booking.",
+    },
+  },
 ];

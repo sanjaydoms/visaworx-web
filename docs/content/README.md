@@ -95,6 +95,7 @@ The sitemap, canonicals and internal links follow automatically.
 | `self-employed-visa-applications-from-india` | Documentation |
 | `travelling-with-children-indian-passport` | Family Travel |
 | `after-a-refusal-appeal-review-or-reapply` | Refusals |
+| `transit-and-layovers-indian-passport` | Visa Preparation |
 
 **Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
 in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.

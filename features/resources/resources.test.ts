@@ -35,6 +35,7 @@ const expectedGuideSlugs = [
   "self-employed-visa-applications-from-india",
   "travelling-with-children-indian-passport",
   "after-a-refusal-appeal-review-or-reapply",
+  "transit-and-layovers-indian-passport",
 ];
 
 describe("guides content model", () => {

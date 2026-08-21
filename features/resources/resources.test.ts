@@ -26,6 +26,7 @@ const expectedGuideSlugs = [
   "singapore-visa-from-india",
   "new-zealand-visitor-visa-from-india",
   "japan-visa-from-india",
+  "south-korea-visa-from-india",
 ];
 
 describe("guides content model", () => {

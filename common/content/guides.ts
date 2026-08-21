@@ -2289,4 +2289,199 @@ export const guidesData: Guide[] = [
         "Japan issues Indian applicants an electronic visa, not a passport sticker, and it must be shown on a phone at the airport. The INR 500 fee and what to prepare.",
     },
   },
+  {
+    slug: "south-korea-visa-from-india",
+    title: "South Korea Visa from India: K-ETA Is Not Your Route",
+    summary: "K-ETA is only for travellers who can enter Korea without a visa, which does not include Indian passport holders. What the C-3-9 tourist visa costs, where it is submitted, and why the official K-ETA site warns about paid agencies.",
+    category: "Country Guides",
+    readingTime: "7 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Every article Divya read about visiting Korea mentioned K-ETA. Apply for your K-ETA, allow seventy-two hours for your K-ETA, do not forget your K-ETA. She found a site that would file it for her, paid, and received something. What she had not found anywhere was a plain statement that K-ETA was never available to her in the first place.",
+      },
+      {
+        type: "paragraph",
+        text: "Divya is an illustration, but the trap is real and Korea's own authorities are alert to it. The official K-ETA service carries a warning about third-party agencies charging inflated fees, which tells you how routinely people are sold something they either do not need or cannot use.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "K-ETA is only for nationals of countries that can enter Korea without a visa. Indian passport holders are not in that group, so the route is a short-term visitor visa, category C-3-9, submitted through the Korea Visa Application Centre. The basic rate for a single-entry tourist visa allowing a stay of no more than 90 days is USD 40, though fees differ for some countries and should be confirmed with the mission.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why K-ETA Does Not Apply to You",
+      },
+      {
+        type: "paragraph",
+        text: "K-ETA exists for travellers who are already allowed to enter Korea without a visa. It is a pre-travel authorisation layered on visa-free entry, not a replacement for a visa or a cheaper alternative to one.",
+      },
+      {
+        type: "paragraph",
+        text: "Because Indian passport holders need a visa for Korea, K-ETA is not part of the process. Applying for one, or paying somebody to apply for one, does nothing about the requirement you actually have.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "The authority itself warns about this",
+        text: "The official K-ETA service states that applications are only made through its own website or app, and cautions against third-party agencies charging inflated fees. If you are being quoted a large sum for a Korean travel authorisation, that is a signal worth stopping on, particularly since the thing being sold may not apply to your passport at all.",
+      },
+      {
+        type: "paragraph",
+        text: "This is the third destination in a row where an electronic travel authorisation gets mistaken for a visa route. The UK has an ETA, Canada has an eTA, Korea has K-ETA, and none of the three is open to Indian passport holders. The pattern is worth internalising: these schemes are almost always built for travellers who already did not need a visa.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What You Actually Apply For",
+      },
+      {
+        type: "paragraph",
+        text: "The short-term visit categories cover tourism and similar purposes, with C-3-9 being the tourist visa. A single-entry tourist visa permits a stay of no more than 90 days.",
+      },
+      {
+        type: "list",
+        items: [
+          "Basic rate for a single-entry C-3-9: USD 40.",
+          "Fees quoted by Korean missions are basic rates, and different fees apply to some countries.",
+          "The Korea Visa Application Centre charges its own service fee in addition.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "That caveat about basic rates is the mission's own, not ours, and it is the reason to confirm your figure with the mission handling your application rather than reading a number off a general page.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where It Is Submitted",
+      },
+      {
+        type: "paragraph",
+        text: "The Embassy operates a Korea Visa Application Centre in partnership with VFS Global, and it handles the whole process rather than only collection: submission, processing, issuance, collection and counselling all happen through the Centre.",
+      },
+      {
+        type: "paragraph",
+        text: "Korea maintains an Embassy in New Delhi and Consulates General in Mumbai and Chennai. Which mission is competent for your application depends on where you are, and that determines whose fee schedule and instructions apply to you.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a Korean Visitor Application Rests On",
+      },
+      {
+        type: "paragraph",
+        text: "As with most short-term visitor categories, the assessment is about whether the visit is genuine and temporary. In practice that means:",
+      },
+      {
+        type: "list",
+        items: [
+          "A purpose that matches the category you are applying under.",
+          "A trip that is affordable on funds you can account for.",
+          "Ties to India that make return the expected outcome.",
+          "Documents that agree with each other and with the dates you have given.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Apply under the right short-term category",
+        text: "C-3 covers several short-term purposes and C-3-9 is the tourist one. Applying under tourism because it looks like the simplest option, when the actual purpose is a conference or business meetings, is a mismatch between what you have asked for and what your documents show. Pick the category that describes the trip.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Go Wrong",
+      },
+      {
+        type: "list",
+        items: [
+          "Pursuing K-ETA because every article mentions it, and losing time before starting the actual application.",
+          "Paying a third-party site for a Korean travel authorisation that does not apply to an Indian passport.",
+          "Reading a fee off a general page without checking what applies at the mission handling your case.",
+          "Applying under tourism for a trip that is really business or a conference.",
+          "Submitting close to travel without allowing for centre processing.",
+          "Assuming a transit through Seoul carries the same permissions as a visit.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You are transferring through a Korean airport rather than visiting. Korea publishes separate arrangements for transfer passengers, with their own conditions - check them with the Embassy directly rather than assuming they cover you.",
+          "You are attending a conference or business meetings rather than travelling as a tourist.",
+          "You need multiple entries.",
+          "You are visiting family or a host in Korea.",
+          "You have a previous refusal from Korea or elsewhere.",
+          "You are applying from a city served by a different mission than you expected.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue Korean visas and we do not speak for the Embassy or its visa application centre. What we can do is confirm which route and which category actually apply before you spend anything, which for Korea is most of the value, because the common failure here is money and time spent on the wrong instrument entirely.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Rule K-ETA out. On an Indian passport it is not your route.",
+          "Identify which mission is competent for where you live.",
+          "Confirm the fee with that mission rather than a general page.",
+          "Choose the short-term category that matches your real purpose.",
+          "If you are only transiting, check the transfer arrangements separately.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Korean visa fees are published as basic rates that vary by country, and entry arrangements change. Everything here was verified against Korean Ministry of Foreign Affairs and K-ETA sources on 21 August 2026. Confirm the current position with the mission handling your application before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["south-korea"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "documentation-review"],
+    faqIds: ["kr-in-1", "kr-in-2", "kr-in-3", "kr-in-4", "kr-in-5"],
+    officialReferences: [
+      {
+        label: "K-ETA - official application service",
+        url: "https://www.k-eta.go.kr/portal/apply/index.do",
+      },
+      {
+        label: "Embassy of the Republic of Korea in India - visa",
+        url: "https://overseas.mofa.go.kr/in-en/wpge/m_2660/contents.do",
+      },
+      {
+        label: "Consulate General of the Republic of Korea in Mumbai - visa requirements",
+        url: "https://overseas.mofa.go.kr/in-mumbai-en/brd/m_1978/view.do?seq=717617&page=1",
+      },
+      {
+        label: "Consulate General of the Republic of Korea in Chennai - visa issuance",
+        url: "https://overseas.mofa.go.kr/in-chennai-en/wpge/m_2782/contents.do",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "South Korea Visa from India: C-3-9, Fees and K-ETA",
+      description:
+        "K-ETA is only for visa-free nationals, so Indian travellers need a C-3-9 tourist visa. What it costs, where it is submitted, and the agency warning to heed.",
+    },
+  },
 ];

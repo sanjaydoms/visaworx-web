@@ -98,6 +98,12 @@ The sitemap, canonicals and internal links follow automatically.
 | `transit-and-layovers-indian-passport` | Visa Preparation |
 | `visa-free-and-visa-on-arrival-for-indian-passports` | Visa Preparation |
 | `schengen-travel-insurance-explained` | Documentation |
+| `australia-visitor-visa-from-india` | Country Guides |
 
-**Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
-in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.
+**Country Guides is complete**: all ten published destinations have one.
+
+Australia was the last, and was deferred twice because the subclass 600 charge could not be
+pinned down. It is published with **no fee figure at all**, because the charge is a base plus
+further components and Home Affairs publishes a pricing estimator for that reason. Naming no
+number and pointing at the estimator is the accurate answer, not a gap — the same treatment as
+US appointment wait times and minimum bank balances.

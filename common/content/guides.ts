@@ -4505,4 +4505,221 @@ export const guidesData: Guide[] = [
         "Article 15 requires cover for repatriation, urgent treatment, hospital care and death across all Schengen states for the whole stay. Why medical-only policies fail.",
     },
   },
+  {
+    slug: "australia-visitor-visa-from-india",
+    title: "Australia Visitor Visa from India: The Condition That Can Lock You Out",
+    summary: "Subclass 600 is the route for Indian passport holders, and it can carry a No Further Stay condition that prevents applying for most other visas while you are in the country. What the streams cover, and why no single fee figure is published here.",
+    category: "Country Guides",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Meghna's visitor visa was approved and she read the grant letter the way most people do, which is to say she read the dates. Months later, offered a short course she wanted to enrol in while she was there, she discovered a condition on the visa that made applying from inside Australia impossible. It had been on the grant all along.",
+      },
+      {
+        type: "paragraph",
+        text: "Meghna is an illustration, but the condition is real, it is common on visitor visas, and it is the single most consequential thing about an Australian visitor visa that almost no article aimed at Indian travellers mentions.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian passport holders apply for a Visitor visa, subclass 600, because the Electronic Travel Authority and eVisitor routes are not open to them. The Tourist stream permits visits of up to 12 months for tourism, a cruise, or visiting family and friends, applied for online through ImmiAccount. Check the grant for a No Further Stay condition, which prevents applying for most other visas while you are in Australia.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why Subclass 600 Is Your Route",
+      },
+      {
+        type: "paragraph",
+        text: "Australia runs lighter entry arrangements alongside the visitor visa, and neither is available on an Indian passport. The eVisitor, subclass 651, is for European passport holders. The Electronic Travel Authority, subclass 601, covers a specific set of nationalities that does not include India.",
+      },
+      {
+        type: "paragraph",
+        text: "This is the fourth destination in this set where a quick electronic authorisation exists and is not open to Indian travellers, alongside the United Kingdom, Canada and South Korea. The pattern is consistent enough to be a planning assumption: these schemes are built for people who did not need a visa to begin with.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Streams Are Not Interchangeable",
+      },
+      {
+        type: "paragraph",
+        text: "Subclass 600 has several streams, and the one you apply under should describe what you are actually doing:",
+      },
+      {
+        type: "list",
+        items: [
+          "Tourist stream: tourism, a cruise, or visiting family and friends, for up to 12 months.",
+          "Business Visitor stream: business visitor activities such as meetings and conferences.",
+          "Sponsored Family stream: where a relative in Australia sponsors the visit.",
+          "Frequent Traveller stream: for eligible travellers making repeated trips.",
+          "Approved Destination Status stream: for organised tour groups from participating countries.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Choosing the Tourist stream because it looks like the default, when a relative is sponsoring you or the trip is for meetings, creates a mismatch between the category applied for and the documents supporting it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "No Further Stay",
+      },
+      {
+        type: "paragraph",
+        text: "This is the part worth reading your grant letter for. A No Further Stay condition prevents the holder from applying for many temporary and permanent visas while they are in Australia.",
+      },
+      {
+        type: "paragraph",
+        text: "It does not shorten your visit and it does not affect leaving and returning later. What it removes is the option of changing your mind while you are there: enrolling in a course, taking up an opportunity, extending for a family reason. If you had assumed you could sort something out from inside the country, that assumption is what the condition closes off.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "A waiver exists, and is not routine",
+        text: "The condition can be waived in certain circumstances, with a dedicated request form for it. Treat that as a genuine but narrow route rather than a formality, and plan on the basis of the condition as granted. The moment to notice it is when the visa arrives, not when you want to do something the condition prevents.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Applying",
+      },
+      {
+        type: "paragraph",
+        text: "Applications are made online through ImmiAccount, which Home Affairs describes as the preferred and most efficient way to apply. Where a form is required as part of the application, it is completed, scanned and attached to the online lodgement rather than posted.",
+      },
+      {
+        type: "paragraph",
+        text: "An online process is not the same as a quick one. The assessment is unchanged by the channel, and a visitor visa still turns on whether your visit is genuine and temporary, whether you can fund it, and whether your circumstances make return the expected outcome.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why We Do Not Publish a Fee Here",
+      },
+      {
+        type: "paragraph",
+        text: "We tried, and stopped. The cost of an Australian visitor visa is not a single number: it is a base application charge with further components that can apply, including charges for additional applicants and a subsequent temporary application charge in some circumstances.",
+      },
+      {
+        type: "paragraph",
+        text: "Home Affairs publishes a visa pricing estimator precisely because of that composition. Any single figure quoted in an article would be right for some readers and wrong for others, and a family applying together would be misled by both. Use the estimator for your own circumstances, which is the answer the department itself gives.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "This is not a gap in the guide",
+        text: "Elsewhere in this set we decline to publish US appointment wait times and minimum bank balances for the same reason: a number that is confidently wrong is worse than a clear explanation of why no single number exists. Where the authority publishes a calculator rather than a price, the calculator is the answer.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What an Australian Visitor Application Rests On",
+      },
+      {
+        type: "list",
+        items: [
+          "A genuine intention to visit temporarily, with a defined end to the trip.",
+          "Funds sufficient for the stay, from a source you can explain.",
+          "Ties to India that make return the expected outcome.",
+          "Health and character requirements, which can involve additional steps.",
+          "A stream that matches the actual purpose of the visit.",
+          "Documents that agree with each other and with the dates given.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "Time lost pursuing an Electronic Travel Authority or eVisitor that an Indian passport cannot use.",
+          "The Tourist stream chosen when a relative is sponsoring the visit.",
+          "A grant letter read for dates only, missing a No Further Stay condition.",
+          "Planning to arrange a course or extension from inside Australia.",
+          "A budget built on a fee figure found in an article rather than the estimator.",
+          "Health or character matters left to surface rather than being anticipated.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "A relative in Australia is sponsoring or hosting you.",
+          "You intend to travel for business meetings rather than tourism.",
+          "You expect to visit repeatedly over the next few years.",
+          "You have a health condition that may require assessment.",
+          "You are transiting Australia rather than visiting, since separate transit arrangements exist.",
+          "You have a previous refusal from Australia or elsewhere.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for the Department of Home Affairs. What we can do is confirm which stream matches your trip before you lodge, and make sure you understand the conditions attached to a grant rather than discovering them when they start mattering.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Accept that subclass 600 is your route and do not lose time on the electronic alternatives.",
+          "Pick the stream that describes the trip, not the one that looks simplest.",
+          "Price it with the official estimator for your own circumstances.",
+          "When the grant arrives, read the conditions before the dates.",
+          "If you might want to study or extend, resolve that before you travel.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Australian visa charges, streams and conditions change, and eligibility for the electronic alternatives is revised periodically. Everything here was verified against Department of Home Affairs sources on 21 August 2026. Confirm the current position, and price your application with the official estimator rather than any figure quoted elsewhere.",
+      },
+    ],
+    relatedCountrySlugs: ["australia"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "family-dependent-visa"],
+    faqIds: ["au-in-1", "au-in-2", "au-in-3", "au-in-4", "au-in-5"],
+    officialReferences: [
+      {
+        label: "Department of Home Affairs - Visitor visa (subclass 600)",
+        url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+      },
+      {
+        label: "Department of Home Affairs - Tourist stream, apply outside Australia",
+        url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
+      },
+      {
+        label: "Department of Home Affairs - visa pricing estimator",
+        url: "https://immi.homeaffairs.gov.au/visas/visa-pricing-estimator",
+      },
+      {
+        label: "Department of Home Affairs - No Further Stay waiver",
+        url: "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/waivers-and-permissions/no-further-stay-waiver",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Australia Visitor Visa from India: Subclass 600 Explained",
+      description:
+        "Indian travellers need subclass 600, not an ETA or eVisitor. The streams, the No Further Stay condition to check on your grant, and how to price it properly.",
+    },
+  },
 ];

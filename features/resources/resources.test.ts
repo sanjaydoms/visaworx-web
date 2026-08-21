@@ -38,6 +38,7 @@ const expectedGuideSlugs = [
   "transit-and-layovers-indian-passport",
   "visa-free-and-visa-on-arrival-for-indian-passports",
   "schengen-travel-insurance-explained",
+  "australia-visitor-visa-from-india",
 ];
 
 describe("guides content model", () => {

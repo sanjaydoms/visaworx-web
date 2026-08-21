@@ -97,6 +97,7 @@ The sitemap, canonicals and internal links follow automatically.
 | `after-a-refusal-appeal-review-or-reapply` | Refusals |
 | `transit-and-layovers-indian-passport` | Visa Preparation |
 | `visa-free-and-visa-on-arrival-for-indian-passports` | Visa Preparation |
+| `schengen-travel-insurance-explained` | Documentation |
 
 **Outstanding:** Australia (blocked, see above), plus the remaining supporting articles listed
 in `south-korea-visa-from-india-strategy.md` and `schengen-visa-from-india-strategy.md`.

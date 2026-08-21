@@ -4320,4 +4320,189 @@ export const guidesData: Guide[] = [
         "The official MEA list, what its three categories actually mean, and why the answer usually depends on which other visas you already hold.",
     },
   },
+  {
+    slug: "schengen-travel-insurance-explained",
+    title: "The EUR 30,000 Is a Floor, Not a Product",
+    summary: "Schengen travel medical insurance has to cover four specific things, not just treatment, and the figure everyone quotes is a legal minimum that some member states consider insufficient. What Article 15 actually asks for.",
+    category: "Documentation",
+    readingTime: "7 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Aditya bought the cheapest policy that said thirty thousand euros on it, because that was the number in every checklist he had read. It covered medical treatment. It did not cover getting him home if he could not fly commercially, and it expired on the date of his return flight rather than after it. Both of those are ordinary features of cheap policies and both fall short of what the law asks for.",
+      },
+      {
+        type: "paragraph",
+        text: "Aditya is an illustration, but the mistake follows directly from how this requirement is usually described. Reduced to a single number, it sounds like a price. It is a floor beneath a list of things the policy has to do.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Article 15 of the EU Visa Code requires adequate and valid travel medical insurance covering expenses arising from repatriation for medical reasons, urgent medical attention, emergency hospital treatment or death, during the stay. Minimum coverage is EUR 30,000, it must be valid across the member states applying the Schengen provisions in full, and it must cover the entire period of stay.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Four Things, Not One",
+      },
+      {
+        type: "paragraph",
+        text: "The legal text is specific about what the cover must extend to, and reading it changes what you look for in a policy:",
+      },
+      {
+        type: "list",
+        items: [
+          "Repatriation for medical reasons.",
+          "Urgent medical attention.",
+          "Emergency hospital treatment.",
+          "Death.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The first and the last are the ones cheap policies quietly omit or cap severely. Medical repatriation, meaning transport home when you cannot travel normally, is expensive and is not the same as an ordinary flight change. Cover relating to death includes repatriation of remains, which nobody enjoys thinking about at the point of buying a holiday policy and which is precisely why it goes unchecked.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "A medical-only policy is not compliant",
+        text: "If the schedule lists hospital treatment and outpatient care but says nothing about repatriation, the policy does not meet the requirement, whatever total it advertises. Read the schedule of benefits rather than the headline figure, and look specifically for the two items people forget.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Thirty Thousand Is the Minimum, Not the Standard",
+      },
+      {
+        type: "paragraph",
+        text: "The Visa Code sets EUR 30,000 as the minimum coverage. It is worth knowing that some member states consider that threshold insufficient, which means the figure in a generic checklist may be below what the consulate deciding your application expects.",
+      },
+      {
+        type: "paragraph",
+        text: "Practically, buying at exactly the minimum leaves you no margin if the deciding state asks for more, and the difference in premium between the minimum and a comfortably higher limit is usually small. This is not a place to optimise.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Valid Everywhere, for the Whole Stay",
+      },
+      {
+        type: "paragraph",
+        text: "Two conditions here, and both are commonly missed for the same reason: people match the policy to the trip they pictured rather than to the visa they are applying for.",
+      },
+      {
+        type: "list",
+        items: [
+          "Territory: the insurance must be valid throughout the member states applying the Schengen provisions in full, not only the country you are visiting. A policy naming France is not enough for a trip that touches Belgium.",
+          "Duration: it must cover the entire period of the stay. A policy ending on the date of your return flight leaves the final day uncovered, and a delayed or rebooked flight leaves more than that.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Buy a day either side",
+        text: "Travel days, time zones and rebooking all conspire against a policy whose dates match your tickets exactly. Extending the cover by a day at each end costs very little and removes an entire category of question about whether the whole stay is covered.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Applying From India",
+      },
+      {
+        type: "paragraph",
+        text: "German missions in India require the overseas travel medical insurance to be from approved Indian travel insurance companies, valid for all Schengen countries and covering the entire duration of the trip, with the minimum coverage of EUR 30,000 for medical expenses.",
+      },
+      {
+        type: "paragraph",
+        text: "That constraint on who issues the policy is easy to miss if you are buying online from an international provider because the price looked better. Check the deciding mission's position on acceptable insurers before you buy, not after.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "When You Have to Show It",
+      },
+      {
+        type: "paragraph",
+        text: "In principle, proof of the insurance is submitted when the visa is issued. In practice consulates ask for it as part of the application bundle, so treat it as a document you need at submission rather than one you can arrange later.",
+      },
+      {
+        type: "paragraph",
+        text: "That has a scheduling consequence worth noting. Because the policy must cover the whole stay, and applications may be lodged up to six months ahead, you are buying cover for dates some way in the future. Make sure the policy you buy is dated to the trip and not to the day you purchased it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Insurance Documents Usually Fail",
+      },
+      {
+        type: "list",
+        items: [
+          "Cover ending on the return flight date instead of after it.",
+          "A policy naming one country rather than the Schengen states.",
+          "Medical treatment covered but repatriation absent or capped far below the total.",
+          "A total advertised in rupees with no euro equivalent stated, leaving the consulate to work out whether it clears the threshold.",
+          "An annual multi-trip policy whose per-trip limit is lower than the headline sum.",
+          "An insurer not accepted by the deciding mission.",
+          "Dates that do not match the itinerary submitted alongside it.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not sell insurance and we have no arrangement with any insurer. What we can do is read a policy schedule against what the deciding consulate asks for and tell you whether the cover, the territory and the dates actually line up, which takes minutes and is far cheaper than discovering the gap at submission.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Buy",
+      },
+      {
+        type: "list",
+        items: [
+          "Look for repatriation and death cover in the schedule, not just treatment.",
+          "Treat EUR 30,000 as the floor and buy above it.",
+          "Check the policy names the Schengen states, not one country.",
+          "Extend the dates a day either side of your travel.",
+          "Confirm the insurer is acceptable to the mission deciding your case.",
+          "Check the euro figure appears on the certificate.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "The insurance requirement sits in Article 15 of the Visa Code and individual member states apply it with their own expectations, including on minimum cover and acceptable insurers. The European Commission position and the German missions requirements for India were verified on 21 August 2026. Check what the consulate deciding your application publishes.",
+      },
+    ],
+    relatedCountrySlugs: ["schengen"],
+    relatedServiceSlugs: ["documentation-review", "tourist-visa", "visa-readiness-review"],
+    faqIds: ["ins-1", "ins-2", "ins-3", "ins-4", "ins-5"],
+    officialReferences: [
+      {
+        label: "EU Visa Code, Regulation 810/2009",
+        url: "https://eur-lex.europa.eu/eli/reg/2009/810/oj/eng",
+      },
+      {
+        label: "European Commission - applying for a Schengen visa",
+        url: "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en",
+      },
+      {
+        label: "German Federal Foreign Office - tourism checklist (India)",
+        url: "https://india.diplo.de/in-en/2674158-2674158",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Schengen Travel Insurance: What EUR 30,000 Must Cover",
+      description:
+        "Article 15 requires cover for repatriation, urgent treatment, hospital care and death across all Schengen states for the whole stay. Why medical-only policies fail.",
+    },
+  },
 ];

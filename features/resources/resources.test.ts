@@ -37,6 +37,7 @@ const expectedGuideSlugs = [
   "after-a-refusal-appeal-review-or-reapply",
   "transit-and-layovers-indian-passport",
   "visa-free-and-visa-on-arrival-for-indian-passports",
+  "schengen-travel-insurance-explained",
 ];
 
 describe("guides content model", () => {

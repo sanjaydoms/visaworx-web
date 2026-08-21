@@ -4125,4 +4125,199 @@ export const guidesData: Guide[] = [
         "Indian nationals generally need a Schengen airport transit visa even without leaving the terminal. How the UK and US treat connections, and what to check before booking.",
     },
   },
+  {
+    slug: "visa-free-and-visa-on-arrival-for-indian-passports",
+    title: "Visa-Free and Visa on Arrival: The Official List Exists, and It Still Is Not the Answer",
+    summary: "The Ministry of External Affairs publishes the list everyone else copies, and it carries a disclaimer saying it is not responsible for its accuracy. Why the honest answer is conditional, and how to check properly before booking.",
+    category: "Visa Preparation",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "The article Priya found listed sixty-something countries her passport could enter without a visa. The article her brother found listed a different number. Neither cited anything, both were confident, and between them they had convinced the family that Egypt was a straightforward trip. Egypt does offer a visa on arrival to Indian nationals. It attaches a condition that neither article mentioned.",
+      },
+      {
+        type: "paragraph",
+        text: "Priya is an illustration, but the pattern is the whole problem with this subject. There is an authoritative list, published by the Indian government. It is more useful than the copies circulating, and it still does not answer the question people are actually asking.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "The Ministry of External Affairs publishes a visa facility list for Indian ordinary passport holders, split into e-visa, visa-free entry and visa on arrival. As published on 21 August 2026 it covered 66, 26 and 47 destinations respectively. It also states that the information comes from public and external sources, that the Ministry is not responsible for its accuracy, and that travellers should verify with the relevant embassy or consulate.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Start With the Official List, Not an Article",
+      },
+      {
+        type: "paragraph",
+        text: "Almost every listicle on this subject is a copy of a copy, without a date and without a source. The Ministry of External Affairs page is the thing they are copying, and reading it directly costs you nothing and gains you three things: the actual current position, the conditions attached to each destination, and a publication you can cite when an airline asks.",
+      },
+      {
+        type: "paragraph",
+        text: "It is organised as tables by facility type, with the country, the validity period and remarks explaining eligibility and documentation. The remarks column is the part the copies leave out, and it is usually where the answer lives.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Even the official list disclaims its own accuracy",
+        text: "The page states that the information is sourced from public and external sources and that the Ministry will not be responsible for its accuracy, advising travellers to verify with the relevant embassy or consulate. That is not a reason to distrust it. It is a reminder that no aggregated list can be authoritative, because each destination governs its own entry and can change it without telling anyone who publishes lists.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Three Categories That Are Not the Same Thing",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Visa-free entry",
+      },
+      {
+        type: "paragraph",
+        text: "No visa applied for in advance. The durations vary enormously, from a week in some destinations to no fixed limit in Bhutan and Nepal. Note that visa-free does not always mean nothing happens at the border: several destinations issue an entry permit on arrival with its own conditions and validity.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Visa on arrival",
+      },
+      {
+        type: "paragraph",
+        text: "A visa issued at the border, which means it is granted there rather than guaranteed there. This is the category most likely to carry conditions, and the conditions are frequently about documents you hold from somewhere else entirely.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "e-Visa",
+      },
+      {
+        type: "paragraph",
+        text: "A real visa, applied for and granted before travel, delivered electronically. Being electronic makes it convenient; it does not make it automatic, and applications are assessed. Several e-visa destinations attach their own requirements, such as travel insurance or proof of funds.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Condition Is Usually Another Country's Visa",
+      },
+      {
+        type: "paragraph",
+        text: "This is the single most useful thing to understand about travelling on an Indian passport, and it has now appeared in nearly every destination we have written about.",
+      },
+      {
+        type: "list",
+        items: [
+          "Egypt's visa on arrival, per the Ministry's remarks, requires a valid US, Schengen, UK or GCC visa.",
+          "The Philippines offers visa-free entry for 14 days for tourism with a passport valid six months and a return ticket, extending to 30 days for holders of visas from specified countries.",
+          "The UAE grants visa on arrival to Indian passport holders who hold qualifying visas or residence permits from a defined set of countries.",
+          "Schengen airport transit is waived for Indian nationals holding a valid visa or residence permit from several named countries.",
+          "Armenia's e-visa carries requirements including travel insurance, with alternatives depending on the visas or documents you hold.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Read those together and the conclusion is hard to avoid. For an Indian passport, how easily you can travel is decided less by the passport than by what else is in it. A single US, UK or Schengen visa can change your options across several unrelated destinations at once.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "This changes how to plan a first big trip",
+        text: "If you are choosing between destinations and one of them would leave you holding a long-validity visa from a major issuing country, that visa has value well beyond the trip it was issued for. It is not a reason to apply somewhere you do not want to go, but it is worth knowing that the options are not independent of each other.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What Visa-Free Does Not Mean",
+      },
+      {
+        type: "list",
+        items: [
+          "It does not mean no conditions. Passport validity, return tickets and proof of funds are commonly required.",
+          "It does not mean guaranteed entry. Admission remains the border authority's decision everywhere.",
+          "It does not mean unlimited stay. The permitted duration is set by the destination and is often short.",
+          "It does not mean you may work, study or conduct business, unless it says so.",
+          "It does not cover countries you transit on the way, which have their own requirements.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How to Check Properly",
+      },
+      {
+        type: "list",
+        items: [
+          "Read the Ministry's list for the current facility type and the remarks column.",
+          "Check what you already hold, because an existing visa may change your category entirely.",
+          "Confirm with the destination's own immigration authority or its mission in India, which is what the Ministry itself advises.",
+          "Check every transit point separately.",
+          "Re-check close to travel, because these arrangements are revised without notice.",
+          "Keep the evidence of any condition you rely on, such as the other country's visa, accessible at the border.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Why we do not publish our own list here",
+        text: "Any list of this kind is wrong within months, and a stale list read as current is worse than no list at all, because it produces confident decisions about non-refundable bookings. The counts above are stated with the date they were read for exactly that reason. The Ministry's page is the one to check, not this one.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue visas and we do not speak for any government. Where we are useful here is in working out which category you actually fall into for a specific trip, given the documents you already hold and the route you intend to fly, which is a different question from what a list says about your nationality in the abstract.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Book",
+      },
+      {
+        type: "list",
+        items: [
+          "Go to the source rather than an article, and read the remarks.",
+          "List the visas and residence permits you already hold.",
+          "Check whether any of them unlocks a better category at your destination.",
+          "Verify with the destination authority before anything becomes non-refundable.",
+          "Do the same for every transit point.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "The category counts here describe the Ministry of External Affairs list as published on 21 August 2026 and will change. Every conditional example given is drawn from that list or from the destination authority and was verified on the same date. Treat all of it as a starting point for a check, never as the check itself.",
+      },
+    ],
+    relatedCountrySlugs: ["united-arab-emirates", "schengen", "united-states", "united-kingdom"],
+    relatedServiceSlugs: ["tourist-visa", "visa-readiness-review"],
+    faqIds: ["vf-1", "vf-2", "vf-3", "vf-4", "vf-5"],
+    officialReferences: [
+      {
+        label: "Ministry of External Affairs - visa facility for Indian nationals (ordinary passports)",
+        url: "https://www.mea.gov.in/vffin",
+      },
+      {
+        label: "Ministry of External Affairs - visa free and visa on arrival",
+        url: "https://mea.gov.in/visa-facility-for-india-nationals-menu.htm",
+      },
+      {
+        label: "Ministry of External Affairs - visa exemption and waiver agreements",
+        url: "https://www.mea.gov.in/bvwa-menu.htm",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Visa-Free and Visa on Arrival for Indian Passports",
+      description:
+        "The official MEA list, what its three categories actually mean, and why the answer usually depends on which other visas you already hold.",
+    },
+  },
 ];

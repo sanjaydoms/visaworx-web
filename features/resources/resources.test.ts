@@ -29,6 +29,7 @@ const expectedGuideSlugs = [
   "south-korea-visa-from-india",
   "travel-authorisations-are-not-visas",
   "what-indian-financial-documents-prove",
+  "when-someone-else-funds-your-trip",
 ];
 
 describe("guides content model", () => {

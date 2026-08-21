@@ -20,6 +20,7 @@ const expectedGuideSlugs = [
   "how-to-check-current-official-visa-requirements",
   "schengen-visa-from-india",
   "uk-visitor-visa-from-india",
+  "uae-visa-from-india",
 ];
 
 describe("guides content model", () => {

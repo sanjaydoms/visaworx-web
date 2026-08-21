@@ -1122,4 +1122,207 @@ export const guidesData: Guide[] = [
         "UK Standard Visitor visa from India explained - why the ETA does not apply to Indian nationals, what the visa allows, the GBP 135 fee and when to apply.",
     },
   },
+  {
+    slug: "uae-visa-from-india",
+    title: "UAE Visa from India: Why Your Other Visas Decide Which Route You Take",
+    summary: "Whether an Indian passport holder gets a UAE visa on arrival depends on what other visas or residence permits they already hold. A guide to both routes, who qualifies for which, and what each actually gives you.",
+    category: "Country Guides",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Priya's sister has lived in Dubai for six years, and every time the subject of visiting came up the answer was the same: do not worry about it, Indians get a visa on arrival now. So Priya booked flights for a long weekend and planned to sort the rest out at the airport. Her sister was not wrong, exactly. She was describing a rule that applied to her and not to Priya.",
+      },
+      {
+        type: "paragraph",
+        text: "Priya is an illustration, but this specific misunderstanding is unusually common, and it is easy to see why. The UAE does grant visas on arrival to Indian passport holders. It grants them on a condition that has nothing to do with your Indian passport and everything to do with what else is in it.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian passport holders qualify for a UAE visa on arrival only if they already hold a valid visa, residence permit or Green Card from the United States, the United Kingdom or the European Union, or a valid residence permit from Australia, Canada, Japan, New Zealand, the Republic of Korea or Singapore. If you hold none of those, you need an entry permit arranged before you travel.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "There Are Two Routes, and Your Documents Choose for You",
+      },
+      {
+        type: "paragraph",
+        text: "This is the part most travellers miss. The UAE does not have one process for Indian nationals, it has two, and which one applies to you is decided entirely by what other permissions you hold.",
+      },
+      {
+        type: "list",
+        items: [
+          "Route one, visa on arrival: available if you hold a qualifying visa or residence permit from another country. Nothing is arranged before you fly.",
+          "Route two, entry permit arranged in advance: the route for everyone else, and the one most first-time visitors from India will take.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Neither is better. They are simply different, and assuming you are on the first when you are on the second is what turns a holiday into an airport problem.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Who Qualifies for a Visa on Arrival",
+      },
+      {
+        type: "paragraph",
+        text: "You need an ordinary Indian passport plus one of the following, held validly at the time you travel:",
+      },
+      {
+        type: "list",
+        items: [
+          "A visa, residence permit or Green Card issued by the United States.",
+          "A residence visa issued by the United Kingdom.",
+          "A residence visa issued by a European Union country.",
+          "Since 13 February 2025, a valid residence permit from Australia, Canada, Japan, New Zealand, the Republic of Korea or Singapore.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "The six-month rule applies twice",
+        text: "Your passport must have at least six months validity. So must the qualifying document. A UK residence visa with four months left does not qualify you, even though it is still valid for the UK. Both clocks are checked, and travellers who remember the first routinely forget the second.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "What the visa on arrival gives you",
+      },
+      {
+        type: "paragraph",
+        text: "It is a visitor entry for 14 days, which can be extended once for a similar period. That is the whole allowance. It is not a month, and the extension is available one time only, so a trip planned around a longer stay does not fit this route even if you qualify for it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If You Do Not Qualify",
+      },
+      {
+        type: "paragraph",
+        text: "Then you arrange an entry permit before you travel, and you cannot do it yourself at the border. UAE visitor entry permits are applied for through a sponsor: an airline you are flying with, a hotel you have booked, a licensed tour operator, or a relative or company resident in the UAE.",
+      },
+      {
+        type: "paragraph",
+        text: "Durations, fees and permitted extensions vary by permit type and by which authority issues it, and they change. Rather than repeat figures that may be stale by the time you read this, check the current position directly with the UAE authorities listed with this guide before you book anything non-refundable.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Sponsorship is not a formality",
+        text: "Because a sponsor applies on your behalf, the quality of your trip planning becomes someone else's administrative problem, and delays are common when hotel bookings, flight dates and passenger details do not agree. Have the details settled and consistent before you hand them over, not after.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Dubai Is Not the Only Authority",
+      },
+      {
+        type: "paragraph",
+        text: "The UAE is a federation, and visitor entry is administered both federally and at emirate level. Dubai has its own residency and foreigners affairs authority with its own service pages and fees, while other emirates are handled federally.",
+      },
+      {
+        type: "paragraph",
+        text: "In practice this means the guidance you find depends on which authority published it, and a fee or procedure quoted for Dubai may not be the one that applies to your entry point. Check the authority for the emirate you are actually flying into.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Go Wrong",
+      },
+      {
+        type: "list",
+        items: [
+          "Assuming visa on arrival applies because it applies to a relative or colleague who holds a residence permit you do not.",
+          "A qualifying US, UK or EU document with less than six months validity left.",
+          "Booking non-refundable flights before confirming which route you are on.",
+          "Planning a stay longer than the visa on arrival allows, then discovering the extension is available only once.",
+          "Passenger name or passport details that do not match between the booking and the permit application.",
+          "Treating a UAE transit stop as automatically permitting entry into the country.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You hold a qualifying residence permit but it expires during the trip.",
+          "You are visiting family who will sponsor you rather than booking a hotel.",
+          "You are travelling for business meetings rather than tourism.",
+          "You are transiting the UAE and want to leave the airport.",
+          "You are travelling with children whose documents differ from yours.",
+          "You have a previous UAE entry refusal or an unresolved issue from an earlier stay.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Each of these changes which route applies or which sponsor is appropriate, and none of them is answered by a general checklist.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue entry permits and we do not speak for the UAE authorities. What we can do is establish which of the two routes actually applies to you before you commit to bookings, and tell you what your documents need to show. If you are not certain which route you are on, that is the question worth settling first, and the readiness assessment is built for exactly that kind of check.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Book",
+      },
+      {
+        type: "list",
+        items: [
+          "Establish your route first. Everything else follows from it.",
+          "If you are relying on another country's visa or residence permit, check its remaining validity, not just that it exists.",
+          "Confirm your passport has at least six months left.",
+          "Match your intended length of stay to what your route actually permits.",
+          "Check the authority for the emirate you are flying into, not simply the first page you find.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "UAE entry rules have changed repeatedly, and the qualifying list for visa on arrival was last expanded in February 2025. Every condition in this guide was verified against UAE government sources on 21 August 2026. Confirm the current position with the authority for your entry point before you travel.",
+      },
+    ],
+    relatedCountrySlugs: ["united-arab-emirates"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "family-dependent-visa"],
+    faqIds: ["uae-in-1", "uae-in-2", "uae-in-3", "uae-in-4", "uae-in-5", "uae-in-6"],
+    officialReferences: [
+      {
+        label: "GDRFA Dubai - visa on arrival for citizens of India",
+        url: "https://www.gdrfad.gov.ae/en/services/727c91b1-52eb-11ea-0320-0050569629e8",
+      },
+      {
+        label: "UAE Ministry of Foreign Affairs - visa on arrival expansion, February 2025",
+        url: "https://www.mofa.gov.ae/en/missions/new-delhi/media-hub/embassy-news/19-2-2025-new-delhi",
+      },
+      {
+        label: "The Official Portal of the UAE Government - visas and Emirates ID",
+        url: "https://u.ae/en/information-and-services/visa-and-emirates-id",
+      },
+      {
+        label: "Federal Authority for Identity and Citizenship (ICP)",
+        url: "https://icp.gov.ae/en/",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "UAE Visa from India: Visa on Arrival Rules Explained",
+      description:
+        "Indian passport holders get a UAE visa on arrival only with a qualifying US, UK, EU or other residence permit. Both routes explained, with validity rules.",
+    },
+  },
 ];

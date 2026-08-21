@@ -1721,4 +1721,195 @@ export const guidesData: Guide[] = [
         "Indian citizens generally need a Canadian visitor visa, not an eTA. The CAD 100 fee, CAD 85 biometrics and their 10-year validity, and family fee maximums.",
     },
   },
+  {
+    slug: "singapore-visa-from-india",
+    title: "Singapore Visa from India: Why You Cannot Apply for It Yourself",
+    summary: "Indian passport holders need a Singapore entry visa, and it is one of the few that cannot be submitted directly by the applicant. What the SGD 30 visa actually gets you, why the arrival card is not a visa, and who decides how long you can stay.",
+    category: "Country Guides",
+    readingTime: "7 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Sandeep spent most of a Sunday looking for the page where he could upload his documents and pay for a Singapore visa. He found plenty of sites offering to do it for him, several asking for money to complete an arrival card that turns out to be free, and no official form he could fill in himself. He assumed he was searching badly. He was not. There is no such form.",
+      },
+      {
+        type: "paragraph",
+        text: "Sandeep is an illustration, but the dead end is real, and it is the reason this route confuses people more than it should. Singapore does not accept entry visa applications directly from the traveller. Somebody in Singapore has to submit it for you.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Holders of ordinary Indian passports need an entry visa for Singapore. It cannot be lodged by you directly: it goes through a local contact in Singapore, a strategic partner, an authorised visa agent, or a Singapore Overseas Mission. The processing fee is SGD 30 and is not refunded if the application is unsuccessful. Applications are normally processed within three working days.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Who Needs a Visa",
+      },
+      {
+        type: "paragraph",
+        text: "Travellers holding ordinary Indian passports need an entry visa before visiting Singapore. Holders of Indian official and diplomatic passports are exempt from that requirement.",
+      },
+      {
+        type: "paragraph",
+        text: "That distinction catches families where one member travels on an official passport and assumes the rest of the household is covered by the same rule. Each traveller is assessed on the passport they hold.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "You Cannot Submit It Yourself",
+      },
+      {
+        type: "paragraph",
+        text: "This is the part worth understanding before you start looking for a form. An entry visa application is submitted on your behalf, through one of these routes:",
+      },
+      {
+        type: "list",
+        items: [
+          "Online through the electronic service, submitted by a strategic partner or a local contact in Singapore.",
+          "At a Singapore Overseas Mission.",
+          "Through an authorised visa agent.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A local contact is exactly what it sounds like: a person or organisation in Singapore who submits for you. If you are visiting family, that is usually them. If you are travelling on business, it is often the company hosting you. If you have neither, an authorised visa agent is the ordinary route.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "The arrival card is free, and it is not a visa",
+        text: "The SG Arrival Card is a separate thing, it costs nothing, and no visa is granted by completing it. A large number of sites charge for it anyway. If something is asking you for money to fill in an arrival card, you are not on an official service, and the visa question is still unanswered.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Cost and Timing",
+      },
+      {
+        type: "list",
+        items: [
+          "A processing fee of SGD 30, paid online by credit or debit card.",
+          "The fee is non-refundable, whether or not the visa is granted.",
+          "Applications are normally processed within three working days, excluding the day of submission. Some take longer.",
+          "Apply within the 30 days before your arrival.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Three working days sounds generous until you notice the application window is narrow at the other end. Aim for the middle of that thirty-day window rather than either edge.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Visa Does Not Decide How Long You Stay",
+      },
+      {
+        type: "paragraph",
+        text: "This is the single most common misunderstanding about Singapore, and it is worth stating plainly. The entry visa allows you to travel to Singapore and present yourself at immigration. How long you may remain is decided at the checkpoint, not by the visa.",
+      },
+      {
+        type: "paragraph",
+        text: "Since March 2022 that decision arrives digitally. Foreign visitors are notified of their Visit Pass by email, with nothing endorsed in the passport, and it is that notification which states the period of stay granted and the last day you may remain.",
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Read the e-Pass, do not assume it",
+        text: "Because there is no stamp in the passport, there is nothing to glance at later. Travellers who assume they were given the length of stay they asked for, rather than reading what they were actually granted, are the ones who overstay without meaning to. Open the email, note the last day, and keep it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Go Wrong",
+      },
+      {
+        type: "list",
+        items: [
+          "Searching for a direct application form, losing days, and then applying too close to departure.",
+          "Paying a site to complete the free arrival card and believing a visa has been arranged.",
+          "Assuming a family member's official or diplomatic passport exemption covers everyone travelling.",
+          "Not identifying a local contact or authorised agent early, when that is the step everything else depends on.",
+          "Treating the visa validity as the permitted length of stay.",
+          "Not reading the e-Pass notification, and overstaying against a date nobody stamped anywhere.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You have no family, host or business contact in Singapore.",
+          "You are transiting Singapore rather than visiting it.",
+          "You are travelling with family members holding different passport types.",
+          "Your trip is being sponsored or hosted by a Singapore company.",
+          "You have a previous refusal or an immigration issue from any country.",
+          "You need a longer stay than a standard visit permits.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not issue Singapore visas and we do not speak for the Immigration and Checkpoints Authority. Where we help is upstream: working out which submission route is actually available to you, what your host or agent will need from you, and whether your documents support the visit you are describing. For a route where the first step is finding someone to submit on your behalf, knowing that early is most of the battle.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Travel",
+      },
+      {
+        type: "list",
+        items: [
+          "Confirm your passport type. Ordinary Indian passports need a visa.",
+          "Identify who will submit for you before anything else.",
+          "Apply inside the thirty days before arrival, not on the last day of it.",
+          "Complete the SG Arrival Card yourself, free, and do not pay anyone for it.",
+          "Read the e-Pass email on arrival and note the last day of your permitted stay.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Fees, submission routes and pass arrangements change. Everything here was verified against Immigration and Checkpoints Authority and Singapore Overseas Mission sources on 21 August 2026. Confirm the current position on the official pages listed with this guide before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["singapore"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "family-dependent-visa"],
+    faqIds: ["sg-in-1", "sg-in-2", "sg-in-3", "sg-in-4", "sg-in-5", "sg-in-6"],
+    officialReferences: [
+      {
+        label: "ICA - visa requirements for India",
+        url: "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements/visa-detail-page/india",
+      },
+      {
+        label: "ICA - check if you need an entry visa",
+        url: "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+      },
+      {
+        label: "ICA - visiting Singapore",
+        url: "https://www.ica.gov.sg/public-education/visiting-singapore",
+      },
+      {
+        label: "High Commission of Singapore, New Delhi - visa information",
+        url: "https://new-delhi.mfa.gov.sg/consular-services/visa-information/",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Singapore Visa from India: How to Apply and What It Costs",
+      description:
+        "Indian passport holders cannot lodge a Singapore visa directly - it goes through a local contact or authorised agent. The SGD 30 fee, timing, and the e-Pass.",
+    },
+  },
 ];

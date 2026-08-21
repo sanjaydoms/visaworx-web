@@ -1325,4 +1325,400 @@ export const guidesData: Guide[] = [
         "Indian passport holders get a UAE visa on arrival only with a qualifying US, UK, EU or other residence permit. Both routes explained, with validity rules.",
     },
   },
+  {
+    slug: "us-visitor-visa-from-india",
+    title: "US B1/B2 Visa from India: What Changed for Interview Waivers",
+    summary: "The interview waiver window narrowed sharply in October 2025. What that means for Indian applicants renewing a B1/B2, what the fee is, and why an old dropbox experience is no longer a guide to this one.",
+    category: "Country Guides",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Karthik renewed his B1/B2 in 2019 without ever meeting a consular officer. He dropped his passport at a collection centre, it came back with a visa in it, and the whole thing took less effort than booking the flights. When the visa lapsed and he started planning another trip, he assumed the same arrangement was waiting for him. It is not, and the difference is measured in months rather than days.",
+      },
+      {
+        type: "paragraph",
+        text: "Karthik is an illustration, but the assumption behind him is extremely widespread among Indian applicants, because for several years it was correct. The interview waiver route was generous, then it narrowed, and in October 2025 it narrowed again to something much smaller than most people remember.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "From 1 October 2025 the interview waiver for B1/B2 applicants applies only to renewals made within 12 months of the previous visa expiring, where that visa was issued for full validity and the applicant was at least 18. You must have no prior refusal that was not overcome or waived, and must apply in your country of nationality or residence. The application fee is USD 185. A consular officer can still require an interview in any case.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What the Interview Waiver Now Covers",
+      },
+      {
+        type: "paragraph",
+        text: "The waiver is a narrow renewal provision, not a general convenience. Every one of these conditions has to hold at the same time:",
+      },
+      {
+        type: "list",
+        items: [
+          "You are renewing a B-1, B-2, B1/B2 or Border Crossing Card, in the same category.",
+          "You apply within 12 months of the previous visa expiring.",
+          "That previous visa was issued for full validity at the time it was granted.",
+          "You were at least 18 years old.",
+          "You have never been refused a visa, unless the refusal was overcome or waived.",
+          "You are applying in your country of nationality or usual residence.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Twelve months, not forty-eight",
+        text: "The number most Indian applicants are carrying in their heads is from an earlier and far more generous version of this policy. If your last visa expired two years ago, you are not renewing under the waiver, you are applying as an interview case. That single fact changes your timeline more than anything else in your preparation.",
+      },
+      {
+        type: "paragraph",
+        text: "Meeting every condition still does not entitle you to a waiver. Consular officers retain discretion to require an in-person interview in any case, for any reason. The waiver is something you may be considered for, not something you qualify into.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Costs",
+      },
+      {
+        type: "paragraph",
+        text: "The non-immigrant visa application fee, commonly called the MRV fee, is USD 185 for a B1/B2. It is paid before the appointment and is not refunded if the application is refused.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on your nationality and visa category, a separate reciprocity or issuance fee may apply after approval, and US fee policy has changed more than once in recent years. Confirm the total against the official fee schedule before you pay rather than relying on a figure quoted in a forum.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Process, in the Order It Actually Happens",
+      },
+      {
+        type: "list",
+        items: [
+          "Complete Form DS-160 online, accurately. What you enter here is what the officer reads.",
+          "Pay the application fee and keep the receipt.",
+          "Schedule your appointment, or submit under interview waiver if you are eligible.",
+          "Attend biometrics collection, and the interview where one is required.",
+          "Wait for administrative processing where applicable, then passport return.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "The DS-160 is the application",
+        text: "Indian applicants often treat the form as an administrative preliminary and the interview as the real event. The officer is reading your DS-160 while you stand there. Inconsistencies between what it says and what you say are the fastest route to a difficult conversation, and they are almost always careless rather than dishonest.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Why We Do Not Publish Wait Times",
+      },
+      {
+        type: "paragraph",
+        text: "Appointment availability at the US missions in India moves constantly and differs by post and by visa class. Any number stated here would be wrong for someone reading it a month later, and planning a trip on a stale figure is worse than having no figure at all.",
+      },
+      {
+        type: "paragraph",
+        text: "The Department of State publishes current appointment wait times by post. Check the post you will apply at, on the day you are planning, and build your timeline from that.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a B1/B2 Application Has to Establish",
+      },
+      {
+        type: "paragraph",
+        text: "A visitor visa applicant is presumed to intend immigration until they demonstrate otherwise. That presumption is the whole architecture of the interview, and understanding it explains almost every question you will be asked.",
+      },
+      {
+        type: "list",
+        items: [
+          "A specific, temporary purpose for the visit, with a defined end.",
+          "The means to fund the trip without working in the United States.",
+          "Ties to India strong enough to make return the obvious outcome: employment, business, property, family responsibility, study.",
+          "A history, where you have one, of complying with the terms of previous visas.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "Assuming an interview waiver applies because it applied last time, and discovering otherwise with weeks rather than months in hand.",
+          "A DS-160 completed quickly and never re-read before the interview.",
+          "Employment or income described one way on the form and another in conversation.",
+          "Funds that appear shortly before the application with no explainable source.",
+          "Failing to declare a previous refusal, which also removes any interview waiver eligibility.",
+          "Answers that describe an open-ended stay when the visa category is for a temporary visit.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "Your previous US visa expired more than 12 months ago.",
+          "You have a prior refusal, under any section, from the US or elsewhere.",
+          "You are self-employed, or your income is difficult to evidence conventionally.",
+          "You are visiting family who are US residents or citizens.",
+          "You are applying with children, or on behalf of a parent.",
+          "You have spent long or frequent periods in the US on previous visits.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "None of these is disqualifying. All of them change what your application has to explain, and explaining them deliberately is better than leaving an officer to infer.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications, we do not schedule consular appointments, and we do not speak for the Department of State. What we can do is check whether the route you think you are on is the route that applies, and review how your documents and your DS-160 read together. If your last visa expired more than a year ago, that check is worth doing before you plan anything around a date.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Find your previous visa and check its expiry date against the 12-month window.",
+          "Assume an interview until you are told otherwise, and build your timeline that way.",
+          "Check current appointment wait times for your post, on the day.",
+          "Re-read your DS-160 before the interview, not after submitting it.",
+          "Declare any previous refusal.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "US visa policy has changed repeatedly, and the interview waiver criteria in particular have narrowed more than once. Everything here was verified against Department of State sources on 21 August 2026. Confirm the current criteria and fees on the official pages listed with this guide, and check your post's own instructions, before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["united-states"],
+    relatedServiceSlugs: ["tourist-visa", "business-visa", "interview-preparation"],
+    faqIds: ["us-in-1", "us-in-2", "us-in-3", "us-in-4", "us-in-5", "us-in-6"],
+    officialReferences: [
+      {
+        label: "US Department of State - interview waiver update, September 2025",
+        url: "https://travel.state.gov/content/travel/en/News/visas-news/interview-waiver-update-sept-18-2025.html",
+      },
+      {
+        label: "US Department of State - fees for visa services",
+        url: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+      },
+      {
+        label: "US Department of State - visa appointment wait times",
+        url: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html",
+      },
+      {
+        label: "US Embassy and Consulates in India - visas",
+        url: "https://in.usembassy.gov/visas/",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "US B1/B2 Visa from India: Interview Waiver Changes",
+      description:
+        "The US interview waiver narrowed in October 2025 to 12-month renewals. What Indian B1/B2 applicants need to know, the USD 185 fee, and how to plan the timeline.",
+    },
+  },
+  {
+    slug: "canada-visitor-visa-from-india",
+    title: "Canada Visitor Visa from India: TRV, Biometrics and the eTA Question",
+    summary: "Indian travellers keep hearing that a US visa gets you into Canada on a quick online authorisation. A guide to what the visitor visa actually involves, what biometrics cost and how long they last, and where the eTA question really stands.",
+    category: "Country Guides",
+    readingTime: "8 min read",
+    featured: true,
+    content: [
+      {
+        type: "paragraph",
+        text: "Anita had a valid US B1/B2 and a colleague who was certain that settled it. Canada, he said, lets you in on an online authorisation if you hold an American visa. She spent an evening trying to apply for one, could not make the eligibility questions work, and went to bed assuming she had misunderstood the form.",
+      },
+      {
+        type: "paragraph",
+        text: "Anita is an illustration, but the belief is real and it is unusually sticky, because it is half true. Canada does let citizens of certain visa-required countries apply for an electronic travel authorisation instead of a visitor visa, and holding a valid US non-immigrant visa is one of the conditions. What people leave out is that the country has to be on the eligible list first.",
+      },
+      {
+        type: "callout",
+        tone: "info",
+        title: "Quick answer",
+        text: "Indian citizens generally need a visitor visa, a Temporary Resident Visa, to travel to Canada. The visa fee is CAD 100 and biometrics cost a further CAD 85, with family maximums of CAD 500 and CAD 170. Biometrics stay valid for 10 years. The eTA alternative exists only for citizens of certain visa-required countries, and India is not currently among them.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where the eTA Question Actually Stands",
+      },
+      {
+        type: "paragraph",
+        text: "Canada operates an eTA route for citizens of a limited set of visa-required countries. Where it applies, the applicant must either have held a Canadian visitor visa in the past 10 years or currently hold a valid US non-immigrant visa, and it covers air travel only. Arriving by car, bus, train or boat still requires a visitor visa.",
+      },
+      {
+        type: "paragraph",
+        text: "The part that gets dropped in retelling is the first step. The eligible-country list is short, and India is not currently on it, so an Indian citizen holding a valid US visa is still applying for a Temporary Resident Visa. Because that list has been extended more than once, confirm the current position on the official eligibility page rather than assuming either way.",
+      },
+      {
+        type: "callout",
+        tone: "warning",
+        title: "Half-true advice is the expensive kind",
+        text: "The US-visa condition is genuine, which is exactly why this misunderstanding survives. Someone will always know a person it worked for, usually a citizen of a country that is on the list. Check your own nationality against the list before you plan around the answer.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What It Costs",
+      },
+      {
+        type: "list",
+        items: [
+          "Visitor visa, per person: CAD 100.",
+          "Visitor visa, family of five or more applying together: CAD 500 maximum.",
+          "Biometrics, per person: CAD 85.",
+          "Biometrics, family of two or more eligible people applying together: CAD 170 maximum.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The family maximums are worth knowing before you apply as individuals out of habit. A family applying at the same time and place is treated as a family for fee purposes, and applying separately can cost more for no benefit.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Biometrics Last Ten Years",
+      },
+      {
+        type: "paragraph",
+        text: "If you have already given biometrics for a Canadian visitor visa, study permit or work permit, they remain valid for 10 years. Within that period you do not need to give them again for a further visitor visa, work permit or study permit application.",
+      },
+      {
+        type: "paragraph",
+        text: "This is one of the few genuinely generous provisions in the process, and a large number of repeat applicants pay and attend for collection they did not need. Check when you last gave them before you book anything.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What a Canadian Visitor Application Has to Establish",
+      },
+      {
+        type: "paragraph",
+        text: "Immigration, Refugees and Citizenship Canada is assessing whether you will leave at the end of an authorised stay. Everything in the application speaks to that question.",
+      },
+      {
+        type: "list",
+        items: [
+          "A clear purpose for the visit, with dates that make sense for it.",
+          "Funds sufficient for the trip, from a source you can explain.",
+          "Ties to India: employment, business, family responsibilities, property, studies.",
+          "Immigration history consistent with what you are describing now.",
+          "Where someone in Canada is hosting or funding you, documents establishing who they are and their status there.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where Applications from India Usually Weaken",
+      },
+      {
+        type: "list",
+        items: [
+          "Applying for an eTA on the strength of a US visa without checking nationality eligibility first.",
+          "Paying for biometrics again inside the 10-year validity period.",
+          "Family members applying separately and losing the family fee maximum.",
+          "A host in Canada described in the application but not evidenced.",
+          "Travel dates that do not match leave approval or bookings.",
+          "Assuming an eTA would cover a land or sea crossing, which it does not even where it applies.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "If Your Situation Is Not Straightforward",
+      },
+      {
+        type: "list",
+        items: [
+          "You have family in Canada who will sponsor or host the visit.",
+          "You have previously applied for a Canadian study or work permit.",
+          "You have a refusal from Canada or another country.",
+          "You are self-employed or your income varies.",
+          "You are travelling with dependants, or as a parent visiting adult children.",
+          "You intend to enter overland from the United States.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Visaworx Helps",
+      },
+      {
+        type: "paragraph",
+        text: "Visaworx is a visa intelligence and guidance service from KLAR Travels. We do not decide applications and we do not speak for IRCC. What we can do is confirm which route applies to you before you spend anything, check whether your biometrics are still valid, and review whether your documents support the purpose you are describing. If a family is applying together, that check usually pays for itself in fees alone.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Before You Apply",
+      },
+      {
+        type: "list",
+        items: [
+          "Check your nationality against the eTA eligibility page before assuming a US visa helps.",
+          "Find out when you last gave biometrics for a Canadian application.",
+          "If a family is travelling, apply at the same time and place.",
+          "Evidence your host in Canada, do not merely mention them.",
+          "Make sure your dates agree across bookings, leave approval and the application.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "expert",
+        title: "Verify before you rely on this",
+        text: "Canadian fees and eTA eligibility both change, and the eligible-country list has been extended more than once. Everything here was verified against IRCC sources on 21 August 2026. Confirm the current position on the official pages listed with this guide before you apply.",
+      },
+    ],
+    relatedCountrySlugs: ["canada"],
+    relatedServiceSlugs: ["tourist-visa", "family-dependent-visa", "documentation-review"],
+    faqIds: ["ca-in-1", "ca-in-2", "ca-in-3", "ca-in-4", "ca-in-5", "ca-in-6"],
+    officialReferences: [
+      {
+        label: "IRCC - visitor visa (temporary resident visa)",
+        url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html",
+      },
+      {
+        label: "IRCC - eTA eligibility, citizens from some visa-required countries",
+        url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eta/eligibility/eta-x.html",
+      },
+      {
+        label: "IRCC - application fee list",
+        url: "https://ircc.canada.ca/english/information/fees/fees.asp",
+      },
+      {
+        label: "IRCC - biometrics",
+        url: "https://www.canada.ca/en/immigration-refugees-citizenship/services/biometrics.html",
+      },
+    ],
+    lastReviewed: "2026-08-21",
+    authorLabel: "Visaworx Visa Intelligence Team",
+    seo: {
+      title: "Canada Visitor Visa from India: Fees, Biometrics, eTA",
+      description:
+        "Indian citizens generally need a Canadian visitor visa, not an eTA. The CAD 100 fee, CAD 85 biometrics and their 10-year validity, and family fee maximums.",
+    },
+  },
 ];

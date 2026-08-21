@@ -50,7 +50,7 @@ export function HomePage() {
                 Make the right visa<br className="hidden sm:inline" /> decision before<br className="hidden sm:inline" /> you apply.
               </h1>
               <p className="mt-5 max-w-2xl text-[18px] leading-[1.55] text-slate-600 sm:text-xl">
-                Understand the right pathway, assess your readiness, identify avoidable risks and speak with experienced visa experts.
+                Visa intelligence for travellers from India. Understand the right pathway, assess your readiness, identify avoidable risks and speak with experienced visa experts.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href={site.consultationUrl}>

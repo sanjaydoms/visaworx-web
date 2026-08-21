@@ -3,7 +3,7 @@ import { HomePage } from "../../features/home/HomePage";
 
 const title = "Visaworx | Visa Intelligence & Expert Guidance";
 const description =
-  "Understand the right visa pathway, assess your readiness, identify avoidable risks and speak with experienced visa experts.";
+  "Visa guidance for travellers from India. Understand the right visa pathway, assess your readiness, identify avoidable risks and speak with experienced visa experts.";
 
 export const metadata: Metadata = {
   title,

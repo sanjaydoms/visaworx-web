@@ -5,14 +5,14 @@ import { ConsultationPage } from "../../../features/consultation/ConsultationPag
 export const metadata: Metadata = {
   title: "Book a Visa Consultation | Visaworx",
   description:
-    "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review.",
+    "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review, from India.",
   alternates: {
     canonical: "/visaworx/consultation",
   },
   openGraph: {
     title: "Book a Visa Consultation | Visaworx",
     description:
-      "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review.",
+      "Request a human visa consultation with Visaworx for destination guidance, readiness, documents, interviews or refusal review, from India.",
     url: "/visaworx/consultation",
     type: "website",
   },

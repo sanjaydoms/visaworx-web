@@ -5,14 +5,14 @@ import { faqsData } from "../../../../common/content/faqs";
 export const metadata: Metadata = {
   title: "Visa Questions and Answers | Visaworx",
   description:
-    "Search and browse frequently asked questions regarding visa categories, bank statements, consular interviews, and refusal reviews.",
+    "Answers for applicants from India on visa categories, bank statements, income tax records, consular interviews and refusal reviews.",
   alternates: {
     canonical: "/visaworx/resources/faqs",
   },
   openGraph: {
     title: "Visa Questions and Answers | Visaworx",
     description:
-      "Search and browse frequently asked questions regarding visa categories, bank statements, consular interviews, and refusal reviews.",
+      "Answers for applicants from India on visa categories, bank statements, income tax records, consular interviews and refusal reviews.",
     url: "/visaworx/resources/faqs",
     type: "website",
   },

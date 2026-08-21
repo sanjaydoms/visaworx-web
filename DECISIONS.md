@@ -20,3 +20,14 @@ All reusable assets, components, design tokens, content, routes and rules live u
 
 ## ADR-007 — Content before code duplication
 Countries, services, trust points and FAQs are structured data, not repeated JSX.
+
+## ADR-008 — India-origin audience
+Visaworx content addresses travellers applying from India. Pages remain organised
+by destination; the origin is the reader, not the taxonomy.
+
+Audience framing (summaries, page copy, SEO metadata) is India-specific. Statements
+about what applies to a specific nationality — visa-vs-eTA routes, visa-on-arrival
+eligibility, e-visa availability — are only made once verified against that
+destination's official source, and are dated in `lastReviewed`. Where a requirement
+branches on nationality and has not yet been verified, the branch is left stated as
+the authority states it rather than resolved for Indian passport holders.

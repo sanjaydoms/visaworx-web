@@ -5,14 +5,14 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
   title: "Visa Readiness Assessment | Visaworx",
   description:
-    "Assess your visa preparation, identify gaps and understand the next steps before you apply.",
+    "Assess your visa preparation for travel from India, identify gaps and understand the next steps before you apply.",
   alternates: {
     canonical: "/visaworx/readiness",
   },
   openGraph: {
     title: "Visa Readiness Assessment | Visaworx",
     description:
-      "Assess your visa preparation, identify gaps and understand the next steps before you apply.",
+      "Assess your visa preparation for travel from India, identify gaps and understand the next steps before you apply.",
     url: "/visaworx/readiness",
     type: "website",
   },

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: "Visaworx | Visa Intelligence & Expert Guidance",
   description:
-    "Visa intelligence, readiness and human consultation within the Klar Travels ecosystem.",
+    "Visa intelligence, readiness and human consultation for travellers from India, within the Klar Travels ecosystem.",
 };
 
 export default function RootLayout({

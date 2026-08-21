@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     canonical: "/visaworx/services",
   },
   openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
     title: "Visa Consultation Services | Visaworx",
     description:
       "Visa consultation, readiness, documentation, interview and refusal-review services from Visaworx, for travellers applying from India.",

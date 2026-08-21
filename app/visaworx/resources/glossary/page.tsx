@@ -9,6 +9,8 @@ export const metadata: Metadata = {
     canonical: "/visaworx/resources/glossary",
   },
   openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
     title: "Visa Glossary | Visaworx",
     description:
       "Clear, non-technical definitions of visa terminology, consular clauses and documentation terms used by applicants from India.",

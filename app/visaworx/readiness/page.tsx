@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     canonical: "/visaworx/readiness",
   },
   openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
     title: "Visa Readiness Assessment | Visaworx",
     description:
       "Assess your visa preparation for travel from India, identify gaps and understand the next steps before you apply.",

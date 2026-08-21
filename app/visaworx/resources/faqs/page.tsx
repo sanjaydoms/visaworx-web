@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     canonical: "/visaworx/resources/faqs",
   },
   openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
     title: "Visa Questions and Answers | Visaworx",
     description:
       "Answers for applicants from India on visa categories, bank statements, income tax records, consular interviews and refusal reviews.",

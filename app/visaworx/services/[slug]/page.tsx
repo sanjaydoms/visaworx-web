@@ -33,6 +33,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `/visaworx/services/${service.slug}`,
     },
     openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
       title,
       description,
       url: `/visaworx/services/${service.slug}`,

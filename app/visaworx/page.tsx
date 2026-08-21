@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     canonical: "/visaworx",
   },
   openGraph: {
+    siteName: "Visaworx",
+    locale: "en_IN",
     title,
     description,
     url: "/visaworx",
